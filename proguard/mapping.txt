@@ -1,0 +1,3287 @@
+com.google.api.client.auth.jsontoken.JsonWebSignature -> com.google.api.client.auth.jsontoken.JsonWebSignature:
+com.google.api.client.auth.jsontoken.JsonWebSignature$Header -> com.google.api.client.auth.jsontoken.JsonWebSignature$Header:
+    java.lang.String algorithm -> algorithm
+    java.lang.String jwkUrl -> jwkUrl
+    java.lang.String keyId -> keyId
+    java.lang.String x509Url -> x509Url
+    java.lang.String x509Thumbprint -> x509Thumbprint
+    com.google.api.client.auth.jsontoken.JsonWebSignature$Header setType(java.lang.String) -> a
+    com.google.api.client.auth.jsontoken.JsonWebSignature$Header setAlgorithm(java.lang.String) -> b
+    com.google.api.client.auth.jsontoken.JsonWebToken$Header setType(java.lang.String) -> c
+com.google.api.client.auth.jsontoken.JsonWebSignature$Parser -> com.google.api.client.auth.jsontoken.JsonWebSignature$Parser:
+com.google.api.client.auth.jsontoken.JsonWebToken -> com.google.api.client.auth.jsontoken.JsonWebToken:
+com.google.api.client.auth.jsontoken.JsonWebToken$Header -> com.google.api.client.auth.jsontoken.JsonWebToken$Header:
+    java.lang.String type -> type
+    com.google.api.client.auth.jsontoken.JsonWebToken$Header setType(java.lang.String) -> c
+com.google.api.client.auth.jsontoken.JsonWebToken$Payload -> com.google.api.client.auth.jsontoken.JsonWebToken$Payload:
+    java.lang.Long expirationTimeSeconds -> expirationTimeSeconds
+    java.lang.Long notBeforeTimeSeconds -> notBeforeTimeSeconds
+    java.lang.Long issuedAtTimeSeconds -> issuedAtTimeSeconds
+    java.lang.String issuer -> issuer
+    java.lang.String audience -> audience
+    java.lang.String principal -> principal
+    java.lang.String jwtId -> jwtId
+    java.lang.String type -> type
+    com.google.api.client.auth.jsontoken.JsonWebToken$Payload setExpirationTimeSeconds(java.lang.Long) -> a
+    com.google.api.client.auth.jsontoken.JsonWebToken$Payload setIssuedAtTimeSeconds(java.lang.Long) -> b
+    com.google.api.client.auth.jsontoken.JsonWebToken$Payload setIssuer(java.lang.String) -> a
+    com.google.api.client.auth.jsontoken.JsonWebToken$Payload setAudience(java.lang.String) -> b
+    com.google.api.client.auth.jsontoken.JsonWebToken$Payload setPrincipal(java.lang.String) -> c
+com.google.api.client.auth.jsontoken.RsaSHA256Signer -> com.google.api.client.auth.jsontoken.RsaSHA256Signer:
+    java.lang.String sign(java.security.PrivateKey,com.google.api.client.json.JsonFactory,com.google.api.client.auth.jsontoken.JsonWebSignature$Header,com.google.api.client.auth.jsontoken.JsonWebToken$Payload) -> a
+com.google.api.client.auth.oauth.AbstractOAuthGetToken -> com.google.api.client.auth.oauth.AbstractOAuthGetToken:
+com.google.api.client.auth.oauth.OAuthAuthorizeTemporaryTokenUrl -> com.google.api.client.auth.oauth.OAuthAuthorizeTemporaryTokenUrl:
+    java.lang.String temporaryToken -> temporaryToken
+com.google.api.client.auth.oauth.OAuthCallbackUrl -> com.google.api.client.auth.oauth.OAuthCallbackUrl:
+    java.lang.String token -> token
+    java.lang.String verifier -> verifier
+com.google.api.client.auth.oauth.OAuthCredentialsResponse -> com.google.api.client.auth.oauth.OAuthCredentialsResponse:
+    java.lang.String token -> token
+    java.lang.String tokenSecret -> tokenSecret
+    java.lang.Boolean callbackConfirmed -> callbackConfirmed
+com.google.api.client.auth.oauth.OAuthGetAccessToken -> com.google.api.client.auth.oauth.OAuthGetAccessToken:
+com.google.api.client.auth.oauth.OAuthGetTemporaryToken -> com.google.api.client.auth.oauth.OAuthGetTemporaryToken:
+com.google.api.client.auth.oauth.OAuthHmacSigner -> com.google.api.client.auth.oauth.OAuthHmacSigner:
+    java.lang.String clientSharedSecret -> a
+    java.lang.String tokenSharedSecret -> b
+    java.lang.String getSignatureMethod() -> a
+    java.lang.String computeSignature(java.lang.String) -> a
+com.google.api.client.auth.oauth.OAuthParameters -> com.google.api.client.auth.oauth.OAuthParameters:
+    java.security.SecureRandom RANDOM -> l
+    com.google.api.client.auth.oauth.OAuthSigner signer -> a
+    java.lang.String callback -> b
+    java.lang.String consumerKey -> c
+    java.lang.String nonce -> d
+    java.lang.String realm -> e
+    java.lang.String signature -> f
+    java.lang.String signatureMethod -> g
+    java.lang.String timestamp -> h
+    java.lang.String token -> i
+    java.lang.String verifier -> j
+    java.lang.String version -> k
+    com.google.api.client.util.escape.PercentEscaper ESCAPER -> m
+    void computeNonce() -> a
+    void computeTimestamp() -> b
+    void computeSignature(java.lang.String,com.google.api.client.http.GenericUrl) -> a
+    java.lang.String getAuthorizationHeader() -> c
+    void appendParameter(java.lang.StringBuilder,java.lang.String,java.lang.String) -> a
+    void putParameterIfValueNotNull(java.util.TreeMap,java.lang.String,java.lang.String) -> a
+    void putParameter(java.util.TreeMap,java.lang.String,java.lang.Object) -> a
+    java.lang.String escape(java.lang.String) -> a
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+com.google.api.client.auth.oauth.OAuthRsaSigner -> com.google.api.client.auth.oauth.OAuthRsaSigner:
+    java.security.PrivateKey privateKey -> a
+    java.lang.String getSignatureMethod() -> a
+    java.lang.String computeSignature(java.lang.String) -> a
+com.google.api.client.auth.oauth.OAuthSigner -> com.google.api.client.auth.oauth.OAuthSigner:
+    java.lang.String getSignatureMethod() -> a
+    java.lang.String computeSignature(java.lang.String) -> a
+com.google.api.client.auth.oauth2.AuthorizationCodeFlow -> com.google.api.client.auth.oauth2.AuthorizationCodeFlow:
+com.google.api.client.auth.oauth2.AuthorizationCodeFlow$Builder -> com.google.api.client.auth.oauth2.AuthorizationCodeFlow$Builder:
+com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl -> com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl:
+com.google.api.client.auth.oauth2.AuthorizationCodeResponseUrl -> com.google.api.client.auth.oauth2.AuthorizationCodeResponseUrl:
+    java.lang.String code -> code
+    java.lang.String state -> state
+    java.lang.String error -> error
+    java.lang.String errorDescription -> errorDescription
+    java.lang.String errorUri -> errorUri
+com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest -> com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest:
+    java.lang.String code -> code
+    java.lang.String redirectUri -> redirectUri
+    com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> a
+    com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> a
+    com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest setGrantType(java.lang.String) -> a
+    com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> a
+    com.google.api.client.auth.oauth2.TokenRequest setGrantType(java.lang.String) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> b
+com.google.api.client.auth.oauth2.AuthorizationRequestUrl -> com.google.api.client.auth.oauth2.AuthorizationRequestUrl:
+    java.lang.String responseTypes -> responseTypes
+    java.lang.String redirectUri -> redirectUri
+    java.lang.String scopes -> scopes
+    java.lang.String clientId -> clientId
+    java.lang.String state -> state
+com.google.api.client.auth.oauth2.BearerToken -> com.google.api.client.auth.oauth2.BearerToken:
+    com.google.api.client.auth.oauth2.Credential$AccessMethod authorizationHeaderAccessMethod() -> a
+com.google.api.client.auth.oauth2.BearerToken$AuthorizationHeaderAccessMethod -> com.google.api.client.auth.oauth2.BearerToken$AuthorizationHeaderAccessMethod:
+    void intercept(com.google.api.client.http.HttpRequest,java.lang.String) -> a
+    java.lang.String getAccessTokenFromRequest(com.google.api.client.http.HttpRequest) -> a
+com.google.api.client.auth.oauth2.BearerToken$FormEncodedBodyAccessMethod -> com.google.api.client.auth.oauth2.BearerToken$FormEncodedBodyAccessMethod:
+    void intercept(com.google.api.client.http.HttpRequest,java.lang.String) -> a
+    java.lang.String getAccessTokenFromRequest(com.google.api.client.http.HttpRequest) -> a
+    java.util.Map getData(com.google.api.client.http.HttpRequest) -> b
+com.google.api.client.auth.oauth2.BearerToken$QueryParameterAccessMethod -> com.google.api.client.auth.oauth2.BearerToken$QueryParameterAccessMethod:
+    void intercept(com.google.api.client.http.HttpRequest,java.lang.String) -> a
+    java.lang.String getAccessTokenFromRequest(com.google.api.client.http.HttpRequest) -> a
+com.google.api.client.auth.oauth2.BrowserClientRequestUrl -> com.google.api.client.auth.oauth2.BrowserClientRequestUrl:
+com.google.api.client.auth.oauth2.ClientParametersAuthentication -> com.google.api.client.auth.oauth2.ClientParametersAuthentication:
+    java.lang.String clientId -> a
+    java.lang.String clientSecret -> b
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+com.google.api.client.auth.oauth2.Credential -> com.google.api.client.auth.oauth2.Credential:
+    java.util.logging.Logger LOGGER -> a
+    java.util.concurrent.locks.Lock lock -> b
+    com.google.api.client.auth.oauth2.Credential$AccessMethod method -> c
+    java.lang.String accessToken -> d
+    java.lang.Long expirationTimeMilliseconds -> e
+    java.lang.String refreshToken -> f
+    com.google.api.client.http.HttpTransport transport -> g
+    com.google.api.client.http.HttpExecuteInterceptor clientAuthentication -> h
+    com.google.api.client.json.JsonFactory jsonFactory -> i
+    java.lang.String tokenServerEncodedUrl -> j
+    java.util.List refreshListeners -> k
+    com.google.api.client.http.HttpRequestInitializer requestInitializer -> l
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+    boolean handleResponse(com.google.api.client.http.HttpRequest,com.google.api.client.http.HttpResponse,boolean) -> a
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+    java.lang.String getAccessToken() -> a
+    com.google.api.client.auth.oauth2.Credential setAccessToken(java.lang.String) -> a
+    com.google.api.client.http.HttpTransport getTransport() -> b
+    com.google.api.client.json.JsonFactory getJsonFactory() -> c
+    java.lang.String getRefreshToken() -> d
+    com.google.api.client.auth.oauth2.Credential setRefreshToken(java.lang.String) -> b
+    java.lang.Long getExpirationTimeMilliseconds() -> e
+    com.google.api.client.auth.oauth2.Credential setExpirationTimeMilliseconds(java.lang.Long) -> a
+    java.lang.Long getExpiresInSeconds() -> f
+    com.google.api.client.auth.oauth2.Credential setExpiresInSeconds(java.lang.Long) -> b
+    boolean refreshToken() -> g
+    com.google.api.client.auth.oauth2.Credential setFromTokenResponse(com.google.api.client.auth.oauth2.TokenResponse) -> a
+    com.google.api.client.auth.oauth2.TokenResponse executeRefreshToken() -> h
+com.google.api.client.auth.oauth2.Credential$AccessMethod -> com.google.api.client.auth.oauth2.Credential$AccessMethod:
+    void intercept(com.google.api.client.http.HttpRequest,java.lang.String) -> a
+    java.lang.String getAccessTokenFromRequest(com.google.api.client.http.HttpRequest) -> a
+com.google.api.client.auth.oauth2.Credential$Builder -> com.google.api.client.auth.oauth2.Credential$Builder:
+    com.google.api.client.auth.oauth2.Credential$AccessMethod method -> a
+    com.google.api.client.http.GenericUrl tokenServerUrl -> b
+    java.util.List refreshListeners -> c
+    com.google.api.client.auth.oauth2.Credential$Builder setTokenServerEncodedUrl(java.lang.String) -> a
+com.google.api.client.auth.oauth2.CredentialRefreshListener -> com.google.api.client.auth.oauth2.CredentialRefreshListener:
+    void onTokenResponse(com.google.api.client.auth.oauth2.Credential,com.google.api.client.auth.oauth2.TokenResponse) -> a
+    void onTokenErrorResponse(com.google.api.client.auth.oauth2.Credential,com.google.api.client.auth.oauth2.TokenErrorResponse) -> a
+com.google.api.client.auth.oauth2.CredentialStore -> com.google.api.client.auth.oauth2.CredentialStore:
+    void store(java.lang.String,com.google.api.client.auth.oauth2.Credential) -> a
+com.google.api.client.auth.oauth2.CredentialStoreRefreshListener -> com.google.api.client.auth.oauth2.CredentialStoreRefreshListener:
+    com.google.api.client.auth.oauth2.CredentialStore credentialStore -> a
+    java.lang.String userId -> b
+    void onTokenResponse(com.google.api.client.auth.oauth2.Credential,com.google.api.client.auth.oauth2.TokenResponse) -> a
+    void onTokenErrorResponse(com.google.api.client.auth.oauth2.Credential,com.google.api.client.auth.oauth2.TokenErrorResponse) -> a
+    void makePersistent(com.google.api.client.auth.oauth2.Credential) -> a
+com.google.api.client.auth.oauth2.MemoryCredentialStore -> com.google.api.client.auth.oauth2.MemoryCredentialStore:
+    java.util.concurrent.locks.Lock lock -> a
+    java.util.Map store -> b
+    void store(java.lang.String,com.google.api.client.auth.oauth2.Credential) -> a
+com.google.api.client.auth.oauth2.MemoryPersistedCredential -> com.google.api.client.auth.oauth2.MemoryPersistedCredential:
+    java.lang.String accessToken -> a
+    java.lang.String refreshToken -> b
+    java.lang.Long expirationTimeMillis -> c
+    void store(com.google.api.client.auth.oauth2.Credential) -> a
+com.google.api.client.auth.oauth2.RefreshTokenRequest -> com.google.api.client.auth.oauth2.RefreshTokenRequest:
+    java.lang.String refreshToken -> refreshToken
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> a
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> a
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setGrantType(java.lang.String) -> a
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> a
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setRefreshToken(java.lang.String) -> c
+    com.google.api.client.auth.oauth2.TokenRequest setGrantType(java.lang.String) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> b
+com.google.api.client.auth.oauth2.TokenErrorResponse -> com.google.api.client.auth.oauth2.TokenErrorResponse:
+    java.lang.String error -> error
+    java.lang.String errorDescription -> errorDescription
+    java.lang.String errorUri -> errorUri
+com.google.api.client.auth.oauth2.TokenRequest -> com.google.api.client.auth.oauth2.TokenRequest:
+    com.google.api.client.http.HttpRequestInitializer requestInitializer -> a
+    com.google.api.client.http.HttpExecuteInterceptor clientAuthentication -> b
+    com.google.api.client.http.HttpTransport transport -> c
+    com.google.api.client.json.JsonFactory jsonFactory -> d
+    com.google.api.client.http.GenericUrl tokenServerUrl -> e
+    java.lang.String scopes -> scopes
+    java.lang.String grantType -> grantType
+    com.google.api.client.auth.oauth2.TokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setGrantType(java.lang.String) -> b
+    com.google.api.client.http.HttpResponse executeUnparsed() -> a
+    com.google.api.client.auth.oauth2.TokenResponse execute() -> b
+com.google.api.client.auth.oauth2.TokenRequest$1 -> com.google.api.client.auth.oauth2.TokenRequest$1:
+    com.google.api.client.auth.oauth2.TokenRequest this$0 -> a
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+com.google.api.client.auth.oauth2.TokenRequest$1$1 -> com.google.api.client.auth.oauth2.TokenRequest$1$1:
+    com.google.api.client.http.HttpExecuteInterceptor val$interceptor -> a
+    com.google.api.client.auth.oauth2.TokenRequest$1 this$1 -> b
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+com.google.api.client.auth.oauth2.TokenResponse -> com.google.api.client.auth.oauth2.TokenResponse:
+    java.lang.String accessToken -> accessToken
+    java.lang.String tokenType -> tokenType
+    java.lang.Long expiresInSeconds -> expiresInSeconds
+    java.lang.String refreshToken -> refreshToken
+    java.lang.String scope -> scope
+    java.lang.String getAccessToken() -> a
+    java.lang.Long getExpiresInSeconds() -> b
+    java.lang.String getRefreshToken() -> a_
+com.google.api.client.auth.oauth2.TokenResponseException -> com.google.api.client.auth.oauth2.TokenResponseException:
+    com.google.api.client.auth.oauth2.TokenErrorResponse details -> a
+    com.google.api.client.auth.oauth2.TokenErrorResponse getDetails() -> a
+    com.google.api.client.auth.oauth2.TokenResponseException from(com.google.api.client.json.JsonFactory,com.google.api.client.http.HttpResponse) -> a
+com.google.api.client.auth.oauth2.draft10.AccessProtectedResource -> com.google.api.client.auth.oauth2.draft10.AccessProtectedResource:
+    java.util.logging.Logger LOGGER -> a
+    java.util.EnumSet ALLOWED_METHODS -> b
+    java.util.concurrent.locks.Lock tokenLock -> c
+    java.lang.String accessToken -> d
+    com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method method -> e
+    com.google.api.client.http.HttpTransport transport -> f
+    com.google.api.client.json.JsonFactory jsonFactory -> g
+    java.lang.String authorizationServerUrl -> h
+    java.lang.String clientId -> i
+    java.lang.String clientSecret -> j
+    java.lang.String refreshToken -> k
+    java.lang.String getAccessToken() -> a
+    void setAccessToken(java.lang.String) -> a
+    com.google.api.client.http.HttpTransport getTransport() -> b
+    com.google.api.client.json.JsonFactory getJsonFactory() -> c
+    java.lang.String getClientId() -> d
+    java.lang.String getClientSecret() -> e
+    java.lang.String getRefreshToken() -> f
+    boolean refreshToken() -> g
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+    java.lang.String getAccessTokenFromRequest(com.google.api.client.http.HttpRequest) -> c
+    boolean handleResponse(com.google.api.client.http.HttpRequest,com.google.api.client.http.HttpResponse,boolean) -> a
+    boolean executeRefreshToken() -> h
+    boolean executeAccessTokenRequest(com.google.api.client.auth.oauth2.draft10.AccessTokenRequest) -> a
+    void onAccessToken(java.lang.String) -> b
+com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$1 -> com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$1:
+    int[] $SwitchMap$com$google$api$client$auth$oauth2$draft10$AccessProtectedResource$Method -> a
+com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method -> com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method:
+    com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method AUTHORIZATION_HEADER -> a
+    com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method QUERY_PARAMETER -> b
+    com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method FORM_ENCODED_BODY -> c
+    com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method[] $VALUES -> d
+    com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method[] values() -> values
+    com.google.api.client.auth.oauth2.draft10.AccessProtectedResource$Method valueOf(java.lang.String) -> valueOf
+com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse -> com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse:
+    java.lang.String error -> error
+    java.lang.String errorDescription -> errorDescription
+    java.lang.String errorUri -> errorUri
+com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError -> com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError:
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError INVALID_REQUEST -> a
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError INVALID_CLIENT -> b
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError UNAUTHORIZED_CLIENT -> c
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError INVALID_GRANT -> d
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError UNSUPPORTED_GRANT_TYPE -> e
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError INVALID_SCOPE -> f
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError[] $VALUES -> g
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError[] values() -> values
+    com.google.api.client.auth.oauth2.draft10.AccessTokenErrorResponse$KnownError valueOf(java.lang.String) -> valueOf
+com.google.api.client.auth.oauth2.draft10.AccessTokenRequest -> com.google.api.client.auth.oauth2.draft10.AccessTokenRequest:
+    com.google.api.client.http.HttpTransport transport -> a
+    com.google.api.client.json.JsonFactory jsonFactory -> b
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType grantType -> grantType
+    java.lang.String clientId -> clientId
+    java.lang.String clientSecret -> c
+    java.lang.String scope -> scope
+    java.lang.String authorizationServerUrl -> d
+    boolean useBasicAuthorization -> e
+    com.google.api.client.http.HttpResponse executeUnparsed() -> a
+    com.google.api.client.auth.oauth2.draft10.AccessTokenResponse execute() -> b
+com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$AssertionGrant -> com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$AssertionGrant:
+    java.lang.String assertionType -> assertionType
+    java.lang.String assertion -> assertion
+com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$AuthorizationCodeGrant -> com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$AuthorizationCodeGrant:
+    java.lang.String code -> code
+    java.lang.String redirectUri -> redirectUri
+com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType -> com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType:
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType AUTHORIZATION_CODE -> a
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType PASSWORD -> b
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType ASSERTION -> c
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType REFRESH_TOKEN -> d
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType NONE -> e
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType[] $VALUES -> f
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType[] values() -> values
+    com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$GrantType valueOf(java.lang.String) -> valueOf
+com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$RefreshTokenGrant -> com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$RefreshTokenGrant:
+    java.lang.String refreshToken -> refreshToken
+com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$ResourceOwnerPasswordCredentialsGrant -> com.google.api.client.auth.oauth2.draft10.AccessTokenRequest$ResourceOwnerPasswordCredentialsGrant:
+    java.lang.String username -> username
+com.google.api.client.auth.oauth2.draft10.AccessTokenResponse -> com.google.api.client.auth.oauth2.draft10.AccessTokenResponse:
+    java.lang.String accessToken -> accessToken
+    java.lang.Long expiresIn -> expiresIn
+    java.lang.String refreshToken -> refreshToken
+    java.lang.String scope -> scope
+com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl -> com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl:
+    java.lang.String responseType -> responseType
+    java.lang.String clientId -> clientId
+    java.lang.String redirectUri -> redirectUri
+    java.lang.String scope -> scope
+    java.lang.String state -> state
+com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl$ResponseType -> com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl$ResponseType:
+    com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl$ResponseType CODE -> a
+    com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl$ResponseType TOKEN -> b
+    com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl$ResponseType CODE_AND_TOKEN -> c
+    com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl$ResponseType[] $VALUES -> d
+    com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl$ResponseType[] values() -> values
+    com.google.api.client.auth.oauth2.draft10.AuthorizationRequestUrl$ResponseType valueOf(java.lang.String) -> valueOf
+com.google.api.client.auth.oauth2.draft10.AuthorizationResponse -> com.google.api.client.auth.oauth2.draft10.AuthorizationResponse:
+    java.lang.String code -> code
+    java.lang.String accessToken -> accessToken
+    java.lang.Long expiresIn -> expiresIn
+    java.lang.String scope -> scope
+    java.lang.String error -> error
+    java.lang.String errorDescription -> errorDescription
+    java.lang.String errorUri -> errorUri
+    java.lang.String state -> state
+com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError -> com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError:
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError INVALID_REQUEST -> a
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError INVALID_CLIENT -> b
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError UNAUTHORIZED_CLIENT -> c
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError REDIRECT_URI_MISMATCH -> d
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError ACCESS_DENIED -> e
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError UNSUPPORTED_RESPONSE_TYPE -> f
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError INVALID_SCOPE -> g
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError[] $VALUES -> h
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError[] values() -> values
+    com.google.api.client.auth.oauth2.draft10.AuthorizationResponse$KnownError valueOf(java.lang.String) -> valueOf
+com.google.api.client.auth.oauth2.draft10.InstalledApp -> com.google.api.client.auth.oauth2.draft10.InstalledApp:
+com.google.api.client.auth.openidconnect.IdTokenResponse -> com.google.api.client.auth.openidconnect.IdTokenResponse:
+    java.lang.String idToken -> idToken
+com.google.api.client.auth.security.PrivateKeys -> com.google.api.client.auth.security.PrivateKeys:
+com.google.api.client.extensions.android2.AndroidHttp -> com.google.api.client.extensions.android2.AndroidHttp:
+    com.google.api.client.http.HttpTransport newCompatibleTransport() -> a
+    boolean isGingerbreadOrHigher() -> b
+com.google.api.client.googleapis.GoogleHeaders -> com.google.api.client.googleapis.GoogleHeaders:
+    com.google.api.client.util.escape.PercentEscaper SLUG_ESCAPER -> a
+    java.lang.String gdataVersion -> gdataVersion
+    java.lang.String slug -> slug
+    java.lang.String gdataClient -> gdataClient
+    java.lang.String gdataKey -> gdataKey
+    java.lang.String googAcl -> googAcl
+    java.lang.String googCopySource -> googCopySource
+    java.lang.String googCopySourceIfMatch -> googCopySourceIfMatch
+    java.lang.String googCopySourceIfNoneMatch -> googCopySourceIfNoneMatch
+    java.lang.String googCopySourceIfModifiedSince -> googCopySourceIfModifiedSince
+    java.lang.String googCopySourceIfUnmodifiedSince -> googCopySourceIfUnmodifiedSince
+    java.lang.String googDate -> googDate
+    java.lang.String googMetadataDirective -> googMetadataDirective
+    java.lang.String methodOverride -> methodOverride
+    long uploadContentLength -> uploadContentLength
+    java.lang.String uploadContentType -> uploadContentType
+    java.lang.String getGoogleLoginValue(java.lang.String) -> a
+com.google.api.client.googleapis.GoogleUrl -> com.google.api.client.googleapis.GoogleUrl:
+    java.lang.Boolean prettyprint -> prettyprint
+    java.lang.String alt -> alt
+    java.lang.String fields -> fields
+    java.lang.String key -> key
+    java.lang.String userip -> userip
+    com.google.api.client.googleapis.GoogleUrl clone() -> a
+    com.google.api.client.http.GenericUrl clone() -> b
+    com.google.api.client.util.GenericData clone() -> c
+    java.lang.Object clone() -> clone
+com.google.api.client.googleapis.MediaExponentialBackOffPolicy -> com.google.api.client.googleapis.MediaExponentialBackOffPolicy:
+    com.google.api.client.googleapis.MediaHttpUploader uploader -> b
+    long getNextBackOffMillis() -> a
+com.google.api.client.googleapis.MediaHttpUploader -> com.google.api.client.googleapis.MediaHttpUploader:
+    com.google.api.client.http.AbstractInputStreamContent mediaContent -> a
+    com.google.api.client.http.HttpRequestFactory requestFactory -> b
+    long mediaContentLength -> c
+    com.google.api.client.http.HttpRequest currentRequest -> d
+    java.io.InputStream contentInputStream -> e
+    long bytesUploaded -> f
+    int chunkSize -> g
+    long getMediaContentLength() -> b
+    void setContentAndHeadersOnCurrentRequest(long) -> a
+    void serverErrorCallback() -> a
+    long getNextByteIndex(java.lang.String) -> a
+com.google.api.client.googleapis.MediaHttpUploader$UploadState -> com.google.api.client.googleapis.MediaHttpUploader$UploadState:
+    com.google.api.client.googleapis.MediaHttpUploader$UploadState NOT_STARTED -> a
+    com.google.api.client.googleapis.MediaHttpUploader$UploadState INITIATION_STARTED -> b
+    com.google.api.client.googleapis.MediaHttpUploader$UploadState INITIATION_COMPLETE -> c
+    com.google.api.client.googleapis.MediaHttpUploader$UploadState MEDIA_IN_PROGRESS -> d
+    com.google.api.client.googleapis.MediaHttpUploader$UploadState MEDIA_COMPLETE -> e
+    com.google.api.client.googleapis.MediaHttpUploader$UploadState[] $VALUES -> f
+    com.google.api.client.googleapis.MediaHttpUploader$UploadState[] values() -> values
+    com.google.api.client.googleapis.MediaHttpUploader$UploadState valueOf(java.lang.String) -> valueOf
+com.google.api.client.googleapis.MediaHttpUploaderProgressListener -> com.google.api.client.googleapis.MediaHttpUploaderProgressListener:
+com.google.api.client.googleapis.MethodOverride -> com.google.api.client.googleapis.MethodOverride:
+    java.util.EnumSet override -> a
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+    boolean overrideThisMethod(com.google.api.client.http.HttpRequest) -> c
+com.google.api.client.googleapis.MethodOverride$1 -> com.google.api.client.googleapis.MethodOverride$1:
+    int[] $SwitchMap$com$google$api$client$http$HttpMethod -> a
+com.google.api.client.googleapis.auth.AuthKeyValueParser -> com.google.api.client.googleapis.auth.AuthKeyValueParser:
+    com.google.api.client.googleapis.auth.AuthKeyValueParser INSTANCE -> a
+    java.lang.String getContentType() -> a
+    java.lang.Object parse(com.google.api.client.http.HttpResponse,java.lang.Class) -> a
+com.google.api.client.googleapis.auth.clientlogin.ClientLogin -> com.google.api.client.googleapis.auth.clientlogin.ClientLogin:
+    com.google.api.client.http.GenericUrl serverUrl -> a
+    java.lang.String applicationName -> applicationName
+    java.lang.String authTokenType -> authTokenType
+    java.lang.String username -> username
+    java.lang.String password -> password
+    java.lang.String accountType -> accountType
+    java.lang.String captchaToken -> captchaToken
+    java.lang.String captchaAnswer -> captchaAnswer
+com.google.api.client.googleapis.auth.clientlogin.ClientLogin$ErrorInfo -> com.google.api.client.googleapis.auth.clientlogin.ClientLogin$ErrorInfo:
+    java.lang.String error -> error
+    java.lang.String url -> url
+    java.lang.String captchaToken -> captchaToken
+    java.lang.String captchaUrl -> captchaUrl
+com.google.api.client.googleapis.auth.clientlogin.ClientLogin$Response -> com.google.api.client.googleapis.auth.clientlogin.ClientLogin$Response:
+    java.lang.String auth -> auth
+    java.lang.String getAuthorizationHeaderValue() -> a
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+com.google.api.client.googleapis.auth.clientlogin.ClientLoginResponseException -> com.google.api.client.googleapis.auth.clientlogin.ClientLoginResponseException:
+com.google.api.client.googleapis.auth.oauth.GoogleOAuthAuthorizeTemporaryTokenUrl -> com.google.api.client.googleapis.auth.oauth.GoogleOAuthAuthorizeTemporaryTokenUrl:
+    java.lang.String template -> template
+    java.lang.String hostedDomain -> hostedDomain
+    java.lang.String language -> language
+com.google.api.client.googleapis.auth.oauth.GoogleOAuthDomainWideDelegation -> com.google.api.client.googleapis.auth.oauth.GoogleOAuthDomainWideDelegation:
+    java.lang.String requestorId -> a
+    com.google.api.client.auth.oauth.OAuthParameters parameters -> b
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+com.google.api.client.googleapis.auth.oauth.GoogleOAuthDomainWideDelegation$Url -> com.google.api.client.googleapis.auth.oauth.GoogleOAuthDomainWideDelegation$Url:
+    java.lang.String requestorId -> requestorId
+com.google.api.client.googleapis.auth.oauth.GoogleOAuthGetAccessToken -> com.google.api.client.googleapis.auth.oauth.GoogleOAuthGetAccessToken:
+com.google.api.client.googleapis.auth.oauth.GoogleOAuthGetTemporaryToken -> com.google.api.client.googleapis.auth.oauth.GoogleOAuthGetTemporaryToken:
+    java.lang.String displayName -> displayName
+    java.lang.String scope -> scope
+com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow -> com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow:
+com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow$Builder -> com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow$Builder:
+com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeRequestUrl -> com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeRequestUrl:
+    java.lang.String approvalPrompt -> approvalPrompt
+    java.lang.String accessType -> accessType
+com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest -> com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest:
+    com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest setGrantType(java.lang.String) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeTokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse execute() -> d
+    com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> a
+    com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest setGrantType(java.lang.String) -> a
+    com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> a
+    com.google.api.client.auth.oauth2.AuthorizationCodeTokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> a
+    com.google.api.client.auth.oauth2.TokenResponse execute() -> b
+    com.google.api.client.auth.oauth2.TokenRequest setGrantType(java.lang.String) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> b
+com.google.api.client.googleapis.auth.oauth2.GoogleBrowserClientRequestUrl -> com.google.api.client.googleapis.auth.oauth2.GoogleBrowserClientRequestUrl:
+    java.lang.String approvalPrompt -> approvalPrompt
+com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets -> com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets:
+    com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets$Details installed -> installed
+    com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets$Details web -> web
+com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets$Details -> com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets$Details:
+    java.lang.String clientId -> clientId
+    java.lang.String clientSecret -> clientSecret
+    java.util.List redirectUris -> redirectUris
+    java.lang.String authUri -> authUri
+    java.lang.String tokenUri -> tokenUri
+com.google.api.client.googleapis.auth.oauth2.GoogleCredential -> com.google.api.client.googleapis.auth.oauth2.GoogleCredential:
+    java.lang.String serviceAccountId -> b
+    java.lang.String serviceAccountScopes -> c
+    java.security.PrivateKey serviceAccountPrivateKey -> d
+    java.lang.String serviceAccountUser -> e
+    com.google.api.client.googleapis.auth.oauth2.GoogleCredential setAccessToken(java.lang.String) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleCredential setRefreshToken(java.lang.String) -> d
+    com.google.api.client.googleapis.auth.oauth2.GoogleCredential setExpirationTimeMilliseconds(java.lang.Long) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleCredential setExpiresInSeconds(java.lang.Long) -> d
+    com.google.api.client.googleapis.auth.oauth2.GoogleCredential setFromTokenResponse(com.google.api.client.auth.oauth2.TokenResponse) -> b
+    com.google.api.client.auth.oauth2.TokenResponse executeRefreshToken() -> h
+    com.google.api.client.auth.oauth2.Credential setFromTokenResponse(com.google.api.client.auth.oauth2.TokenResponse) -> a
+    com.google.api.client.auth.oauth2.Credential setExpiresInSeconds(java.lang.Long) -> b
+    com.google.api.client.auth.oauth2.Credential setExpirationTimeMilliseconds(java.lang.Long) -> a
+    com.google.api.client.auth.oauth2.Credential setRefreshToken(java.lang.String) -> b
+    com.google.api.client.auth.oauth2.Credential setAccessToken(java.lang.String) -> a
+com.google.api.client.googleapis.auth.oauth2.GoogleCredential$Builder -> com.google.api.client.googleapis.auth.oauth2.GoogleCredential$Builder:
+    com.google.api.client.googleapis.auth.oauth2.GoogleCredential$Builder setTokenServerEncodedUrl(java.lang.String) -> b
+    com.google.api.client.auth.oauth2.Credential$Builder setTokenServerEncodedUrl(java.lang.String) -> a
+com.google.api.client.googleapis.auth.oauth2.GoogleIdToken -> com.google.api.client.googleapis.auth.oauth2.GoogleIdToken:
+com.google.api.client.googleapis.auth.oauth2.GoogleIdToken$Payload -> com.google.api.client.googleapis.auth.oauth2.GoogleIdToken$Payload:
+    java.lang.String userId -> userId
+    java.lang.String issuee -> issuee
+    java.lang.String accessTokenHash -> accessTokenHash
+    java.lang.String hostedDomain -> hostedDomain
+com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier -> com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier:
+    java.util.regex.Pattern MAX_AGE_PATTERN -> a
+com.google.api.client.googleapis.auth.oauth2.GoogleOAuthConstants -> com.google.api.client.googleapis.auth.oauth2.GoogleOAuthConstants:
+com.google.api.client.googleapis.auth.oauth2.GoogleRefreshTokenRequest -> com.google.api.client.googleapis.auth.oauth2.GoogleRefreshTokenRequest:
+    com.google.api.client.googleapis.auth.oauth2.GoogleRefreshTokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleRefreshTokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleRefreshTokenRequest setGrantType(java.lang.String) -> d
+    com.google.api.client.googleapis.auth.oauth2.GoogleRefreshTokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> c
+    com.google.api.client.googleapis.auth.oauth2.GoogleRefreshTokenRequest setRefreshToken(java.lang.String) -> e
+    com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse execute() -> d
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setRefreshToken(java.lang.String) -> c
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> a
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setGrantType(java.lang.String) -> a
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> a
+    com.google.api.client.auth.oauth2.RefreshTokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> a
+    com.google.api.client.auth.oauth2.TokenResponse execute() -> b
+    com.google.api.client.auth.oauth2.TokenRequest setGrantType(java.lang.String) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setTokenServerUrl(com.google.api.client.http.GenericUrl) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setClientAuthentication(com.google.api.client.http.HttpExecuteInterceptor) -> b
+    com.google.api.client.auth.oauth2.TokenRequest setRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> b
+com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse -> com.google.api.client.googleapis.auth.oauth2.GoogleTokenResponse:
+com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessProtectedResource -> com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessProtectedResource:
+    boolean executeRefreshToken() -> h
+com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessTokenRequest -> com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessTokenRequest:
+    void init(com.google.api.client.auth.oauth2.draft10.AccessTokenRequest) -> a
+com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessTokenRequest$GoogleAssertionGrant -> com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessTokenRequest$GoogleAssertionGrant:
+com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessTokenRequest$GoogleAuthorizationCodeGrant -> com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessTokenRequest$GoogleAuthorizationCodeGrant:
+com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessTokenRequest$GoogleRefreshTokenGrant -> com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAccessTokenRequest$GoogleRefreshTokenGrant:
+com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAuthorizationRequestUrl -> com.google.api.client.googleapis.auth.oauth2.draft10.GoogleAuthorizationRequestUrl:
+    java.lang.String approvalPrompt -> approvalPrompt
+    java.lang.String accessType -> accessType
+com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager -> com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager:
+    android.accounts.AccountManager manager -> a
+    android.accounts.AccountManager getAccountManager() -> a
+    android.accounts.Account[] getAccounts() -> b
+    android.accounts.Account getAccountByName(java.lang.String) -> a
+    void invalidateAuthToken(java.lang.String) -> b
+com.google.api.client.googleapis.json.AbstractJsonFeedParser -> com.google.api.client.googleapis.json.AbstractJsonFeedParser:
+    java.lang.Class feedClass -> a
+com.google.api.client.googleapis.json.AbstractJsonFeedParser$StopAtItems -> com.google.api.client.googleapis.json.AbstractJsonFeedParser$StopAtItems:
+    com.google.api.client.googleapis.json.AbstractJsonFeedParser this$0 -> a
+    boolean stopAt(java.lang.Object,java.lang.String) -> a
+com.google.api.client.googleapis.json.GoogleJsonError -> com.google.api.client.googleapis.json.GoogleJsonError:
+    java.util.List errors -> errors
+    int code -> code
+    java.lang.String message -> message
+com.google.api.client.googleapis.json.GoogleJsonError$ErrorInfo -> com.google.api.client.googleapis.json.GoogleJsonError$ErrorInfo:
+    java.lang.String domain -> domain
+    java.lang.String reason -> reason
+    java.lang.String message -> message
+    java.lang.String location -> location
+    java.lang.String locationType -> locationType
+com.google.api.client.googleapis.json.GoogleJsonResponseException -> com.google.api.client.googleapis.json.GoogleJsonResponseException:
+    com.google.api.client.googleapis.json.GoogleJsonError details -> a
+    com.google.api.client.json.JsonFactory jsonFactory -> b
+    com.google.api.client.googleapis.json.GoogleJsonResponseException from(com.google.api.client.json.JsonFactory,com.google.api.client.http.HttpResponse) -> a
+    com.google.api.client.http.HttpResponse execute(com.google.api.client.json.JsonFactory,com.google.api.client.http.HttpRequest) -> a
+com.google.api.client.googleapis.json.GoogleJsonRpcHttpTransport -> com.google.api.client.googleapis.json.GoogleJsonRpcHttpTransport:
+    java.lang.String contentType -> a
+    java.lang.String accept -> b
+com.google.api.client.googleapis.json.JsonCContent -> com.google.api.client.googleapis.json.JsonCContent:
+    void writeTo(java.io.OutputStream) -> a
+com.google.api.client.googleapis.json.JsonCParser -> com.google.api.client.googleapis.json.JsonCParser:
+    java.lang.Object parse(com.google.api.client.http.HttpResponse,java.lang.Class) -> a
+    com.google.api.client.json.JsonParser parserForResponse(com.google.api.client.json.JsonFactory,com.google.api.client.http.HttpResponse) -> a
+com.google.api.client.googleapis.json.JsonFeedParser -> com.google.api.client.googleapis.json.JsonFeedParser:
+com.google.api.client.googleapis.json.JsonMultiKindFeedParser -> com.google.api.client.googleapis.json.JsonMultiKindFeedParser:
+com.google.api.client.googleapis.services.GoogleClient -> com.google.api.client.googleapis.services.GoogleClient:
+    com.google.api.client.http.HttpRequest buildHttpRequest(com.google.api.client.http.HttpMethod,com.google.api.client.http.GenericUrl,java.lang.Object) -> a
+    com.google.api.client.http.HttpResponse executeUnparsed(com.google.api.client.http.HttpMethod,com.google.api.client.http.GenericUrl,java.lang.Object) -> b
+com.google.api.client.googleapis.services.GoogleClient$Builder -> com.google.api.client.googleapis.services.GoogleClient$Builder:
+com.google.api.client.googleapis.services.GoogleKeyInitializer -> com.google.api.client.googleapis.services.GoogleKeyInitializer:
+    java.lang.String key -> a
+    void initialize(com.google.api.client.http.json.JsonHttpRequest) -> a
+com.google.api.client.googleapis.xml.atom.AtomPatchContent -> com.google.api.client.googleapis.xml.atom.AtomPatchContent:
+com.google.api.client.googleapis.xml.atom.AtomPatchRelativeToOriginalContent -> com.google.api.client.googleapis.xml.atom.AtomPatchRelativeToOriginalContent:
+    java.lang.Object patchedEntry -> a
+    java.lang.Object originalEntry -> b
+    void writeTo(org.xmlpull.v1.XmlSerializer) -> a
+com.google.api.client.googleapis.xml.atom.GoogleAtom -> com.google.api.client.googleapis.xml.atom.GoogleAtom:
+    java.util.Map computePatch(java.lang.Object,java.lang.Object) -> a
+    com.google.api.client.util.ArrayMap computePatchInternal(com.google.api.client.googleapis.xml.atom.GoogleAtom$FieldsMask,java.lang.Object,java.lang.Object) -> a
+com.google.api.client.googleapis.xml.atom.GoogleAtom$FieldsMask -> com.google.api.client.googleapis.xml.atom.GoogleAtom$FieldsMask:
+    int numDifferences -> a
+    java.lang.StringBuilder buf -> b
+    void append(java.lang.String) -> a
+    void append(java.lang.String,com.google.api.client.googleapis.xml.atom.GoogleAtom$FieldsMask) -> a
+com.google.api.client.googleapis.xml.atom.MultiKindFeedParser -> com.google.api.client.googleapis.xml.atom.MultiKindFeedParser:
+com.google.api.client.http.AbstractHttpContent -> com.google.api.client.http.AbstractHttpContent:
+    long computedLength -> a
+    java.lang.String getEncoding() -> a
+    long getLength() -> b
+    long computeLength() -> c
+    boolean retrySupported() -> d
+com.google.api.client.http.AbstractInputStreamContent -> com.google.api.client.http.AbstractInputStreamContent:
+    java.lang.String type -> a
+    java.lang.String encoding -> b
+    boolean closeInputStream -> c
+    java.io.InputStream getInputStream() -> c
+    void writeTo(java.io.OutputStream) -> a
+    java.lang.String getEncoding() -> a
+    java.lang.String getType() -> e
+    com.google.api.client.http.AbstractInputStreamContent setType(java.lang.String) -> a
+    com.google.api.client.http.AbstractInputStreamContent setCloseInputStream(boolean) -> a
+    void copy(java.io.InputStream,java.io.OutputStream) -> a
+    void copy(java.io.InputStream,java.io.OutputStream,boolean) -> a
+com.google.api.client.http.BackOffPolicy -> com.google.api.client.http.BackOffPolicy:
+    boolean isBackOffRequired(int) -> a
+    void reset() -> b
+    long getNextBackOffMillis() -> a
+com.google.api.client.http.BasicAuthentication -> com.google.api.client.http.BasicAuthentication:
+    java.lang.String username -> a
+    java.lang.String password -> b
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+com.google.api.client.http.ByteArrayContent -> com.google.api.client.http.ByteArrayContent:
+    byte[] byteArray -> a
+    int offset -> b
+    int length -> c
+    com.google.api.client.http.ByteArrayContent fromString(java.lang.String,java.lang.String) -> a
+    long getLength() -> b
+    boolean retrySupported() -> d
+    java.io.InputStream getInputStream() -> c
+    com.google.api.client.http.ByteArrayContent setType(java.lang.String) -> b
+    com.google.api.client.http.ByteArrayContent setCloseInputStream(boolean) -> b
+    com.google.api.client.http.AbstractInputStreamContent setCloseInputStream(boolean) -> a
+    com.google.api.client.http.AbstractInputStreamContent setType(java.lang.String) -> a
+com.google.api.client.http.ByteCountingOutputStream -> com.google.api.client.http.ByteCountingOutputStream:
+    long count -> a
+    void write(byte[],int,int) -> write
+    void write(int) -> write
+com.google.api.client.http.ExponentialBackOffPolicy -> com.google.api.client.http.ExponentialBackOffPolicy:
+    int currentIntervalMillis -> b
+    int initialIntervalMillis -> c
+    double randomizationFactor -> d
+    double multiplier -> e
+    int maxIntervalMillis -> f
+    long startTimeNanos -> a
+    int maxElapsedTimeMillis -> g
+    boolean isBackOffRequired(int) -> a
+    void reset() -> b
+    long getNextBackOffMillis() -> a
+    int getRandomValueFromInterval(double,double,int) -> a
+    long getElapsedTimeMillis() -> c
+    void incrementCurrentInterval() -> d
+com.google.api.client.http.ExponentialBackOffPolicy$Builder -> com.google.api.client.http.ExponentialBackOffPolicy$Builder:
+    int initialIntervalMillis -> a
+    double randomizationFactor -> b
+    double multiplier -> c
+    int maxIntervalMillis -> d
+    int maxElapsedTimeMillis -> e
+com.google.api.client.http.FileContent -> com.google.api.client.http.FileContent:
+    java.io.File file -> a
+    long getLength() -> b
+    boolean retrySupported() -> d
+    java.io.InputStream getInputStream() -> c
+    com.google.api.client.http.FileContent setType(java.lang.String) -> b
+    com.google.api.client.http.FileContent setCloseInputStream(boolean) -> b
+    com.google.api.client.http.AbstractInputStreamContent setCloseInputStream(boolean) -> a
+    com.google.api.client.http.AbstractInputStreamContent setType(java.lang.String) -> a
+com.google.api.client.http.GZipContent -> com.google.api.client.http.GZipContent:
+    com.google.api.client.http.HttpContent httpContent -> a
+    java.lang.String contentType -> b
+    void writeTo(java.io.OutputStream) -> a
+    java.lang.String getEncoding() -> a
+    java.lang.String getType() -> e
+    boolean retrySupported() -> d
+com.google.api.client.http.GenericUrl -> com.google.api.client.http.GenericUrl:
+    com.google.api.client.util.escape.Escaper URI_FRAGMENT_ESCAPER -> a
+    java.lang.String scheme -> b
+    java.lang.String host -> c
+    int port -> d
+    java.util.List pathParts -> e
+    java.lang.String fragment -> h
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.String toString() -> toString
+    com.google.api.client.http.GenericUrl clone() -> b
+    java.lang.String getScheme() -> d
+    void setScheme(java.lang.String) -> a
+    java.lang.String getHost() -> e
+    void setHost(java.lang.String) -> b
+    int getPort() -> f
+    void setPort(int) -> a
+    java.util.List getPathParts() -> g
+    void setPathParts(java.util.List) -> a
+    java.lang.String getFragment() -> h
+    java.lang.String build() -> i
+    void setRawPath(java.lang.String) -> c
+    java.util.List toPathParts(java.lang.String) -> d
+    void appendRawPathFromParts(java.lang.StringBuilder) -> a
+    void addQueryParams(java.util.Set,java.lang.StringBuilder) -> a
+    boolean appendParam(boolean,java.lang.StringBuilder,java.lang.String,java.lang.Object) -> a
+    com.google.api.client.util.GenericData clone() -> c
+    java.lang.Object clone() -> clone
+com.google.api.client.http.HttpContent -> com.google.api.client.http.HttpContent:
+    long getLength() -> b
+    java.lang.String getEncoding() -> a
+    java.lang.String getType() -> e
+    void writeTo(java.io.OutputStream) -> a
+    boolean retrySupported() -> d
+com.google.api.client.http.HttpExecuteInterceptor -> com.google.api.client.http.HttpExecuteInterceptor:
+    void intercept(com.google.api.client.http.HttpRequest) -> b
+com.google.api.client.http.HttpHeaders -> com.google.api.client.http.HttpHeaders:
+    java.lang.String accept -> accept
+    java.lang.String acceptEncoding -> acceptEncoding
+    java.lang.String authorization -> authorization
+    java.lang.String cacheControl -> cacheControl
+    java.lang.String contentEncoding -> contentEncoding
+    java.lang.String contentLength -> contentLength
+    java.lang.String contentMD5 -> contentMD5
+    java.lang.String contentRange -> contentRange
+    java.lang.String contentType -> contentType
+    java.lang.String cookie -> cookie
+    java.lang.String date -> date
+    java.lang.String etag -> etag
+    java.lang.String expires -> expires
+    java.lang.String ifModifiedSince -> ifModifiedSince
+    java.lang.String ifMatch -> ifMatch
+    java.lang.String ifNoneMatch -> ifNoneMatch
+    java.lang.String ifUnmodifiedSince -> ifUnmodifiedSince
+    java.lang.String lastModified -> lastModified
+    java.lang.String location -> location
+    java.lang.String mimeVersion -> mimeVersion
+    java.lang.String range -> range
+    java.lang.String retryAfter -> retryAfter
+    java.lang.String userAgent -> userAgent
+    java.lang.String authenticate -> authenticate
+    com.google.api.client.http.HttpHeaders clone() -> a
+    java.lang.String getAuthorization() -> b
+    void setAuthorization(java.lang.String) -> b
+    void setContentRange(java.lang.String) -> c
+    java.lang.String getLocation() -> d
+    java.lang.String getRange() -> e
+    java.lang.String getUserAgent() -> f
+    void setUserAgent(java.lang.String) -> d
+    void setBasicAuthentication(java.lang.String,java.lang.String) -> a
+    java.util.HashMap getFieldNameMap(java.lang.Class) -> a
+    com.google.api.client.util.GenericData clone() -> c
+    java.lang.Object clone() -> clone
+com.google.api.client.http.HttpMethod -> com.google.api.client.http.HttpMethod:
+    com.google.api.client.http.HttpMethod DELETE -> a
+    com.google.api.client.http.HttpMethod GET -> b
+    com.google.api.client.http.HttpMethod HEAD -> c
+    com.google.api.client.http.HttpMethod PATCH -> d
+    com.google.api.client.http.HttpMethod PUT -> e
+    com.google.api.client.http.HttpMethod POST -> f
+    com.google.api.client.http.HttpMethod[] $VALUES -> g
+    com.google.api.client.http.HttpMethod[] values() -> values
+    com.google.api.client.http.HttpMethod valueOf(java.lang.String) -> valueOf
+com.google.api.client.http.HttpParser -> com.google.api.client.http.HttpParser:
+    java.lang.String getContentType() -> a
+    java.lang.Object parse(com.google.api.client.http.HttpResponse,java.lang.Class) -> a
+com.google.api.client.http.HttpRequest -> com.google.api.client.http.HttpRequest:
+    com.google.api.client.http.HttpExecuteInterceptor interceptor -> a
+    com.google.api.client.http.HttpHeaders headers -> b
+    com.google.api.client.http.HttpHeaders responseHeaders -> c
+    boolean allowEmptyContent -> d
+    int numRetries -> e
+    boolean disableContentLogging -> f
+    int contentLoggingLimit -> g
+    com.google.api.client.http.HttpContent content -> h
+    com.google.api.client.http.HttpTransport transport -> i
+    com.google.api.client.http.HttpMethod method -> j
+    com.google.api.client.http.GenericUrl url -> k
+    int connectTimeout -> l
+    int readTimeout -> m
+    com.google.api.client.http.HttpUnsuccessfulResponseHandler unsuccessfulResponseHandler -> n
+    java.util.Map contentTypeToParserMap -> o
+    boolean enableGZipContent -> p
+    com.google.api.client.http.BackOffPolicy backOffPolicy -> q
+    boolean followRedirects -> r
+    boolean throwExceptionOnExecuteError -> s
+    com.google.api.client.http.HttpTransport getTransport() -> a
+    com.google.api.client.http.HttpMethod getMethod() -> b
+    com.google.api.client.http.HttpRequest setMethod(com.google.api.client.http.HttpMethod) -> a
+    com.google.api.client.http.GenericUrl getUrl() -> c
+    com.google.api.client.http.HttpRequest setUrl(com.google.api.client.http.GenericUrl) -> a
+    com.google.api.client.http.HttpContent getContent() -> d
+    com.google.api.client.http.HttpRequest setContent(com.google.api.client.http.HttpContent) -> a
+    com.google.api.client.http.HttpRequest setEnableGZipContent(boolean) -> a
+    com.google.api.client.http.HttpHeaders getHeaders() -> e
+    com.google.api.client.http.HttpHeaders getResponseHeaders() -> f
+    com.google.api.client.http.HttpExecuteInterceptor getInterceptor() -> g
+    com.google.api.client.http.HttpRequest setInterceptor(com.google.api.client.http.HttpExecuteInterceptor) -> a
+    com.google.api.client.http.HttpRequest setUnsuccessfulResponseHandler(com.google.api.client.http.HttpUnsuccessfulResponseHandler) -> a
+    com.google.api.client.http.HttpRequest setAllowEmptyContent(boolean) -> b
+    boolean isAllowEmptyContent() -> h
+    void addParser(com.google.api.client.http.HttpParser) -> a
+    com.google.api.client.http.HttpParser getParser(java.lang.String) -> a
+    boolean getFollowRedirects() -> i
+    boolean getThrowExceptionOnExecuteError() -> j
+    com.google.api.client.http.HttpRequest setThrowExceptionOnExecuteError(boolean) -> c
+    com.google.api.client.http.HttpResponse execute() -> k
+    void handleRedirect(com.google.api.client.http.HttpResponse) -> a
+    boolean isRedirected(com.google.api.client.http.HttpResponse) -> b
+    void sleep(long) -> a
+    void addHeader(java.util.logging.Logger,java.lang.StringBuilder,com.google.api.client.http.LowLevelHttpRequest,java.lang.String,java.lang.Object) -> a
+    java.lang.String normalizeMediaType(java.lang.String) -> b
+com.google.api.client.http.HttpRequest$1 -> com.google.api.client.http.HttpRequest$1:
+    int[] $SwitchMap$com$google$api$client$http$HttpMethod -> a
+com.google.api.client.http.HttpRequestFactory -> com.google.api.client.http.HttpRequestFactory:
+    com.google.api.client.http.HttpTransport transport -> a
+    com.google.api.client.http.HttpRequestInitializer initializer -> b
+    com.google.api.client.http.HttpRequest buildRequest(com.google.api.client.http.HttpMethod,com.google.api.client.http.GenericUrl,com.google.api.client.http.HttpContent) -> a
+    com.google.api.client.http.HttpRequest buildPostRequest(com.google.api.client.http.GenericUrl,com.google.api.client.http.HttpContent) -> a
+    com.google.api.client.http.HttpRequest buildPutRequest(com.google.api.client.http.GenericUrl,com.google.api.client.http.HttpContent) -> b
+com.google.api.client.http.HttpRequestInitializer -> com.google.api.client.http.HttpRequestInitializer:
+    void initialize(com.google.api.client.http.HttpRequest) -> a
+com.google.api.client.http.HttpResponse -> com.google.api.client.http.HttpResponse:
+    java.io.InputStream content -> a
+    java.lang.String contentEncoding -> b
+    long contentLength -> c
+    java.lang.String contentType -> d
+    com.google.api.client.http.HttpHeaders headers -> e
+    com.google.api.client.http.LowLevelHttpResponse response -> f
+    int statusCode -> g
+    java.lang.String statusMessage -> h
+    com.google.api.client.http.HttpTransport transport -> i
+    com.google.api.client.http.HttpRequest request -> j
+    boolean disableContentLogging -> k
+    int contentLoggingLimit -> l
+    com.google.api.client.http.HttpResponse setDisableContentLogging(boolean) -> a
+    com.google.api.client.http.HttpResponse setContentLoggingLimit(int) -> a
+    java.lang.String getContentType() -> a
+    com.google.api.client.http.HttpHeaders getHeaders() -> b
+    boolean isSuccessStatusCode() -> c
+    int getStatusCode() -> d
+    java.lang.String getStatusMessage() -> e
+    java.lang.Object parseValue(java.lang.reflect.Type,java.util.List,java.lang.String) -> a
+    java.io.InputStream getContent() -> f
+    void ignore() -> g
+    com.google.api.client.http.HttpParser getParser() -> h
+    java.lang.Object parseAs(java.lang.Class) -> a
+    java.lang.String parseAsString() -> i
+com.google.api.client.http.HttpResponseException -> com.google.api.client.http.HttpResponseException:
+    int statusCode -> a
+    com.google.api.client.http.HttpHeaders headers -> b
+    com.google.api.client.http.HttpResponse response -> c
+    int getStatusCode() -> b
+    java.lang.String computeMessageWithContent(com.google.api.client.http.HttpResponse) -> b
+    java.lang.StringBuilder computeMessageBuffer(com.google.api.client.http.HttpResponse) -> a
+com.google.api.client.http.HttpStatusCodes -> com.google.api.client.http.HttpStatusCodes:
+    boolean isSuccess(int) -> a
+com.google.api.client.http.HttpTransport -> com.google.api.client.http.HttpTransport:
+    java.util.logging.Logger LOGGER -> a
+    com.google.api.client.http.HttpRequestFactory createRequestFactory() -> a
+    com.google.api.client.http.HttpRequestFactory createRequestFactory(com.google.api.client.http.HttpRequestInitializer) -> a
+    com.google.api.client.http.HttpRequest buildRequest() -> b
+    boolean supportsHead() -> c
+    boolean supportsPatch() -> d
+    com.google.api.client.http.LowLevelHttpRequest buildDeleteRequest(java.lang.String) -> a
+    com.google.api.client.http.LowLevelHttpRequest buildGetRequest(java.lang.String) -> b
+    com.google.api.client.http.LowLevelHttpRequest buildHeadRequest(java.lang.String) -> c
+    com.google.api.client.http.LowLevelHttpRequest buildPatchRequest(java.lang.String) -> d
+    com.google.api.client.http.LowLevelHttpRequest buildPostRequest(java.lang.String) -> e
+    com.google.api.client.http.LowLevelHttpRequest buildPutRequest(java.lang.String) -> f
+com.google.api.client.http.HttpUnsuccessfulResponseHandler -> com.google.api.client.http.HttpUnsuccessfulResponseHandler:
+    boolean handleResponse(com.google.api.client.http.HttpRequest,com.google.api.client.http.HttpResponse,boolean) -> a
+com.google.api.client.http.InputStreamContent -> com.google.api.client.http.InputStreamContent:
+    long length -> a
+    boolean retrySupported -> b
+    java.io.InputStream inputStream -> c
+    long getLength() -> b
+    boolean retrySupported() -> d
+    com.google.api.client.http.InputStreamContent setRetrySupported(boolean) -> b
+    java.io.InputStream getInputStream() -> c
+    com.google.api.client.http.InputStreamContent setType(java.lang.String) -> b
+    com.google.api.client.http.InputStreamContent setCloseInputStream(boolean) -> c
+    com.google.api.client.http.InputStreamContent setLength(long) -> a
+    com.google.api.client.http.AbstractInputStreamContent setCloseInputStream(boolean) -> a
+    com.google.api.client.http.AbstractInputStreamContent setType(java.lang.String) -> a
+com.google.api.client.http.LogContent -> com.google.api.client.http.LogContent:
+    com.google.api.client.http.HttpContent httpContent -> a
+    java.lang.String contentType -> b
+    java.lang.String contentEncoding -> c
+    long contentLength -> d
+    int contentLoggingLimit -> e
+    void writeTo(java.io.OutputStream) -> a
+    java.lang.String getEncoding() -> a
+    long getLength() -> b
+    java.lang.String getType() -> e
+    boolean isTextBasedContentType(java.lang.String) -> a
+    boolean retrySupported() -> d
+com.google.api.client.http.LowLevelHttpRequest -> com.google.api.client.http.LowLevelHttpRequest:
+    void addHeader(java.lang.String,java.lang.String) -> a
+    void setContent(com.google.api.client.http.HttpContent) -> a
+    void setTimeout(int,int) -> a
+    com.google.api.client.http.LowLevelHttpResponse execute() -> a
+com.google.api.client.http.LowLevelHttpResponse -> com.google.api.client.http.LowLevelHttpResponse:
+    java.io.InputStream getContent() -> a
+    java.lang.String getContentEncoding() -> b
+    long getContentLength() -> c
+    java.lang.String getContentType() -> d
+    java.lang.String getStatusLine() -> e
+    int getStatusCode() -> f
+    java.lang.String getReasonPhrase() -> g
+    int getHeaderCount() -> h
+    java.lang.String getHeaderName(int) -> a
+    java.lang.String getHeaderValue(int) -> b
+com.google.api.client.http.MultipartRelatedContent -> com.google.api.client.http.MultipartRelatedContent:
+    java.lang.String boundary -> a
+    java.util.Collection parts -> b
+    byte[] CR_LF -> c
+    byte[] CONTENT_TYPE -> d
+    byte[] CONTENT_TRANSFER_ENCODING -> e
+    byte[] TWO_DASHES -> f
+    void writeTo(java.io.OutputStream) -> a
+    long computeLength() -> c
+    java.lang.String getType() -> e
+    boolean retrySupported() -> d
+    java.lang.String getBoundary() -> f
+com.google.api.client.http.UriTemplate -> com.google.api.client.http.UriTemplate:
+    java.util.Map COMPOSITE_PREFIXES -> a
+    com.google.api.client.http.UriTemplate$CompositeOutput getCompositeOutput(java.lang.String) -> a
+    java.util.Map getMap(java.lang.Object) -> a
+    java.lang.String expand(java.lang.String,java.lang.String,java.lang.Object,boolean) -> a
+    java.lang.String expand(java.lang.String,java.lang.Object,boolean) -> a
+    java.lang.String getListPropertyValue(java.lang.String,java.util.Iterator,boolean,com.google.api.client.http.UriTemplate$CompositeOutput) -> a
+    java.lang.String getMapPropertyValue(java.lang.String,java.util.Map,boolean,com.google.api.client.http.UriTemplate$CompositeOutput) -> a
+com.google.api.client.http.UriTemplate$CompositeOutput -> com.google.api.client.http.UriTemplate$CompositeOutput:
+    com.google.api.client.http.UriTemplate$CompositeOutput PLUS -> a
+    com.google.api.client.http.UriTemplate$CompositeOutput HASH -> b
+    com.google.api.client.http.UriTemplate$CompositeOutput DOT -> c
+    com.google.api.client.http.UriTemplate$CompositeOutput FORWARD_SLASH -> d
+    com.google.api.client.http.UriTemplate$CompositeOutput SEMI_COLON -> e
+    com.google.api.client.http.UriTemplate$CompositeOutput QUERY -> f
+    com.google.api.client.http.UriTemplate$CompositeOutput AMP -> g
+    com.google.api.client.http.UriTemplate$CompositeOutput SIMPLE -> h
+    java.lang.Character propertyPrefix -> i
+    java.lang.String outputPrefix -> j
+    java.lang.String explodeJoiner -> k
+    boolean requiresVarAssignment -> l
+    boolean reservedExpansion -> m
+    com.google.api.client.http.UriTemplate$CompositeOutput[] $VALUES -> n
+    com.google.api.client.http.UriTemplate$CompositeOutput[] values() -> values
+    com.google.api.client.http.UriTemplate$CompositeOutput valueOf(java.lang.String) -> valueOf
+    java.lang.String getOutputPrefix() -> a
+    java.lang.String getExplodeJoiner() -> b
+    boolean requiresVarAssignment() -> c
+    int getVarNameStartIndex() -> d
+    java.lang.String getEncodedValue(java.lang.String) -> a
+com.google.api.client.http.UrlEncodedContent -> com.google.api.client.http.UrlEncodedContent:
+    java.util.logging.Logger LOGGER -> a
+    java.lang.String contentType -> b
+    java.lang.Object data -> c
+    java.lang.String getType() -> e
+    void writeTo(java.io.OutputStream) -> a
+    java.lang.Object getData() -> f
+    com.google.api.client.http.UrlEncodedContent setData(java.lang.Object) -> a
+    com.google.api.client.http.UrlEncodedContent getContent(com.google.api.client.http.HttpRequest) -> a
+    boolean appendParam(boolean,java.io.Writer,java.lang.String,java.lang.Object) -> a
+com.google.api.client.http.UrlEncodedParser -> com.google.api.client.http.UrlEncodedParser:
+    boolean disableContentLogging -> a
+    java.lang.String contentType -> b
+    java.lang.String getContentType() -> a
+    java.lang.Object parse(com.google.api.client.http.HttpResponse,java.lang.Class) -> a
+    void parse(java.lang.String,java.lang.Object) -> a
+    java.lang.Object parseValue(java.lang.reflect.Type,java.util.List,java.lang.String) -> a
+com.google.api.client.http.UrlEncodedParser$Builder -> com.google.api.client.http.UrlEncodedParser$Builder:
+    java.lang.String contentType -> a
+com.google.api.client.http.apache.ApacheHttpRequest -> com.google.api.client.http.apache.ApacheHttpRequest:
+    org.apache.http.client.HttpClient httpClient -> a
+    org.apache.http.client.methods.HttpRequestBase request -> b
+    void addHeader(java.lang.String,java.lang.String) -> a
+    void setTimeout(int,int) -> a
+    com.google.api.client.http.LowLevelHttpResponse execute() -> a
+    void setContent(com.google.api.client.http.HttpContent) -> a
+com.google.api.client.http.apache.ApacheHttpResponse -> com.google.api.client.http.apache.ApacheHttpResponse:
+    org.apache.http.client.methods.HttpRequestBase request -> a
+    org.apache.http.HttpResponse response -> b
+    org.apache.http.Header[] allHeaders -> c
+    int getStatusCode() -> f
+    java.io.InputStream getContent() -> a
+    java.lang.String getContentEncoding() -> b
+    long getContentLength() -> c
+    java.lang.String getContentType() -> d
+    java.lang.String getReasonPhrase() -> g
+    java.lang.String getStatusLine() -> e
+    int getHeaderCount() -> h
+    java.lang.String getHeaderName(int) -> a
+    java.lang.String getHeaderValue(int) -> b
+com.google.api.client.http.apache.ApacheHttpTransport -> com.google.api.client.http.apache.ApacheHttpTransport:
+    org.apache.http.client.HttpClient httpClient -> b
+    org.apache.http.impl.client.DefaultHttpClient newDefaultHttpClient() -> e
+    boolean supportsHead() -> c
+    boolean supportsPatch() -> d
+    com.google.api.client.http.apache.ApacheHttpRequest buildDeleteRequest(java.lang.String) -> g
+    com.google.api.client.http.apache.ApacheHttpRequest buildGetRequest(java.lang.String) -> h
+    com.google.api.client.http.apache.ApacheHttpRequest buildHeadRequest(java.lang.String) -> i
+    com.google.api.client.http.apache.ApacheHttpRequest buildPatchRequest(java.lang.String) -> j
+    com.google.api.client.http.apache.ApacheHttpRequest buildPostRequest(java.lang.String) -> k
+    com.google.api.client.http.apache.ApacheHttpRequest buildPutRequest(java.lang.String) -> l
+    com.google.api.client.http.LowLevelHttpRequest buildPutRequest(java.lang.String) -> f
+    com.google.api.client.http.LowLevelHttpRequest buildPostRequest(java.lang.String) -> e
+    com.google.api.client.http.LowLevelHttpRequest buildPatchRequest(java.lang.String) -> d
+    com.google.api.client.http.LowLevelHttpRequest buildHeadRequest(java.lang.String) -> c
+    com.google.api.client.http.LowLevelHttpRequest buildGetRequest(java.lang.String) -> b
+    com.google.api.client.http.LowLevelHttpRequest buildDeleteRequest(java.lang.String) -> a
+com.google.api.client.http.apache.ContentEntity -> com.google.api.client.http.apache.ContentEntity:
+    long contentLength -> a
+    com.google.api.client.http.HttpContent content -> b
+    java.io.InputStream getContent() -> getContent
+    long getContentLength() -> getContentLength
+    boolean isRepeatable() -> isRepeatable
+    boolean isStreaming() -> isStreaming
+    void writeTo(java.io.OutputStream) -> writeTo
+com.google.api.client.http.apache.HttpPatch -> com.google.api.client.http.apache.HttpPatch:
+    java.lang.String getMethod() -> getMethod
+com.google.api.client.http.javanet.NetHttpRequest -> com.google.api.client.http.javanet.NetHttpRequest:
+    java.net.HttpURLConnection connection -> a
+    com.google.api.client.http.HttpContent content -> b
+    void addHeader(java.lang.String,java.lang.String) -> a
+    void setTimeout(int,int) -> a
+    com.google.api.client.http.LowLevelHttpResponse execute() -> a
+    void setContent(com.google.api.client.http.HttpContent) -> a
+com.google.api.client.http.javanet.NetHttpResponse -> com.google.api.client.http.javanet.NetHttpResponse:
+    java.net.HttpURLConnection connection -> a
+    int responseCode -> b
+    java.lang.String responseMessage -> c
+    java.util.ArrayList headerNames -> d
+    java.util.ArrayList headerValues -> e
+    int getStatusCode() -> f
+    java.io.InputStream getContent() -> a
+    java.lang.String getContentEncoding() -> b
+    long getContentLength() -> c
+    java.lang.String getContentType() -> d
+    java.lang.String getReasonPhrase() -> g
+    java.lang.String getStatusLine() -> e
+    int getHeaderCount() -> h
+    java.lang.String getHeaderName(int) -> a
+    java.lang.String getHeaderValue(int) -> b
+com.google.api.client.http.javanet.NetHttpTransport -> com.google.api.client.http.javanet.NetHttpTransport:
+    boolean supportsHead() -> c
+    com.google.api.client.http.javanet.NetHttpRequest buildDeleteRequest(java.lang.String) -> g
+    com.google.api.client.http.javanet.NetHttpRequest buildGetRequest(java.lang.String) -> h
+    com.google.api.client.http.javanet.NetHttpRequest buildHeadRequest(java.lang.String) -> i
+    com.google.api.client.http.javanet.NetHttpRequest buildPostRequest(java.lang.String) -> j
+    com.google.api.client.http.javanet.NetHttpRequest buildPutRequest(java.lang.String) -> k
+    com.google.api.client.http.LowLevelHttpRequest buildPutRequest(java.lang.String) -> f
+    com.google.api.client.http.LowLevelHttpRequest buildPostRequest(java.lang.String) -> e
+    com.google.api.client.http.LowLevelHttpRequest buildHeadRequest(java.lang.String) -> c
+    com.google.api.client.http.LowLevelHttpRequest buildGetRequest(java.lang.String) -> b
+    com.google.api.client.http.LowLevelHttpRequest buildDeleteRequest(java.lang.String) -> a
+com.google.api.client.http.json.JsonHttpClient -> com.google.api.client.http.json.JsonHttpClient:
+    java.util.logging.Logger LOGGER -> a
+    com.google.api.client.http.HttpRequestFactory requestFactory -> b
+    com.google.api.client.http.json.JsonHttpRequestInitializer jsonHttpRequestInitializer -> c
+    java.lang.String baseUrl -> d
+    java.lang.String applicationName -> e
+    com.google.api.client.json.JsonFactory jsonFactory -> f
+    com.google.api.client.http.json.JsonHttpParser jsonHttpParser -> g
+    java.lang.String getBaseUrl() -> a
+    java.lang.String getApplicationName() -> b
+    com.google.api.client.json.JsonFactory getJsonFactory() -> c
+    com.google.api.client.http.json.JsonHttpRequestInitializer getJsonHttpRequestInitializer() -> d
+    com.google.api.client.http.json.JsonHttpParser getJsonHttpParser() -> e
+    com.google.api.client.http.json.JsonHttpParser createParser() -> f
+    com.google.api.client.http.json.JsonHttpContent createSerializer(java.lang.Object) -> a
+    void initialize(com.google.api.client.http.json.JsonHttpRequest) -> a
+    com.google.api.client.http.HttpRequest buildHttpRequest(com.google.api.client.http.HttpMethod,com.google.api.client.http.GenericUrl,java.lang.Object) -> a
+    com.google.api.client.http.HttpResponse executeUnparsed(com.google.api.client.http.HttpMethod,com.google.api.client.http.GenericUrl,java.lang.Object) -> b
+com.google.api.client.http.json.JsonHttpClient$Builder -> com.google.api.client.http.json.JsonHttpClient$Builder:
+    com.google.api.client.http.HttpTransport transport -> a
+    com.google.api.client.http.json.JsonHttpRequestInitializer jsonHttpRequestInitializer -> b
+    com.google.api.client.http.HttpRequestInitializer httpRequestInitializer -> c
+    com.google.api.client.json.JsonFactory jsonFactory -> d
+    com.google.api.client.http.GenericUrl baseUrl -> e
+    java.lang.String applicationName -> f
+    com.google.api.client.json.JsonFactory getJsonFactory() -> a
+    com.google.api.client.http.HttpTransport getTransport() -> b
+    com.google.api.client.http.GenericUrl getBaseUrl() -> c
+    com.google.api.client.http.json.JsonHttpClient$Builder setBaseUrl(com.google.api.client.http.GenericUrl) -> a
+    com.google.api.client.http.json.JsonHttpClient$Builder setJsonHttpRequestInitializer(com.google.api.client.http.json.JsonHttpRequestInitializer) -> a
+    com.google.api.client.http.json.JsonHttpRequestInitializer getJsonHttpRequestInitializer() -> d
+    com.google.api.client.http.json.JsonHttpClient$Builder setHttpRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> a
+    com.google.api.client.http.HttpRequestInitializer getHttpRequestInitializer() -> e
+    com.google.api.client.http.json.JsonHttpClient$Builder setApplicationName(java.lang.String) -> a
+    java.lang.String getApplicationName() -> f
+com.google.api.client.http.json.JsonHttpContent -> com.google.api.client.http.json.JsonHttpContent:
+    java.lang.String contentType -> a
+    java.lang.Object data -> b
+    com.google.api.client.json.JsonFactory jsonFactory -> c
+    java.lang.String getType() -> e
+    void writeTo(java.io.OutputStream) -> a
+    java.lang.Object getData() -> f
+    com.google.api.client.json.JsonFactory getJsonFactory() -> g
+com.google.api.client.http.json.JsonHttpParser -> com.google.api.client.http.json.JsonHttpParser:
+    java.lang.String contentType -> a
+    com.google.api.client.json.JsonFactory jsonFactory -> b
+    java.lang.String getContentType() -> a
+    java.lang.Object parse(com.google.api.client.http.HttpResponse,java.lang.Class) -> a
+    com.google.api.client.json.JsonFactory getJsonFactory() -> b
+    com.google.api.client.json.JsonParser parserForResponse(com.google.api.client.json.JsonFactory,com.google.api.client.http.HttpResponse) -> b
+com.google.api.client.http.json.JsonHttpParser$Builder -> com.google.api.client.http.json.JsonHttpParser$Builder:
+com.google.api.client.http.json.JsonHttpRequest -> com.google.api.client.http.json.JsonHttpRequest:
+    com.google.api.client.http.json.JsonHttpClient client -> a
+    com.google.api.client.http.HttpMethod method -> b
+    java.lang.String uriTemplate -> c
+    java.lang.Object content -> d
+    com.google.api.client.http.json.JsonHttpClient getClient() -> a
+    com.google.api.client.http.GenericUrl buildHttpRequestUrl() -> b
+    com.google.api.client.http.HttpResponse executeUnparsed() -> d
+com.google.api.client.http.json.JsonHttpRequestInitializer -> com.google.api.client.http.json.JsonHttpRequestInitializer:
+    void initialize(com.google.api.client.http.json.JsonHttpRequest) -> a
+com.google.api.client.http.protobuf.ProtoHttpContent -> com.google.api.client.http.protobuf.ProtoHttpContent:
+    com.google.protobuf.MessageLite message -> a
+    java.lang.String type -> b
+    long getLength() -> b
+    java.lang.String getType() -> e
+    void writeTo(java.io.OutputStream) -> a
+com.google.api.client.http.protobuf.ProtoHttpParser -> com.google.api.client.http.protobuf.ProtoHttpParser:
+    java.lang.String contentType -> a
+    java.lang.String getContentType() -> a
+    java.lang.Object parse(com.google.api.client.http.HttpResponse,java.lang.Class) -> a
+com.google.api.client.http.protobuf.ProtoHttpParser$Builder -> com.google.api.client.http.protobuf.ProtoHttpParser$Builder:
+    java.lang.String contentType -> a
+com.google.api.client.http.xml.AbstractXmlHttpContent -> com.google.api.client.http.xml.AbstractXmlHttpContent:
+    java.lang.String contentType -> a
+    com.google.api.client.xml.XmlNamespaceDictionary namespaceDictionary -> b
+    java.lang.String getType() -> e
+    void writeTo(java.io.OutputStream) -> a
+    com.google.api.client.xml.XmlNamespaceDictionary getNamespaceDictionary() -> f
+    void writeTo(org.xmlpull.v1.XmlSerializer) -> a
+com.google.api.client.http.xml.XmlHttpContent -> com.google.api.client.http.xml.XmlHttpContent:
+    java.lang.String elementName -> a
+    java.lang.Object data -> b
+    void writeTo(org.xmlpull.v1.XmlSerializer) -> a
+com.google.api.client.http.xml.XmlHttpParser -> com.google.api.client.http.xml.XmlHttpParser:
+    java.lang.String contentType -> a
+    com.google.api.client.xml.XmlNamespaceDictionary namespaceDictionary -> b
+    java.lang.String getContentType() -> a
+    java.lang.Object parse(com.google.api.client.http.HttpResponse,java.lang.Class) -> a
+com.google.api.client.http.xml.XmlHttpParser$Builder -> com.google.api.client.http.xml.XmlHttpParser$Builder:
+com.google.api.client.http.xml.atom.AtomContent -> com.google.api.client.http.xml.atom.AtomContent:
+    boolean isEntry -> a
+    java.lang.Object entry -> b
+    void writeTo(org.xmlpull.v1.XmlSerializer) -> a
+com.google.api.client.http.xml.atom.AtomFeedParser -> com.google.api.client.http.xml.atom.AtomFeedParser:
+com.google.api.client.http.xml.atom.AtomParser -> com.google.api.client.http.xml.atom.AtomParser:
+com.google.api.client.json.CustomizeJsonParser -> com.google.api.client.json.CustomizeJsonParser:
+    boolean stopAt(java.lang.Object,java.lang.String) -> a
+    void handleUnrecognizedKey(java.lang.Object,java.lang.String) -> b
+    java.util.Collection newInstanceForArray(java.lang.Object,java.lang.reflect.Field) -> a
+    java.lang.Object newInstanceForObject(java.lang.Object,java.lang.Class) -> a
+com.google.api.client.json.GenericJson -> com.google.api.client.json.GenericJson:
+    com.google.api.client.json.JsonFactory jsonFactory -> a
+    void setFactory(com.google.api.client.json.JsonFactory) -> a
+    java.lang.String toString() -> toString
+    java.lang.String toPrettyString() -> d
+    com.google.api.client.json.GenericJson clone() -> e
+    com.google.api.client.util.GenericData clone() -> c
+    java.lang.Object clone() -> clone
+com.google.api.client.json.Json -> com.google.api.client.json.Json:
+com.google.api.client.json.JsonEncoding -> com.google.api.client.json.JsonEncoding:
+    com.google.api.client.json.JsonEncoding UTF8 -> a
+    com.google.api.client.json.JsonEncoding[] $VALUES -> b
+    com.google.api.client.json.JsonEncoding[] values() -> values
+    com.google.api.client.json.JsonEncoding valueOf(java.lang.String) -> valueOf
+com.google.api.client.json.JsonFactory -> com.google.api.client.json.JsonFactory:
+    com.google.api.client.json.JsonParser createJsonParser(java.io.InputStream) -> a
+    com.google.api.client.json.JsonGenerator createJsonGenerator(java.io.OutputStream,com.google.api.client.json.JsonEncoding) -> a
+    java.lang.String toString(java.lang.Object) -> a
+    java.lang.String toPrettyString(java.lang.Object) -> b
+    byte[] toByteArray(java.lang.Object) -> c
+    java.lang.String toString(java.lang.Object,boolean) -> a
+    java.io.ByteArrayOutputStream toByteStream(java.lang.Object,boolean) -> b
+com.google.api.client.json.JsonGenerator -> com.google.api.client.json.JsonGenerator:
+    void flush() -> a
+    void writeStartArray() -> b
+    void writeEndArray() -> c
+    void writeStartObject() -> d
+    void writeEndObject() -> e
+    void writeFieldName(java.lang.String) -> a
+    void writeNull() -> f
+    void writeString(java.lang.String) -> b
+    void writeBoolean(boolean) -> a
+    void writeNumber(int) -> a
+    void writeNumber(long) -> a
+    void writeNumber(java.math.BigInteger) -> a
+    void writeNumber(float) -> a
+    void writeNumber(double) -> a
+    void writeNumber(java.math.BigDecimal) -> a
+    void serialize(java.lang.Object) -> a
+    void enablePrettyPrint() -> g
+com.google.api.client.json.JsonParser -> com.google.api.client.json.JsonParser:
+    com.google.api.client.json.JsonFactory getFactory() -> a
+    void close() -> b
+    com.google.api.client.json.JsonToken nextToken() -> c
+    com.google.api.client.json.JsonToken getCurrentToken() -> d
+    java.lang.String getCurrentName() -> e
+    com.google.api.client.json.JsonParser skipChildren() -> f
+    java.lang.String getText() -> g
+    byte getByteValue() -> h
+    short getShortValue() -> i
+    int getIntValue() -> j
+    float getFloatValue() -> k
+    long getLongValue() -> l
+    double getDoubleValue() -> m
+    java.math.BigInteger getBigIntegerValue() -> n
+    java.math.BigDecimal getDecimalValue() -> o
+    java.lang.Object parseAndClose(java.lang.Class,com.google.api.client.json.CustomizeJsonParser) -> a
+    void skipToKey(java.lang.String) -> a
+    com.google.api.client.json.JsonToken startParsing() -> p
+    com.google.api.client.json.JsonToken startParsingObjectOrArray() -> q
+    java.lang.Object parse(java.lang.Class,com.google.api.client.json.CustomizeJsonParser) -> b
+    void parse(java.util.ArrayList,java.lang.Object,com.google.api.client.json.CustomizeJsonParser) -> a
+    void parseArray(java.util.Collection,java.lang.reflect.Type,java.util.ArrayList,com.google.api.client.json.CustomizeJsonParser) -> a
+    void parseMap(java.util.Map,java.lang.reflect.Type,java.util.ArrayList,com.google.api.client.json.CustomizeJsonParser) -> a
+    java.lang.Object parseValue(java.lang.reflect.Field,java.lang.reflect.Type,java.util.ArrayList,java.lang.Object,com.google.api.client.json.CustomizeJsonParser) -> a
+com.google.api.client.json.JsonParser$1 -> com.google.api.client.json.JsonParser$1:
+    int[] $SwitchMap$com$google$api$client$json$JsonToken -> a
+com.google.api.client.json.JsonString -> com.google.api.client.json.JsonString:
+com.google.api.client.json.JsonToken -> com.google.api.client.json.JsonToken:
+    com.google.api.client.json.JsonToken START_ARRAY -> a
+    com.google.api.client.json.JsonToken END_ARRAY -> b
+    com.google.api.client.json.JsonToken START_OBJECT -> c
+    com.google.api.client.json.JsonToken END_OBJECT -> d
+    com.google.api.client.json.JsonToken FIELD_NAME -> e
+    com.google.api.client.json.JsonToken VALUE_STRING -> f
+    com.google.api.client.json.JsonToken VALUE_NUMBER_INT -> g
+    com.google.api.client.json.JsonToken VALUE_NUMBER_FLOAT -> h
+    com.google.api.client.json.JsonToken VALUE_TRUE -> i
+    com.google.api.client.json.JsonToken VALUE_FALSE -> j
+    com.google.api.client.json.JsonToken VALUE_NULL -> k
+    com.google.api.client.json.JsonToken NOT_AVAILABLE -> l
+    com.google.api.client.json.JsonToken[] $VALUES -> m
+    com.google.api.client.json.JsonToken[] values() -> values
+    com.google.api.client.json.JsonToken valueOf(java.lang.String) -> valueOf
+com.google.api.client.json.gson.GsonFactory -> com.google.api.client.json.gson.GsonFactory:
+    com.google.api.client.json.JsonParser createJsonParser(java.io.InputStream) -> a
+    com.google.api.client.json.JsonParser createJsonParser(java.io.Reader) -> a
+    com.google.api.client.json.JsonGenerator createJsonGenerator(java.io.OutputStream,com.google.api.client.json.JsonEncoding) -> a
+    com.google.api.client.json.JsonGenerator createJsonGenerator(java.io.Writer) -> a
+com.google.api.client.json.gson.GsonGenerator -> com.google.api.client.json.gson.GsonGenerator:
+    com.google.gson.stream.JsonWriter writer -> a
+    com.google.api.client.json.gson.GsonFactory factory -> b
+    void flush() -> a
+    void writeBoolean(boolean) -> a
+    void writeEndArray() -> c
+    void writeEndObject() -> e
+    void writeFieldName(java.lang.String) -> a
+    void writeNull() -> f
+    void writeNumber(int) -> a
+    void writeNumber(long) -> a
+    void writeNumber(java.math.BigInteger) -> a
+    void writeNumber(double) -> a
+    void writeNumber(float) -> a
+    void writeNumber(java.math.BigDecimal) -> a
+    void writeStartArray() -> b
+    void writeStartObject() -> d
+    void writeString(java.lang.String) -> b
+    void enablePrettyPrint() -> g
+com.google.api.client.json.gson.GsonGenerator$StringNumber -> com.google.api.client.json.gson.GsonGenerator$StringNumber:
+    java.lang.String encodedValue -> a
+    double doubleValue() -> doubleValue
+    float floatValue() -> floatValue
+    int intValue() -> intValue
+    long longValue() -> longValue
+    java.lang.String toString() -> toString
+com.google.api.client.json.gson.GsonParser -> com.google.api.client.json.gson.GsonParser:
+    com.google.gson.stream.JsonReader reader -> a
+    com.google.api.client.json.gson.GsonFactory factory -> b
+    java.util.List currentNameStack -> c
+    com.google.api.client.json.JsonToken currentToken -> d
+    java.lang.String currentText -> e
+    void close() -> b
+    java.lang.String getCurrentName() -> e
+    com.google.api.client.json.JsonToken getCurrentToken() -> d
+    com.google.api.client.json.JsonFactory getFactory() -> a
+    byte getByteValue() -> h
+    short getShortValue() -> i
+    int getIntValue() -> j
+    float getFloatValue() -> k
+    java.math.BigInteger getBigIntegerValue() -> n
+    java.math.BigDecimal getDecimalValue() -> o
+    double getDoubleValue() -> m
+    long getLongValue() -> l
+    void checkNumber() -> p
+    java.lang.String getText() -> g
+    com.google.api.client.json.JsonToken nextToken() -> c
+    com.google.api.client.json.JsonParser skipChildren() -> f
+com.google.api.client.json.gson.GsonParser$1 -> com.google.api.client.json.gson.GsonParser$1:
+    int[] $SwitchMap$com$google$api$client$json$JsonToken -> a
+    int[] $SwitchMap$com$google$gson$stream$JsonToken -> b
+com.google.api.client.json.jackson.JacksonFactory -> com.google.api.client.json.jackson.JacksonFactory:
+    org.codehaus.jackson.JsonFactory factory -> a
+    com.google.api.client.json.JsonGenerator createJsonGenerator(java.io.OutputStream,com.google.api.client.json.JsonEncoding) -> a
+    com.google.api.client.json.JsonParser createJsonParser(java.io.InputStream) -> a
+    com.google.api.client.json.JsonToken convert(org.codehaus.jackson.JsonToken) -> a
+com.google.api.client.json.jackson.JacksonFactory$1 -> com.google.api.client.json.jackson.JacksonFactory$1:
+    int[] $SwitchMap$org$codehaus$jackson$JsonToken -> a
+com.google.api.client.json.jackson.JacksonGenerator -> com.google.api.client.json.jackson.JacksonGenerator:
+    org.codehaus.jackson.JsonGenerator generator -> a
+    com.google.api.client.json.jackson.JacksonFactory factory -> b
+    void flush() -> a
+    void writeBoolean(boolean) -> a
+    void writeEndArray() -> c
+    void writeEndObject() -> e
+    void writeFieldName(java.lang.String) -> a
+    void writeNull() -> f
+    void writeNumber(int) -> a
+    void writeNumber(long) -> a
+    void writeNumber(java.math.BigInteger) -> a
+    void writeNumber(double) -> a
+    void writeNumber(float) -> a
+    void writeNumber(java.math.BigDecimal) -> a
+    void writeStartArray() -> b
+    void writeStartObject() -> d
+    void writeString(java.lang.String) -> b
+    void enablePrettyPrint() -> g
+com.google.api.client.json.jackson.JacksonParser -> com.google.api.client.json.jackson.JacksonParser:
+    org.codehaus.jackson.JsonParser parser -> a
+    com.google.api.client.json.jackson.JacksonFactory factory -> b
+    com.google.api.client.json.jackson.JacksonFactory getFactory() -> p
+    void close() -> b
+    com.google.api.client.json.JsonToken nextToken() -> c
+    java.lang.String getCurrentName() -> e
+    com.google.api.client.json.JsonToken getCurrentToken() -> d
+    com.google.api.client.json.JsonParser skipChildren() -> f
+    java.lang.String getText() -> g
+    byte getByteValue() -> h
+    float getFloatValue() -> k
+    int getIntValue() -> j
+    short getShortValue() -> i
+    java.math.BigInteger getBigIntegerValue() -> n
+    java.math.BigDecimal getDecimalValue() -> o
+    double getDoubleValue() -> m
+    long getLongValue() -> l
+    com.google.api.client.json.JsonFactory getFactory() -> a
+com.google.api.client.json.rpc2.JsonRpcRequest -> com.google.api.client.json.rpc2.JsonRpcRequest:
+    java.lang.String jsonrpc -> jsonrpc
+    java.lang.Object id -> id
+    java.lang.String method -> method
+    java.lang.Object params -> params
+com.google.api.client.protobuf.ProtocolBuffers -> com.google.api.client.protobuf.ProtocolBuffers:
+    com.google.protobuf.MessageLite parseAndClose(java.io.InputStream,java.lang.Class) -> a
+com.google.api.client.repackaged.org.apache.commons.codec.BinaryDecoder -> com.google.api.client.repackaged.org.apache.commons.codec.BinaryDecoder:
+com.google.api.client.repackaged.org.apache.commons.codec.BinaryEncoder -> com.google.api.client.repackaged.org.apache.commons.codec.BinaryEncoder:
+com.google.api.client.repackaged.org.apache.commons.codec.Decoder -> com.google.api.client.repackaged.org.apache.commons.codec.Decoder:
+com.google.api.client.repackaged.org.apache.commons.codec.DecoderException -> com.google.api.client.repackaged.org.apache.commons.codec.DecoderException:
+com.google.api.client.repackaged.org.apache.commons.codec.Encoder -> com.google.api.client.repackaged.org.apache.commons.codec.Encoder:
+com.google.api.client.repackaged.org.apache.commons.codec.EncoderException -> com.google.api.client.repackaged.org.apache.commons.codec.EncoderException:
+com.google.api.client.repackaged.org.apache.commons.codec.binary.Base64 -> com.google.api.client.repackaged.org.apache.commons.codec.binary.Base64:
+    byte[] CHUNK_SEPARATOR -> a
+    byte[] STANDARD_ENCODE_TABLE -> i
+    byte[] URL_SAFE_ENCODE_TABLE -> j
+    byte[] DECODE_TABLE -> k
+    byte[] encodeTable -> l
+    byte[] decodeTable -> m
+    byte[] lineSeparator -> n
+    int decodeSize -> o
+    int encodeSize -> p
+    int bitWorkArea -> q
+    void encode(byte[],int,int) -> a
+    java.lang.String encodeBase64String(byte[]) -> a
+    java.lang.String encodeBase64URLSafeString(byte[]) -> b
+    byte[] encodeBase64(byte[],boolean) -> a
+    byte[] encodeBase64(byte[],boolean,boolean) -> a
+    byte[] encodeBase64(byte[],boolean,boolean,int) -> a
+    boolean isInAlphabet(byte) -> a
+com.google.api.client.repackaged.org.apache.commons.codec.binary.BaseNCodec -> com.google.api.client.repackaged.org.apache.commons.codec.binary.BaseNCodec:
+    byte PAD -> b
+    int unencodedBlockSize -> a
+    int encodedBlockSize -> i
+    int lineLength -> c
+    int chunkSeparatorLength -> j
+    byte[] buffer -> d
+    int pos -> e
+    int readPos -> k
+    boolean eof -> f
+    int currentLinePos -> g
+    int modulus -> h
+    int available() -> a
+    int getDefaultBufferSize() -> b
+    void resizeBuffer() -> c
+    void ensureBufferSize(int) -> a
+    int readResults(byte[],int,int) -> b
+    void reset() -> d
+    byte[] encode(byte[]) -> c
+    void encode(byte[],int,int) -> a
+    boolean isInAlphabet(byte) -> a
+    boolean containsAlphabetOrPad(byte[]) -> d
+    long getEncodedLength(byte[]) -> e
+com.google.api.client.repackaged.org.apache.commons.codec.binary.StringUtils -> com.google.api.client.repackaged.org.apache.commons.codec.binary.StringUtils:
+    byte[] getBytesUtf8(java.lang.String) -> a
+    byte[] getBytesUnchecked(java.lang.String,java.lang.String) -> a
+    java.lang.IllegalStateException newIllegalStateException(java.lang.String,java.io.UnsupportedEncodingException) -> a
+    java.lang.String newString(byte[],java.lang.String) -> a
+    java.lang.String newStringUtf8(byte[]) -> a
+com.google.api.client.testing.http.HttpTesting -> com.google.api.client.testing.http.HttpTesting:
+    com.google.api.client.http.GenericUrl SIMPLE_GENERIC_URL -> a
+com.google.api.client.testing.http.MockHttpContent -> com.google.api.client.testing.http.MockHttpContent:
+    java.lang.String encoding -> a
+    long length -> b
+    java.lang.String type -> c
+    byte[] content -> d
+    java.lang.String getEncoding() -> a
+    long getLength() -> b
+    java.lang.String getType() -> e
+    void writeTo(java.io.OutputStream) -> a
+    boolean retrySupported() -> d
+com.google.api.client.testing.http.MockHttpTransport -> com.google.api.client.testing.http.MockHttpTransport:
+    java.util.Set DEFAULT_SUPPORTED_OPTIONAL_METHODS -> b
+    java.util.EnumSet supportedOptionalMethods -> c
+    com.google.api.client.http.LowLevelHttpRequest buildDeleteRequest(java.lang.String) -> a
+    com.google.api.client.http.LowLevelHttpRequest buildGetRequest(java.lang.String) -> b
+    com.google.api.client.http.LowLevelHttpRequest buildHeadRequest(java.lang.String) -> c
+    com.google.api.client.http.LowLevelHttpRequest buildPatchRequest(java.lang.String) -> d
+    com.google.api.client.http.LowLevelHttpRequest buildPostRequest(java.lang.String) -> e
+    com.google.api.client.http.LowLevelHttpRequest buildPutRequest(java.lang.String) -> f
+    boolean supportsHead() -> c
+    boolean supportsPatch() -> d
+com.google.api.client.testing.http.MockHttpTransport$Builder -> com.google.api.client.testing.http.MockHttpTransport$Builder:
+    java.util.Set supportedOptionalMethods -> a
+com.google.api.client.testing.http.MockHttpUnsuccessfulResponseHandler -> com.google.api.client.testing.http.MockHttpUnsuccessfulResponseHandler:
+    boolean isCalled -> a
+    boolean successfullyHandleResponse -> b
+    boolean handleResponse(com.google.api.client.http.HttpRequest,com.google.api.client.http.HttpResponse,boolean) -> a
+com.google.api.client.testing.http.MockLowLevelHttpRequest -> com.google.api.client.testing.http.MockLowLevelHttpRequest:
+    java.lang.String url -> a
+    com.google.api.client.http.HttpContent content -> b
+    java.util.Map headersMap -> c
+    com.google.api.client.testing.http.MockLowLevelHttpResponse response -> d
+    void addHeader(java.lang.String,java.lang.String) -> a
+    com.google.api.client.http.LowLevelHttpResponse execute() -> a
+    void setContent(com.google.api.client.http.HttpContent) -> a
+com.google.api.client.testing.http.MockLowLevelHttpResponse -> com.google.api.client.testing.http.MockLowLevelHttpResponse:
+    java.io.InputStream content -> a
+    java.lang.String contentType -> b
+    int statusCode -> c
+    java.lang.String reasonPhrase -> d
+    java.util.List headerNames -> e
+    java.util.List headerValues -> f
+    java.lang.String contentEncoding -> g
+    long contentLength -> h
+    java.io.InputStream getContent() -> a
+    java.lang.String getContentEncoding() -> b
+    long getContentLength() -> c
+    java.lang.String getContentType() -> d
+    int getHeaderCount() -> h
+    java.lang.String getHeaderName(int) -> a
+    java.lang.String getHeaderValue(int) -> b
+    java.lang.String getReasonPhrase() -> g
+    int getStatusCode() -> f
+    java.lang.String getStatusLine() -> e
+com.google.api.client.testing.json.AbstractJsonFactoryTest -> com.google.api.client.testing.json.AbstractJsonFactoryTest:
+com.google.api.client.testing.json.AbstractJsonFactoryTest$A -> com.google.api.client.testing.json.AbstractJsonFactoryTest$A:
+    java.util.Map map -> map
+com.google.api.client.testing.json.AbstractJsonFactoryTest$AnyType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$AnyType:
+    java.lang.Object arr -> arr
+    java.lang.Object bool -> bool
+    java.lang.Object num -> num
+    java.lang.Object obj -> obj
+    java.lang.Object str -> str
+    java.lang.Object nul -> nul
+com.google.api.client.testing.json.AbstractJsonFactoryTest$ArrayType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$ArrayType:
+    int[] arr -> arr
+    int[][] arr2 -> arr2
+    java.lang.Integer[] integerArr -> integerArr
+com.google.api.client.testing.json.AbstractJsonFactoryTest$CollectionOfCollectionType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$CollectionOfCollectionType:
+    java.util.LinkedList arr -> arr
+com.google.api.client.testing.json.AbstractJsonFactoryTest$DoubleListTypeVariableType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$DoubleListTypeVariableType:
+com.google.api.client.testing.json.AbstractJsonFactoryTest$E -> com.google.api.client.testing.json.AbstractJsonFactoryTest$E:
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E VALUE -> a
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E OTHER_VALUE -> b
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E NULL -> c
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E IGNORED_VALUE -> d
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E[] $VALUES -> e
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E[] values() -> values
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E valueOf(java.lang.String) -> valueOf
+com.google.api.client.testing.json.AbstractJsonFactoryTest$Entry -> com.google.api.client.testing.json.AbstractJsonFactoryTest$Entry:
+    java.lang.String title -> title
+com.google.api.client.testing.json.AbstractJsonFactoryTest$EnumValue -> com.google.api.client.testing.json.AbstractJsonFactoryTest$EnumValue:
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E value -> value
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E otherValue -> otherValue
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$E nullValue -> nullValue
+com.google.api.client.testing.json.AbstractJsonFactoryTest$Feed -> com.google.api.client.testing.json.AbstractJsonFactoryTest$Feed:
+    java.util.Collection entries -> entries
+com.google.api.client.testing.json.AbstractJsonFactoryTest$FloatMapTypeVariableType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$FloatMapTypeVariableType:
+com.google.api.client.testing.json.AbstractJsonFactoryTest$IntArrayTypeVariableType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$IntArrayTypeVariableType:
+com.google.api.client.testing.json.AbstractJsonFactoryTest$IntegerTypeVariableType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$IntegerTypeVariableType:
+com.google.api.client.testing.json.AbstractJsonFactoryTest$MapOfMapType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$MapOfMapType:
+    java.util.Map[] value -> value
+com.google.api.client.testing.json.AbstractJsonFactoryTest$NumberTypes -> com.google.api.client.testing.json.AbstractJsonFactoryTest$NumberTypes:
+    byte byteValue -> byteValue
+    java.lang.Byte byteObjValue -> byteObjValue
+    short shortValue -> shortValue
+    java.lang.Short shortObjValue -> shortObjValue
+    int intValue -> intValue
+    java.lang.Integer intObjValue -> intObjValue
+    float floatValue -> floatValue
+    java.lang.Float floatObjValue -> floatObjValue
+    long longValue -> longValue
+    java.lang.Long longObjValue -> longObjValue
+    double doubleValue -> doubleValue
+    java.lang.Double doubleObjValue -> doubleObjValue
+    java.math.BigInteger bigIntegerValue -> bigIntegerValue
+    java.math.BigDecimal bigDecimalValue -> bigDecimalValue
+    java.math.BigDecimal anotherBigDecimalValue -> anotherBigDecimalValue
+com.google.api.client.testing.json.AbstractJsonFactoryTest$NumberTypesAsString -> com.google.api.client.testing.json.AbstractJsonFactoryTest$NumberTypesAsString:
+    byte byteValue -> byteValue
+    java.lang.Byte byteObjValue -> byteObjValue
+    short shortValue -> shortValue
+    java.lang.Short shortObjValue -> shortObjValue
+    int intValue -> intValue
+    java.lang.Integer intObjValue -> intObjValue
+    float floatValue -> floatValue
+    java.lang.Float floatObjValue -> floatObjValue
+    long longValue -> longValue
+    java.lang.Long longObjValue -> longObjValue
+    double doubleValue -> doubleValue
+    java.lang.Double doubleObjValue -> doubleObjValue
+    java.math.BigInteger bigIntegerValue -> bigIntegerValue
+    java.math.BigDecimal bigDecimalValue -> bigDecimalValue
+    java.math.BigDecimal anotherBigDecimalValue -> anotherBigDecimalValue
+com.google.api.client.testing.json.AbstractJsonFactoryTest$StringNullValue -> com.google.api.client.testing.json.AbstractJsonFactoryTest$StringNullValue:
+    java.lang.String[][] arr2 -> arr2
+    java.lang.String[] arr -> arr
+    java.lang.String value -> value
+com.google.api.client.testing.json.AbstractJsonFactoryTest$TypeVariableType -> com.google.api.client.testing.json.AbstractJsonFactoryTest$TypeVariableType:
+    java.lang.Object[][] arr -> arr
+    java.util.LinkedList list -> list
+    java.lang.Object nullValue -> nullValue
+    java.lang.Object value -> value
+com.google.api.client.testing.json.AbstractJsonFactoryTest$TypeVariablesPassedAround -> com.google.api.client.testing.json.AbstractJsonFactoryTest$TypeVariablesPassedAround:
+com.google.api.client.testing.json.AbstractJsonFactoryTest$WildCardTypes -> com.google.api.client.testing.json.AbstractJsonFactoryTest$WildCardTypes:
+    java.util.Collection[] lower -> lower
+    java.util.Map map -> map
+    java.util.Collection mapInWild -> mapInWild
+    java.util.Map mapUpper -> mapUpper
+    java.util.Collection[] simple -> simple
+    java.util.Collection[] upper -> upper
+com.google.api.client.testing.json.AbstractJsonFactoryTest$X -> com.google.api.client.testing.json.AbstractJsonFactoryTest$X:
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$Y y -> y
+com.google.api.client.testing.json.AbstractJsonFactoryTest$Y -> com.google.api.client.testing.json.AbstractJsonFactoryTest$Y:
+    com.google.api.client.testing.json.AbstractJsonFactoryTest$Z z -> z
+com.google.api.client.testing.json.AbstractJsonFactoryTest$Z -> com.google.api.client.testing.json.AbstractJsonFactoryTest$Z:
+    java.lang.Object f -> f
+com.google.api.client.util.ArrayMap -> com.google.api.client.util.ArrayMap:
+    int size -> a
+    java.lang.Object[] data -> b
+    com.google.api.client.util.ArrayMap create() -> a
+    int size() -> size
+    java.lang.Object getKey(int) -> a
+    java.lang.Object getValue(int) -> b
+    java.lang.Object set(int,java.lang.Object,java.lang.Object) -> a
+    java.lang.Object set(int,java.lang.Object) -> a
+    void add(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object remove(int) -> c
+    boolean containsKey(java.lang.Object) -> containsKey
+    int getIndexOfKey(java.lang.Object) -> a
+    java.lang.Object get(java.lang.Object) -> get
+    java.lang.Object put(java.lang.Object,java.lang.Object) -> put
+    java.lang.Object remove(java.lang.Object) -> remove
+    void ensureCapacity(int) -> d
+    void setDataCapacity(int) -> e
+    void setData(int,java.lang.Object,java.lang.Object) -> b
+    java.lang.Object valueAtDataIndex(int) -> f
+    int getDataIndexOfKey(java.lang.Object) -> b
+    java.lang.Object removeFromDataIndexOfKey(int) -> g
+    void clear() -> clear
+    boolean containsValue(java.lang.Object) -> containsValue
+    java.util.Set entrySet() -> entrySet
+    com.google.api.client.util.ArrayMap clone() -> b
+    java.lang.Object clone() -> clone
+com.google.api.client.util.ArrayMap$Entry -> com.google.api.client.util.ArrayMap$Entry:
+    int index -> b
+    com.google.api.client.util.ArrayMap this$0 -> a
+    java.lang.Object getKey() -> getKey
+    java.lang.Object getValue() -> getValue
+    java.lang.Object setValue(java.lang.Object) -> setValue
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+com.google.api.client.util.ArrayMap$EntryIterator -> com.google.api.client.util.ArrayMap$EntryIterator:
+    boolean removed -> b
+    int nextIndex -> c
+    com.google.api.client.util.ArrayMap this$0 -> a
+    boolean hasNext() -> hasNext
+    java.util.Map$Entry next() -> a
+    void remove() -> remove
+    java.lang.Object next() -> next
+com.google.api.client.util.ArrayMap$EntrySet -> com.google.api.client.util.ArrayMap$EntrySet:
+    com.google.api.client.util.ArrayMap this$0 -> a
+    java.util.Iterator iterator() -> iterator
+    int size() -> size
+com.google.api.client.util.ArrayValueMap -> com.google.api.client.util.ArrayValueMap:
+    java.util.Map keyMap -> a
+    java.util.Map fieldMap -> b
+    java.lang.Object destination -> c
+    void setValues() -> a
+    void put(java.lang.reflect.Field,java.lang.Class,java.lang.Object) -> a
+    void put(java.lang.String,java.lang.Class,java.lang.Object) -> a
+com.google.api.client.util.ArrayValueMap$ArrayValue -> com.google.api.client.util.ArrayValueMap$ArrayValue:
+    java.lang.Class componentType -> a
+    java.util.ArrayList values -> b
+    java.lang.Object toArray() -> a
+    void addValue(java.lang.Class,java.lang.Object) -> a
+com.google.api.client.util.Base64 -> com.google.api.client.util.Base64:
+    java.lang.String encodeBase64String(byte[]) -> a
+    java.lang.String encodeBase64URLSafeString(byte[]) -> b
+com.google.api.client.util.ClassInfo -> com.google.api.client.util.ClassInfo:
+    java.util.Map CACHE -> b
+    java.lang.Class clazz -> c
+    java.util.IdentityHashMap nameToFieldInfoMap -> d
+    java.util.List names -> a
+    com.google.api.client.util.ClassInfo of(java.lang.Class) -> a
+    com.google.api.client.util.FieldInfo getFieldInfo(java.lang.String) -> a
+    java.lang.reflect.Field getField(java.lang.String) -> b
+    boolean isEnum() -> a
+    java.util.Collection getNames() -> b
+com.google.api.client.util.ClassInfo$1 -> com.google.api.client.util.ClassInfo$1:
+    com.google.api.client.util.ClassInfo this$0 -> a
+    int compare(java.lang.String,java.lang.String) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.google.api.client.util.Data -> com.google.api.client.util.Data:
+    java.lang.Boolean NULL_BOOLEAN -> a
+    java.lang.String NULL_STRING -> b
+    java.lang.Character NULL_CHARACTER -> c
+    java.lang.Byte NULL_BYTE -> d
+    java.lang.Short NULL_SHORT -> e
+    java.lang.Integer NULL_INTEGER -> f
+    java.lang.Float NULL_FLOAT -> g
+    java.lang.Long NULL_LONG -> h
+    java.lang.Double NULL_DOUBLE -> i
+    java.math.BigInteger NULL_BIG_INTEGER -> j
+    java.math.BigDecimal NULL_BIG_DECIMAL -> k
+    com.google.api.client.util.DateTime NULL_DATE_TIME -> l
+    java.util.concurrent.ConcurrentHashMap NULL_CACHE -> m
+    java.lang.Object nullOf(java.lang.Class) -> a
+    boolean isNull(java.lang.Object) -> a
+    java.util.Map mapOf(java.lang.Object) -> b
+    java.lang.Object clone(java.lang.Object) -> c
+    void deepCopy(java.lang.Object,java.lang.Object) -> a
+    boolean isPrimitive(java.lang.reflect.Type) -> a
+    boolean isValueOfPrimitiveType(java.lang.Object) -> d
+    java.lang.Object parsePrimitiveValue(java.lang.reflect.Type,java.lang.String) -> a
+    java.util.Collection newCollectionInstance(java.lang.reflect.Type) -> b
+    java.util.Map newMapInstance(java.lang.Class) -> b
+    java.lang.reflect.Type resolveWildcardTypeOrTypeVariable(java.util.List,java.lang.reflect.Type) -> a
+com.google.api.client.util.DataMap -> com.google.api.client.util.DataMap:
+    java.lang.Object object -> a
+    com.google.api.client.util.ClassInfo classInfo -> b
+    com.google.api.client.util.DataMap$EntrySet entrySet() -> a
+    boolean containsKey(java.lang.Object) -> containsKey
+    java.lang.Object get(java.lang.Object) -> get
+    java.lang.Object put(java.lang.String,java.lang.Object) -> a
+    java.util.Set entrySet() -> entrySet
+    java.lang.Object put(java.lang.Object,java.lang.Object) -> put
+com.google.api.client.util.DataMap$Entry -> com.google.api.client.util.DataMap$Entry:
+    java.lang.Object fieldValue -> b
+    com.google.api.client.util.FieldInfo fieldInfo -> c
+    com.google.api.client.util.DataMap this$0 -> a
+    java.lang.String getKey() -> a
+    java.lang.Object getValue() -> getValue
+    java.lang.Object setValue(java.lang.Object) -> setValue
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+    java.lang.Object getKey() -> getKey
+com.google.api.client.util.DataMap$EntryIterator -> com.google.api.client.util.DataMap$EntryIterator:
+    int nextKeyIndex -> b
+    com.google.api.client.util.FieldInfo nextFieldInfo -> c
+    java.lang.Object nextFieldValue -> d
+    boolean isRemoved -> e
+    boolean isComputed -> f
+    com.google.api.client.util.FieldInfo currentFieldInfo -> g
+    com.google.api.client.util.DataMap this$0 -> a
+    boolean hasNext() -> hasNext
+    java.util.Map$Entry next() -> a
+    void remove() -> remove
+    java.lang.Object next() -> next
+com.google.api.client.util.DataMap$EntrySet -> com.google.api.client.util.DataMap$EntrySet:
+    com.google.api.client.util.DataMap this$0 -> a
+    com.google.api.client.util.DataMap$EntryIterator iterator() -> a
+    int size() -> size
+    void clear() -> clear
+    boolean isEmpty() -> isEmpty
+    java.util.Iterator iterator() -> iterator
+com.google.api.client.util.DateTime -> com.google.api.client.util.DateTime:
+    java.util.TimeZone GMT -> a
+    long value -> b
+    boolean dateOnly -> c
+    java.lang.Integer tzShift -> d
+    java.lang.String toStringRfc3339() -> a
+    java.lang.String toString() -> toString
+    boolean equals(java.lang.Object) -> equals
+    com.google.api.client.util.DateTime parseRfc3339(java.lang.String) -> a
+    void appendInt(java.lang.StringBuilder,int,int) -> a
+com.google.api.client.util.FieldInfo -> com.google.api.client.util.FieldInfo:
+    java.util.Map CACHE -> a
+    boolean isPrimitive -> b
+    java.lang.reflect.Field field -> c
+    java.lang.String name -> d
+    com.google.api.client.util.FieldInfo of(java.lang.Enum) -> a
+    com.google.api.client.util.FieldInfo of(java.lang.reflect.Field) -> a
+    java.lang.reflect.Field getField() -> a
+    java.lang.String getName() -> b
+    java.lang.Class getType() -> c
+    java.lang.reflect.Type getGenericType() -> d
+    boolean isFinal() -> e
+    boolean isPrimitive() -> f
+    java.lang.Object getValue(java.lang.Object) -> a
+    void setValue(java.lang.Object,java.lang.Object) -> a
+    java.lang.Enum enumValue() -> g
+    java.lang.Object getFieldValue(java.lang.reflect.Field,java.lang.Object) -> a
+    void setFieldValue(java.lang.reflect.Field,java.lang.Object,java.lang.Object) -> a
+com.google.api.client.util.GenericData -> com.google.api.client.util.GenericData:
+    java.util.Map unknownFields -> f
+    com.google.api.client.util.ClassInfo classInfo -> g
+    java.lang.Object get(java.lang.Object) -> get
+    java.lang.Object put(java.lang.String,java.lang.Object) -> a
+    void set(java.lang.String,java.lang.Object) -> b
+    void putAll(java.util.Map) -> putAll
+    java.lang.Object remove(java.lang.Object) -> remove
+    java.util.Set entrySet() -> entrySet
+    com.google.api.client.util.GenericData clone() -> c
+    java.lang.Object clone() -> clone
+    java.lang.Object put(java.lang.Object,java.lang.Object) -> put
+com.google.api.client.util.GenericData$EntryIterator -> com.google.api.client.util.GenericData$EntryIterator:
+    boolean startedUnknown -> b
+    java.util.Iterator fieldIterator -> c
+    java.util.Iterator unknownIterator -> d
+    com.google.api.client.util.GenericData this$0 -> a
+    boolean hasNext() -> hasNext
+    java.util.Map$Entry next() -> a
+    void remove() -> remove
+    java.lang.Object next() -> next
+com.google.api.client.util.GenericData$EntrySet -> com.google.api.client.util.GenericData$EntrySet:
+    com.google.api.client.util.DataMap$EntrySet dataEntrySet -> b
+    com.google.api.client.util.GenericData this$0 -> a
+    java.util.Iterator iterator() -> iterator
+    int size() -> size
+    void clear() -> clear
+com.google.api.client.util.Key -> com.google.api.client.util.Key:
+    java.lang.String value() -> a
+com.google.api.client.util.NullValue -> com.google.api.client.util.NullValue:
+com.google.api.client.util.StringUtils -> com.google.api.client.util.StringUtils:
+    java.lang.String LINE_SEPARATOR -> a
+    byte[] getBytesUtf8(java.lang.String) -> a
+    java.lang.String newStringUtf8(byte[]) -> a
+com.google.api.client.util.Strings -> com.google.api.client.util.Strings:
+    java.lang.String LINE_SEPARATOR -> a
+com.google.api.client.util.Types -> com.google.api.client.util.Types:
+    java.lang.reflect.ParameterizedType getSuperParameterizedType(java.lang.reflect.Type,java.lang.Class) -> a
+    boolean isAssignableToOrFrom(java.lang.Class,java.lang.Class) -> a
+    java.lang.Object newInstance(java.lang.Class) -> a
+    java.lang.IllegalArgumentException handleExceptionForNewInstance(java.lang.Exception,java.lang.Class) -> a
+    boolean isArray(java.lang.reflect.Type) -> a
+    java.lang.reflect.Type getArrayComponentType(java.lang.reflect.Type) -> b
+    java.lang.Class getRawClass(java.lang.reflect.ParameterizedType) -> a
+    java.lang.reflect.Type getBound(java.lang.reflect.WildcardType) -> a
+    java.lang.reflect.Type resolveTypeVariable(java.util.List,java.lang.reflect.TypeVariable) -> a
+    java.lang.Class getRawArrayComponentType(java.util.List,java.lang.reflect.Type) -> a
+    java.lang.reflect.Type getIterableParameter(java.lang.reflect.Type) -> c
+    java.lang.reflect.Type getMapValueParameter(java.lang.reflect.Type) -> d
+    java.lang.reflect.Type getActualParameterAtPosition(java.lang.reflect.Type,java.lang.Class,int) -> a
+    java.lang.Iterable iterableOf(java.lang.Object) -> a
+    java.lang.Object toArray(java.util.Collection,java.lang.Class) -> a
+com.google.api.client.util.Types$1 -> com.google.api.client.util.Types$1:
+    java.lang.Object val$value -> a
+    java.util.Iterator iterator() -> iterator
+com.google.api.client.util.Types$1$1 -> com.google.api.client.util.Types$1$1:
+    int length -> a
+    int index -> b
+    com.google.api.client.util.Types$1 this$0 -> c
+    boolean hasNext() -> hasNext
+    java.lang.Object next() -> next
+    void remove() -> remove
+com.google.api.client.util.Value -> com.google.api.client.util.Value:
+    java.lang.String value() -> a
+com.google.api.client.util.escape.CharEscapers -> com.google.api.client.util.escape.CharEscapers:
+    com.google.api.client.util.escape.Escaper URI_ESCAPER -> a
+    com.google.api.client.util.escape.Escaper URI_PATH_ESCAPER -> b
+    com.google.api.client.util.escape.Escaper URI_QUERY_STRING_ESCAPER -> c
+    java.lang.String escapeUri(java.lang.String) -> a
+    java.lang.String decodeUri(java.lang.String) -> b
+    java.lang.String escapeUriPath(java.lang.String) -> c
+    java.lang.String escapeUriQuery(java.lang.String) -> d
+com.google.api.client.util.escape.Escaper -> com.google.api.client.util.escape.Escaper:
+    java.lang.String escape(java.lang.String) -> a
+com.google.api.client.util.escape.PercentEscaper -> com.google.api.client.util.escape.PercentEscaper:
+    char[] URI_ESCAPED_SPACE -> a
+    char[] UPPER_HEX_DIGITS -> b
+    boolean plusForSpace -> c
+    boolean[] safeOctets -> d
+    boolean[] createSafeOctets(java.lang.String) -> b
+    int nextEscapeIndex(java.lang.CharSequence,int,int) -> a
+    java.lang.String escape(java.lang.String) -> a
+    char[] escape(int) -> a
+com.google.api.client.util.escape.Platform -> com.google.api.client.util.escape.Platform:
+    java.lang.ThreadLocal DEST_TL -> a
+    char[] charBufferFromThreadLocal() -> a
+com.google.api.client.util.escape.Platform$1 -> com.google.api.client.util.escape.Platform$1:
+    char[] initialValue() -> a
+    java.lang.Object initialValue() -> initialValue
+com.google.api.client.util.escape.UnicodeEscaper -> com.google.api.client.util.escape.UnicodeEscaper:
+    char[] escape(int) -> a
+    int nextEscapeIndex(java.lang.CharSequence,int,int) -> a
+    java.lang.String escapeSlow(java.lang.String,int) -> a
+    int codePointAt(java.lang.CharSequence,int,int) -> b
+    char[] growBuffer(char[],int,int) -> a
+com.google.api.client.xml.GenericXml -> com.google.api.client.xml.GenericXml:
+    java.lang.String name -> a
+    com.google.api.client.xml.XmlNamespaceDictionary namespaceDictionary -> b
+    com.google.api.client.xml.GenericXml clone() -> a
+    java.lang.String toString() -> toString
+    com.google.api.client.util.GenericData clone() -> c
+    java.lang.Object clone() -> clone
+com.google.api.client.xml.Xml -> com.google.api.client.xml.Xml:
+    org.xmlpull.v1.XmlPullParserFactory factory -> a
+    org.xmlpull.v1.XmlPullParserFactory getParserFactory() -> c
+    org.xmlpull.v1.XmlSerializer createSerializer() -> a
+    org.xmlpull.v1.XmlPullParser createParser() -> b
+    void parseAttributeOrTextContent(java.lang.String,java.lang.reflect.Field,java.lang.reflect.Type,java.util.List,java.lang.Object,com.google.api.client.xml.GenericXml,java.util.Map,java.lang.String) -> a
+    void setValue(java.lang.Object,java.lang.reflect.Field,java.lang.Object,com.google.api.client.xml.GenericXml,java.util.Map,java.lang.String) -> a
+    void parseElement(org.xmlpull.v1.XmlPullParser,java.lang.Object,com.google.api.client.xml.XmlNamespaceDictionary,com.google.api.client.xml.Xml$CustomizeParser) -> a
+    boolean parseElementInternal(org.xmlpull.v1.XmlPullParser,java.util.ArrayList,java.lang.Object,java.lang.reflect.Type,com.google.api.client.xml.XmlNamespaceDictionary,com.google.api.client.xml.Xml$CustomizeParser) -> a
+    java.lang.String getFieldName(boolean,java.lang.String,java.lang.String,java.lang.String) -> a
+    java.lang.Object parseTextContentForElement(org.xmlpull.v1.XmlPullParser,java.util.List,boolean,java.lang.reflect.Type) -> a
+    java.lang.Object parseValue(java.lang.reflect.Type,java.util.List,java.lang.String) -> a
+    void parseNamespacesForElement(org.xmlpull.v1.XmlPullParser,com.google.api.client.xml.XmlNamespaceDictionary) -> a
+com.google.api.client.xml.Xml$CustomizeParser -> com.google.api.client.xml.Xml$CustomizeParser:
+    boolean stopBeforeStartTag(java.lang.String,java.lang.String) -> a
+    boolean stopAfterEndTag(java.lang.String,java.lang.String) -> b
+com.google.api.client.xml.XmlNamespaceDictionary -> com.google.api.client.xml.XmlNamespaceDictionary:
+    java.util.HashMap namespaceAliasToUriMap -> a
+    java.util.HashMap namespaceUriToAliasMap -> b
+    java.lang.String getAliasForUri(java.lang.String) -> a
+    java.lang.String getUriForAlias(java.lang.String) -> b
+    com.google.api.client.xml.XmlNamespaceDictionary set(java.lang.String,java.lang.String) -> a
+    java.lang.String toStringOf(java.lang.String,java.lang.Object) -> a
+    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.String,java.lang.String,java.lang.Object) -> a
+    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.String,java.lang.Object) -> a
+    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.String,java.lang.String,java.lang.Object,boolean) -> a
+    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.String,java.lang.Object,boolean) -> a
+    com.google.api.client.xml.XmlNamespaceDictionary$ElementSerializer startDoc(org.xmlpull.v1.XmlSerializer,java.lang.Object,boolean,java.lang.String) -> a
+    void computeAliases(java.lang.Object,java.util.SortedSet) -> a
+    java.lang.String getNamespaceUriForAliasHandlingUnknown(boolean,java.lang.String) -> a
+    java.lang.String getNamespaceAliasForUriErrorOnUnknown(java.lang.String) -> c
+    java.lang.String toSerializedValue(java.lang.Object) -> a
+com.google.api.client.xml.XmlNamespaceDictionary$ElementSerializer -> com.google.api.client.xml.XmlNamespaceDictionary$ElementSerializer:
+    boolean errorOnUnknown -> g
+    java.lang.Object textValue -> a
+    java.util.List attributeNames -> b
+    java.util.List attributeValues -> c
+    java.util.List subElementNames -> d
+    java.util.List subElementValues -> e
+    com.google.api.client.xml.XmlNamespaceDictionary this$0 -> f
+    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.String) -> a
+    void serialize(org.xmlpull.v1.XmlSerializer,java.lang.String,java.lang.String) -> a
+com.google.api.client.xml.atom.AbstractAtomFeedParser -> com.google.api.client.xml.atom.AbstractAtomFeedParser:
+com.google.api.client.xml.atom.Atom -> com.google.api.client.xml.atom.Atom:
+com.google.api.client.xml.atom.Atom$StopAtAtomEntry -> com.google.api.client.xml.atom.Atom$StopAtAtomEntry:
+    com.google.api.client.xml.atom.Atom$StopAtAtomEntry INSTANCE -> a
+    boolean stopBeforeStartTag(java.lang.String,java.lang.String) -> a
+com.google.api.services.tasks.Tasks -> com.google.api.services.tasks.a:
+    com.google.api.services.tasks.Tasks$Builder builder(com.google.api.client.http.HttpTransport,com.google.api.client.json.JsonFactory) -> a
+    com.google.api.services.tasks.Tasks$TasksOperations tasks() -> g
+    com.google.api.services.tasks.Tasks$Tasklists tasklists() -> h
+    void access$100(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> a
+    void access$300(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> b
+    void access$900(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> c
+    void access$1100(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> d
+    void access$1500(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> e
+    void access$1700(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> f
+    void access$1900(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> g
+    void access$2100(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> h
+    void access$2300(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> i
+    void access$2700(com.google.api.services.tasks.Tasks,com.google.api.client.http.json.JsonHttpRequest) -> j
+com.google.api.services.tasks.Tasks$1 -> com.google.api.services.tasks.b:
+com.google.api.services.tasks.Tasks$Builder -> com.google.api.services.tasks.c:
+    com.google.api.services.tasks.Tasks build() -> g
+    com.google.api.services.tasks.Tasks$Builder setBaseUrl(com.google.api.client.http.GenericUrl) -> b
+    com.google.api.services.tasks.Tasks$Builder setJsonHttpRequestInitializer(com.google.api.client.http.json.JsonHttpRequestInitializer) -> b
+    com.google.api.services.tasks.Tasks$Builder setHttpRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> b
+    com.google.api.services.tasks.Tasks$Builder setApplicationName(java.lang.String) -> b
+    com.google.api.client.http.json.JsonHttpClient$Builder setApplicationName(java.lang.String) -> a
+    com.google.api.client.http.json.JsonHttpClient$Builder setHttpRequestInitializer(com.google.api.client.http.HttpRequestInitializer) -> a
+    com.google.api.client.http.json.JsonHttpClient$Builder setJsonHttpRequestInitializer(com.google.api.client.http.json.JsonHttpRequestInitializer) -> a
+    com.google.api.client.http.json.JsonHttpClient$Builder setBaseUrl(com.google.api.client.http.GenericUrl) -> a
+com.google.api.services.tasks.Tasks$Tasklists -> com.google.api.services.tasks.d:
+    com.google.api.services.tasks.Tasks this$0 -> a
+    com.google.api.services.tasks.Tasks$Tasklists$Insert insert(com.google.api.services.tasks.model.TaskList) -> a
+    com.google.api.services.tasks.Tasks$Tasklists$Get get(java.lang.String) -> a
+    com.google.api.services.tasks.Tasks$Tasklists$List list() -> a
+    com.google.api.services.tasks.Tasks$Tasklists$Update update(java.lang.String,com.google.api.services.tasks.model.TaskList) -> a
+    com.google.api.services.tasks.Tasks$Tasklists$Delete delete(java.lang.String) -> b
+com.google.api.services.tasks.Tasks$Tasklists$Delete -> com.google.api.services.tasks.e:
+    java.lang.String tasklist -> tasklist
+    com.google.api.services.tasks.Tasks$Tasklists this$1 -> a
+    void execute() -> e
+com.google.api.services.tasks.Tasks$Tasklists$Get -> com.google.api.services.tasks.f:
+    java.lang.String tasklist -> tasklist
+    com.google.api.services.tasks.Tasks$Tasklists this$1 -> a
+    com.google.api.services.tasks.model.TaskList execute() -> e
+com.google.api.services.tasks.Tasks$Tasklists$Insert -> com.google.api.services.tasks.g:
+    com.google.api.services.tasks.Tasks$Tasklists this$1 -> a
+    com.google.api.services.tasks.model.TaskList execute() -> e
+com.google.api.services.tasks.Tasks$Tasklists$List -> com.google.api.services.tasks.h:
+    java.lang.String pageToken -> pageToken
+    java.lang.Long maxResults -> maxResults
+    com.google.api.services.tasks.Tasks$Tasklists this$1 -> a
+    com.google.api.services.tasks.model.TaskLists execute() -> e
+com.google.api.services.tasks.Tasks$Tasklists$Update -> com.google.api.services.tasks.i:
+    java.lang.String tasklist -> tasklist
+    com.google.api.services.tasks.Tasks$Tasklists this$1 -> a
+    com.google.api.services.tasks.model.TaskList execute() -> e
+com.google.api.services.tasks.Tasks$TasksOperations -> com.google.api.services.tasks.j:
+    com.google.api.services.tasks.Tasks this$0 -> a
+    com.google.api.services.tasks.Tasks$TasksOperations$Insert insert(java.lang.String,com.google.api.services.tasks.model.Task) -> a
+    com.google.api.services.tasks.Tasks$TasksOperations$Get get(java.lang.String,java.lang.String) -> a
+    com.google.api.services.tasks.Tasks$TasksOperations$List list(java.lang.String) -> a
+    com.google.api.services.tasks.Tasks$TasksOperations$Update update(java.lang.String,java.lang.String,com.google.api.services.tasks.model.Task) -> a
+    com.google.api.services.tasks.Tasks$TasksOperations$Delete delete(java.lang.String,java.lang.String) -> b
+com.google.api.services.tasks.Tasks$TasksOperations$Delete -> com.google.api.services.tasks.k:
+    java.lang.String tasklist -> tasklist
+    java.lang.String task -> task
+    com.google.api.services.tasks.Tasks$TasksOperations this$1 -> a
+    void execute() -> e
+com.google.api.services.tasks.Tasks$TasksOperations$Get -> com.google.api.services.tasks.l:
+    java.lang.String tasklist -> tasklist
+    java.lang.String task -> task
+    com.google.api.services.tasks.Tasks$TasksOperations this$1 -> a
+    com.google.api.services.tasks.model.Task execute() -> e
+com.google.api.services.tasks.Tasks$TasksOperations$Insert -> com.google.api.services.tasks.m:
+    java.lang.String tasklist -> tasklist
+    java.lang.String parent -> parent
+    java.lang.String previous -> previous
+    com.google.api.services.tasks.Tasks$TasksOperations this$1 -> a
+    com.google.api.services.tasks.model.Task execute() -> e
+com.google.api.services.tasks.Tasks$TasksOperations$List -> com.google.api.services.tasks.n:
+    java.lang.String tasklist -> tasklist
+    java.lang.String dueMax -> dueMax
+    java.lang.Boolean showDeleted -> showDeleted
+    java.lang.String updatedMin -> updatedMin
+    java.lang.String completedMin -> completedMin
+    java.lang.Long maxResults -> maxResults
+    java.lang.Boolean showCompleted -> showCompleted
+    java.lang.String pageToken -> pageToken
+    java.lang.String completedMax -> completedMax
+    java.lang.Boolean showHidden -> showHidden
+    java.lang.String dueMin -> dueMin
+    com.google.api.services.tasks.Tasks$TasksOperations this$1 -> a
+    com.google.api.services.tasks.model.Tasks execute() -> e
+com.google.api.services.tasks.Tasks$TasksOperations$Update -> com.google.api.services.tasks.o:
+    java.lang.String tasklist -> tasklist
+    java.lang.String task -> task
+    com.google.api.services.tasks.Tasks$TasksOperations this$1 -> a
+    com.google.api.services.tasks.model.Task execute() -> e
+com.google.api.services.tasks.TasksRequest -> com.google.api.services.tasks.p:
+    java.lang.Boolean prettyPrint -> prettyPrint
+    java.lang.String fields -> fields
+    java.lang.String quotaUser -> quotaUser
+    java.lang.String oauthToken -> oauthToken
+    java.lang.String key -> key
+    java.lang.String userIp -> userIp
+    java.lang.String alt -> alt
+com.google.api.services.tasks.model.Task -> com.google.api.services.tasks.model.Task:
+    java.lang.String status -> status
+    java.lang.String kind -> kind
+    com.google.api.client.util.DateTime updated -> updated
+    java.lang.String parent -> parent
+    java.util.List links -> links
+    java.lang.String title -> title
+    java.lang.Boolean deleted -> deleted
+    com.google.api.client.util.DateTime completed -> completed
+    com.google.api.client.util.DateTime due -> due
+    java.lang.String etag -> etag
+    java.lang.String notes -> notes
+    java.lang.String position -> position
+    java.lang.Boolean hidden -> hidden
+    java.lang.String id -> id
+    java.lang.String selfLink -> selfLink
+    com.google.api.client.http.HttpHeaders responseHeaders -> a
+    java.lang.String getStatus() -> a
+    com.google.api.services.tasks.model.Task setStatus(java.lang.String) -> a
+    java.lang.String getTitle() -> b
+    com.google.api.services.tasks.model.Task setTitle(java.lang.String) -> b
+    com.google.api.services.tasks.model.Task setCompleted(com.google.api.client.util.DateTime) -> a
+    java.lang.String getId() -> f
+    void setResponseHeaders(com.google.api.client.http.HttpHeaders) -> a
+com.google.api.services.tasks.model.Task$Links -> com.google.api.services.tasks.model.Task$Links:
+    java.lang.String type -> type
+    java.lang.String link -> link
+    java.lang.String description -> description
+com.google.api.services.tasks.model.TaskList -> com.google.api.services.tasks.model.TaskList:
+    java.lang.String kind -> kind
+    java.lang.String title -> title
+    com.google.api.client.util.DateTime updated -> updated
+    java.lang.String etag -> etag
+    java.lang.String id -> id
+    java.lang.String selfLink -> selfLink
+    com.google.api.client.http.HttpHeaders responseHeaders -> a
+    java.lang.String getTitle() -> a
+    com.google.api.services.tasks.model.TaskList setTitle(java.lang.String) -> a
+    java.lang.String getId() -> b
+    void setResponseHeaders(com.google.api.client.http.HttpHeaders) -> a
+com.google.api.services.tasks.model.TaskLists -> com.google.api.services.tasks.model.TaskLists:
+    java.lang.String nextPageToken -> nextPageToken
+    java.util.List items -> items
+    java.lang.String kind -> kind
+    java.lang.String etag -> etag
+    com.google.api.client.http.HttpHeaders responseHeaders -> a
+    java.util.List getItems() -> a
+    void setResponseHeaders(com.google.api.client.http.HttpHeaders) -> a
+com.google.api.services.tasks.model.Tasks -> com.google.api.services.tasks.model.Tasks:
+    java.lang.String nextPageToken -> nextPageToken
+    java.util.List items -> items
+    java.lang.String kind -> kind
+    java.lang.String etag -> etag
+    com.google.api.client.http.HttpHeaders responseHeaders -> a
+    java.util.List getItems() -> a
+    void setResponseHeaders(com.google.api.client.http.HttpHeaders) -> a
+com.google.common.base.Charsets -> com.google.a.a.a:
+    java.nio.charset.Charset US_ASCII -> a
+    java.nio.charset.Charset ISO_8859_1 -> b
+    java.nio.charset.Charset UTF_8 -> c
+    java.nio.charset.Charset UTF_16BE -> d
+    java.nio.charset.Charset UTF_16LE -> e
+    java.nio.charset.Charset UTF_16 -> f
+com.google.common.base.Objects -> com.google.a.a.b:
+    boolean equal(java.lang.Object,java.lang.Object) -> a
+com.google.common.base.Preconditions -> com.google.a.a.c:
+    void checkArgument(boolean) -> a
+    void checkArgument(boolean,java.lang.Object) -> a
+    void checkArgument(boolean,java.lang.String,java.lang.Object[]) -> a
+    void checkState(boolean) -> b
+    void checkState(boolean,java.lang.String,java.lang.Object[]) -> b
+    java.lang.Object checkNotNull(java.lang.Object) -> a
+    java.lang.Object checkNotNull(java.lang.Object,java.lang.Object) -> a
+    java.lang.Object checkNotNull(java.lang.Object,java.lang.String,java.lang.Object[]) -> a
+    java.lang.String format(java.lang.String,java.lang.Object[]) -> a
+com.google.common.base.Strings -> com.google.a.a.d:
+    boolean isNullOrEmpty(java.lang.String) -> a
+com.google.gson.internal.JsonReaderInternalAccess -> com.google.b.a.a:
+    com.google.gson.internal.JsonReaderInternalAccess INSTANCE -> a
+com.google.gson.stream.JsonReader -> com.google.b.b.a:
+    char[] NON_EXECUTE_PREFIX -> a
+    com.google.gson.stream.StringPool stringPool -> b
+    java.io.Reader in -> c
+    boolean lenient -> d
+    char[] buffer -> e
+    int pos -> f
+    int limit -> g
+    int bufferStartLine -> h
+    int bufferStartColumn -> i
+    com.google.gson.stream.JsonScope[] stack -> j
+    int stackSize -> k
+    com.google.gson.stream.JsonToken token -> l
+    java.lang.String name -> m
+    java.lang.String value -> n
+    int valuePos -> o
+    int valueLength -> p
+    boolean skipping -> q
+    void setLenient(boolean) -> a
+    void beginArray() -> a
+    void endArray() -> b
+    void beginObject() -> c
+    void endObject() -> d
+    void expect(com.google.gson.stream.JsonToken) -> a
+    com.google.gson.stream.JsonToken peek() -> e
+    void consumeNonExecutePrefix() -> k
+    com.google.gson.stream.JsonToken advance() -> l
+    java.lang.String nextName() -> f
+    java.lang.String nextString() -> g
+    boolean nextBoolean() -> h
+    void nextNull() -> i
+    void close() -> close
+    void skipValue() -> j
+    void push(com.google.gson.stream.JsonScope) -> a
+    com.google.gson.stream.JsonToken nextInArray(boolean) -> b
+    com.google.gson.stream.JsonToken nextInObject(boolean) -> c
+    com.google.gson.stream.JsonToken objectValue() -> m
+    com.google.gson.stream.JsonToken nextValue() -> n
+    boolean fillBuffer(int) -> a
+    int getLineNumber() -> o
+    int getColumnNumber() -> p
+    int nextNonWhitespace(boolean) -> d
+    void checkLenient() -> q
+    void skipToEndOfLine() -> r
+    boolean skipTo(java.lang.String) -> a
+    java.lang.String nextString(char) -> a
+    java.lang.String nextLiteral(boolean) -> e
+    java.lang.String toString() -> toString
+    char readEscapeCharacter() -> s
+    com.google.gson.stream.JsonToken readLiteral() -> t
+    com.google.gson.stream.JsonToken decodeLiteral() -> u
+    com.google.gson.stream.JsonToken decodeNumber(char[],int,int) -> a
+    java.io.IOException syntaxError(java.lang.String) -> b
+    java.lang.CharSequence getSnippet() -> v
+com.google.gson.stream.JsonReader$1 -> com.google.b.b.b:
+com.google.gson.stream.JsonReader$2 -> com.google.b.b.c:
+    int[] $SwitchMap$com$google$gson$stream$JsonScope -> a
+com.google.gson.stream.JsonScope -> com.google.b.b.d:
+    com.google.gson.stream.JsonScope EMPTY_ARRAY -> a
+    com.google.gson.stream.JsonScope NONEMPTY_ARRAY -> b
+    com.google.gson.stream.JsonScope EMPTY_OBJECT -> c
+    com.google.gson.stream.JsonScope DANGLING_NAME -> d
+    com.google.gson.stream.JsonScope NONEMPTY_OBJECT -> e
+    com.google.gson.stream.JsonScope EMPTY_DOCUMENT -> f
+    com.google.gson.stream.JsonScope NONEMPTY_DOCUMENT -> g
+    com.google.gson.stream.JsonScope CLOSED -> h
+    com.google.gson.stream.JsonScope[] $VALUES -> i
+    com.google.gson.stream.JsonScope[] values() -> values
+    com.google.gson.stream.JsonScope valueOf(java.lang.String) -> valueOf
+com.google.gson.stream.JsonToken -> com.google.b.b.e:
+    com.google.gson.stream.JsonToken BEGIN_ARRAY -> a
+    com.google.gson.stream.JsonToken END_ARRAY -> b
+    com.google.gson.stream.JsonToken BEGIN_OBJECT -> c
+    com.google.gson.stream.JsonToken END_OBJECT -> d
+    com.google.gson.stream.JsonToken NAME -> e
+    com.google.gson.stream.JsonToken STRING -> f
+    com.google.gson.stream.JsonToken NUMBER -> g
+    com.google.gson.stream.JsonToken BOOLEAN -> h
+    com.google.gson.stream.JsonToken NULL -> i
+    com.google.gson.stream.JsonToken END_DOCUMENT -> j
+    com.google.gson.stream.JsonToken[] $VALUES -> k
+    com.google.gson.stream.JsonToken[] values() -> values
+    com.google.gson.stream.JsonToken valueOf(java.lang.String) -> valueOf
+com.google.gson.stream.JsonWriter -> com.google.b.b.f:
+    java.io.Writer out -> a
+    java.util.List stack -> b
+    java.lang.String indent -> c
+    java.lang.String separator -> d
+    boolean lenient -> e
+    boolean htmlSafe -> f
+    java.lang.String deferredName -> g
+    boolean serializeNulls -> h
+    void setIndent(java.lang.String) -> a
+    void setLenient(boolean) -> a
+    com.google.gson.stream.JsonWriter beginArray() -> a
+    com.google.gson.stream.JsonWriter endArray() -> b
+    com.google.gson.stream.JsonWriter beginObject() -> c
+    com.google.gson.stream.JsonWriter endObject() -> d
+    com.google.gson.stream.JsonWriter open(com.google.gson.stream.JsonScope,java.lang.String) -> a
+    com.google.gson.stream.JsonWriter close(com.google.gson.stream.JsonScope,com.google.gson.stream.JsonScope,java.lang.String) -> a
+    com.google.gson.stream.JsonScope peek() -> g
+    void replaceTop(com.google.gson.stream.JsonScope) -> a
+    com.google.gson.stream.JsonWriter name(java.lang.String) -> b
+    void writeDeferredName() -> h
+    com.google.gson.stream.JsonWriter value(java.lang.String) -> c
+    com.google.gson.stream.JsonWriter nullValue() -> e
+    com.google.gson.stream.JsonWriter value(boolean) -> b
+    com.google.gson.stream.JsonWriter value(double) -> a
+    com.google.gson.stream.JsonWriter value(long) -> a
+    com.google.gson.stream.JsonWriter value(java.lang.Number) -> a
+    void flush() -> f
+    void close() -> close
+    void string(java.lang.String) -> d
+    void newline() -> i
+    void beforeName() -> j
+    void beforeValue(boolean) -> c
+com.google.gson.stream.JsonWriter$1 -> com.google.b.b.g:
+    int[] $SwitchMap$com$google$gson$stream$JsonScope -> a
+com.google.gson.stream.MalformedJsonException -> com.google.b.b.h:
+com.google.gson.stream.StringPool -> com.google.b.b.i:
+    java.lang.String[] pool -> a
+    java.lang.String get(char[],int,int) -> a
+com.google.protobuf.MessageLite -> com.google.c.a:
+    int getSerializedSize() -> a
+    void writeTo(java.io.OutputStream) -> a
+daniel.stanciu.quicktasks.GoogleTasksSyncTask -> daniel.stanciu.quicktasks.a:
+    daniel.stanciu.quicktasks.QuickTasksActivity activity -> a
+    java.lang.String doInBackground(java.lang.Void[]) -> a
+    void onPostExecute(java.lang.String) -> a
+    void onPreExecute() -> onPreExecute
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+daniel.stanciu.quicktasks.GoogleTasksUtils -> daniel.stanciu.quicktasks.b:
+    daniel.stanciu.quicktasks.QuickTasksActivity activity -> b
+    java.util.logging.Level LOGGING_LEVEL -> c
+    com.google.api.services.tasks.Tasks service -> d
+    com.google.api.client.http.HttpTransport transport -> e
+    com.google.api.client.json.JsonFactory jsonFactory -> f
+    com.google.api.client.googleapis.auth.oauth2.GoogleCredential credential -> g
+    java.lang.String accountName -> h
+    com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager accountManager -> a
+    android.content.SharedPreferences settings -> i
+    void gotAccount() -> a
+    void chooseAccount() -> b
+    void setAccountName(java.lang.String) -> a
+    void setAuthToken(java.lang.String) -> b
+    void onAuthToken() -> e
+    void getDebugTasks() -> f
+    void getDebugTaskLists() -> g
+    void handleGoogleException(java.io.IOException) -> a
+    void updateDirty() -> c
+    void downloadUpdates() -> d
+    daniel.stanciu.quicktasks.QuickTasksActivity access$0(daniel.stanciu.quicktasks.GoogleTasksUtils) -> a
+    void access$1(daniel.stanciu.quicktasks.GoogleTasksUtils) -> b
+daniel.stanciu.quicktasks.GoogleTasksUtils$1 -> daniel.stanciu.quicktasks.c:
+    daniel.stanciu.quicktasks.GoogleTasksUtils this$0 -> a
+    void run(android.accounts.AccountManagerFuture) -> run
+daniel.stanciu.quicktasks.GoogleTasksUtils$2 -> daniel.stanciu.quicktasks.d:
+    daniel.stanciu.quicktasks.GoogleTasksUtils this$0 -> a
+    void run(android.accounts.AccountManagerFuture) -> run
+daniel.stanciu.quicktasks.MyArrayAdapter -> daniel.stanciu.quicktasks.e:
+    android.view.LayoutInflater mInflater -> b
+    int editingPosition -> c
+    daniel.stanciu.quicktasks.QuickTasksActivity activity -> a
+    android.widget.EditText editText -> d
+    void init(android.content.Context) -> a
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    android.view.View getTaskListView(int,android.view.View,android.view.ViewGroup) -> a
+    void notifyDataSetChanged() -> notifyDataSetChanged
+    android.view.View getTaskView(int,android.view.View,android.view.ViewGroup) -> b
+    int getItemViewType(int) -> getItemViewType
+    int getViewTypeCount() -> getViewTypeCount
+    boolean exitEditMode() -> a
+    void setEditingPosition(int) -> a
+    android.widget.EditText access$0(daniel.stanciu.quicktasks.MyArrayAdapter) -> a
+daniel.stanciu.quicktasks.MyArrayAdapter$1 -> daniel.stanciu.quicktasks.f:
+    daniel.stanciu.quicktasks.MyArrayAdapter this$0 -> a
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+daniel.stanciu.quicktasks.MyArrayAdapter$2 -> daniel.stanciu.quicktasks.g:
+    daniel.stanciu.quicktasks.MyArrayAdapter this$0 -> a
+    void run() -> run
+daniel.stanciu.quicktasks.MyArrayAdapter$3 -> daniel.stanciu.quicktasks.h:
+    daniel.stanciu.quicktasks.MyArrayAdapter this$0 -> a
+    void onFocusChange(android.view.View,boolean) -> onFocusChange
+daniel.stanciu.quicktasks.MyLinearLayout -> daniel.stanciu.quicktasks.MyLinearLayout:
+daniel.stanciu.quicktasks.MyOnGestureListener -> daniel.stanciu.quicktasks.i:
+    daniel.stanciu.quicktasks.QuickTasksActivity activity -> a
+    boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onScroll
+    boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
+    boolean onDoubleTapEvent(android.view.MotionEvent) -> onDoubleTapEvent
+    boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+    boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
+daniel.stanciu.quicktasks.MyScrollView -> daniel.stanciu.quicktasks.MyScrollView:
+    daniel.stanciu.quicktasks.QuickTasksActivity activity -> a
+    void setActivity(daniel.stanciu.quicktasks.QuickTasksActivity) -> setActivity
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+daniel.stanciu.quicktasks.MyTask -> daniel.stanciu.quicktasks.j:
+    boolean checked -> a
+    java.lang.String parentListId -> b
+    boolean isChecked() -> a
+    void setChecked(boolean) -> a
+    void setParentListId(java.lang.String) -> a
+    java.lang.String getParentListId() -> b
+daniel.stanciu.quicktasks.MyTaskBase -> daniel.stanciu.quicktasks.k:
+    java.lang.String id -> a
+    java.lang.String title -> b
+    long internalId -> c
+    boolean deleted -> d
+    java.lang.String toString() -> toString
+    java.lang.String getId() -> c
+    void setId(java.lang.String) -> b
+    java.lang.String getTitle() -> d
+    void setTitle(java.lang.String) -> c
+    long getInternalId() -> e
+    void setInternalId(long) -> a
+    boolean isDeleted() -> f
+    void setDeleted(boolean) -> b
+daniel.stanciu.quicktasks.MyTasksList -> daniel.stanciu.quicktasks.l:
+    java.lang.String toString() -> toString
+daniel.stanciu.quicktasks.MyTextView -> daniel.stanciu.quicktasks.MyTextView:
+    daniel.stanciu.quicktasks.QuickTasksActivity activity -> a
+    android.view.GestureDetector gd -> b
+    daniel.stanciu.quicktasks.MyArrayAdapter arrayAdapter -> c
+    android.view.MotionEvent doubleTapStart -> d
+    void setActivity(daniel.stanciu.quicktasks.QuickTasksActivity) -> setActivity
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    boolean onDown(android.view.MotionEvent) -> onDown
+    void onShowPress(android.view.MotionEvent) -> onShowPress
+    boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
+    boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onScroll
+    void onLongPress(android.view.MotionEvent) -> onLongPress
+    boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
+    boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+    boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
+    boolean onDoubleTapEvent(android.view.MotionEvent) -> onDoubleTapEvent
+    void setArrayAdapter(daniel.stanciu.quicktasks.MyArrayAdapter) -> setArrayAdapter
+daniel.stanciu.quicktasks.QuickTasksActivity -> daniel.stanciu.quicktasks.QuickTasksActivity:
+    daniel.stanciu.quicktasks.ViewType currentViewType -> a
+    daniel.stanciu.quicktasks.MyTasksList currentList -> b
+    android.view.GestureDetector gestureDetector -> c
+    daniel.stanciu.quicktasks.MyLinearLayout mainLayout -> e
+    daniel.stanciu.quicktasks.MyArrayAdapter arrayAdapter -> f
+    daniel.stanciu.quicktasks.db.DbManager dbManager -> g
+    android.widget.EditText newItemEditText -> h
+    android.widget.Button addItemButton -> i
+    daniel.stanciu.quicktasks.GoogleTasksUtils gtasksUtils -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    void getDataFromDB() -> a
+    boolean shouldUpdate() -> j
+    boolean isNetworkAvailable() -> k
+    boolean isEmulator() -> b
+    void onBackPressed() -> onBackPressed
+    void onResume() -> onResume
+    void onPause() -> onPause
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void deleteCompletedTasks() -> l
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    void populateView() -> c
+    android.view.View createView(int) -> d
+    void selectNextList() -> d
+    void selectPrevList() -> e
+    void onRightToLeftSwipe() -> f
+    void onLeftToRightSwipe() -> g
+    void clearFocus() -> h
+    void replaceView(int) -> a
+    daniel.stanciu.quicktasks.db.DbManager getDbManager() -> i
+    void deleteView(int) -> b
+    void addView(int) -> c
+    android.widget.EditText access$0(daniel.stanciu.quicktasks.QuickTasksActivity) -> a
+    daniel.stanciu.quicktasks.db.DbManager access$1(daniel.stanciu.quicktasks.QuickTasksActivity) -> b
+    daniel.stanciu.quicktasks.MyArrayAdapter access$2(daniel.stanciu.quicktasks.QuickTasksActivity) -> c
+daniel.stanciu.quicktasks.QuickTasksActivity$1 -> daniel.stanciu.quicktasks.m:
+    daniel.stanciu.quicktasks.QuickTasksActivity this$0 -> a
+    void onClick(android.view.View) -> onClick
+daniel.stanciu.quicktasks.ViewType -> daniel.stanciu.quicktasks.n:
+    daniel.stanciu.quicktasks.ViewType LISTS -> a
+    daniel.stanciu.quicktasks.ViewType TASKS -> b
+    daniel.stanciu.quicktasks.ViewType[] ENUM$VALUES -> c
+    daniel.stanciu.quicktasks.ViewType[] values() -> values
+    daniel.stanciu.quicktasks.ViewType valueOf(java.lang.String) -> valueOf
+daniel.stanciu.quicktasks.db.DbManager -> daniel.stanciu.quicktasks.a.a:
+    android.content.Context context -> a
+    daniel.stanciu.quicktasks.db.TasksOpenHelper dbOpenHelper -> b
+    android.database.sqlite.SQLiteDatabase db -> c
+    daniel.stanciu.quicktasks.QuickTasksActivity activity -> d
+    java.util.ArrayList availableLists -> e
+    java.lang.String[] fullListColumns -> f
+    java.lang.String[] fullTaskColumns -> g
+    boolean isDbEmpty() -> a
+    void openDb() -> b
+    void closeDb() -> c
+    daniel.stanciu.quicktasks.MyTasksList getListFromCursor(android.database.Cursor) -> a
+    void populateAvailableLists() -> d
+    java.util.List getLists() -> e
+    java.util.ArrayList getTasks(daniel.stanciu.quicktasks.MyTasksList) -> a
+    daniel.stanciu.quicktasks.MyTask getTaskFromCursor(android.database.Cursor) -> b
+    boolean isDbDirty() -> f
+    boolean insertList(daniel.stanciu.quicktasks.MyTasksList) -> b
+    boolean insertTask(daniel.stanciu.quicktasks.MyTask,daniel.stanciu.quicktasks.MyTasksList) -> a
+    void checkForUpdateTask(daniel.stanciu.quicktasks.MyTask,daniel.stanciu.quicktasks.MyTasksList) -> b
+    void checkForUpdateList(daniel.stanciu.quicktasks.MyTasksList) -> c
+    void updateTask(daniel.stanciu.quicktasks.MyTask) -> a
+    void updateTask(daniel.stanciu.quicktasks.MyTask,boolean) -> a
+    void updateList(daniel.stanciu.quicktasks.MyTasksList,boolean) -> a
+    java.util.ArrayList getDirtyLists() -> g
+    void newListUploaded(daniel.stanciu.quicktasks.MyTasksList) -> d
+    void existingListUploaded(daniel.stanciu.quicktasks.MyTasksList) -> e
+    java.util.ArrayList getDirtyTasks() -> h
+    void newTaskUploaded(daniel.stanciu.quicktasks.MyTask) -> b
+    void existingTaskUploaded(daniel.stanciu.quicktasks.MyTask) -> c
+    void deleteTask(daniel.stanciu.quicktasks.MyTask) -> d
+    void deleteList(daniel.stanciu.quicktasks.MyTasksList) -> f
+    void deleteCompletedTasks(daniel.stanciu.quicktasks.MyTasksList) -> g
+daniel.stanciu.quicktasks.db.TasksOpenHelper -> daniel.stanciu.quicktasks.a.b:
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+org.codehaus.jackson.JsonEncoding -> a.a.a.a:
+    org.codehaus.jackson.JsonEncoding UTF8 -> a
+    org.codehaus.jackson.JsonEncoding UTF16_BE -> b
+    org.codehaus.jackson.JsonEncoding UTF16_LE -> c
+    org.codehaus.jackson.JsonEncoding UTF32_BE -> d
+    org.codehaus.jackson.JsonEncoding UTF32_LE -> e
+    java.lang.String _javaName -> f
+    boolean _bigEndian -> g
+    org.codehaus.jackson.JsonEncoding[] $VALUES -> h
+    org.codehaus.jackson.JsonEncoding[] values() -> values
+    org.codehaus.jackson.JsonEncoding valueOf(java.lang.String) -> valueOf
+    java.lang.String getJavaName() -> a
+    boolean isBigEndian() -> b
+org.codehaus.jackson.JsonFactory -> a.a.a.b:
+    int DEFAULT_PARSER_FEATURE_FLAGS -> a
+    int DEFAULT_GENERATOR_FEATURE_FLAGS -> b
+    java.lang.ThreadLocal _recyclerRef -> c
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer _rootCharSymbols -> d
+    org.codehaus.jackson.sym.BytesToNameCanonicalizer _rootByteSymbols -> e
+    org.codehaus.jackson.ObjectCodec _objectCodec -> f
+    int _parserFeatures -> g
+    int _generatorFeatures -> h
+    org.codehaus.jackson.io.CharacterEscapes _characterEscapes -> i
+    org.codehaus.jackson.io.InputDecorator _inputDecorator -> j
+    org.codehaus.jackson.io.OutputDecorator _outputDecorator -> k
+    org.codehaus.jackson.JsonFactory configure(org.codehaus.jackson.JsonGenerator$Feature,boolean) -> a
+    org.codehaus.jackson.JsonFactory enable(org.codehaus.jackson.JsonGenerator$Feature) -> a
+    org.codehaus.jackson.JsonFactory disable(org.codehaus.jackson.JsonGenerator$Feature) -> b
+    org.codehaus.jackson.JsonParser createJsonParser(java.io.InputStream) -> a
+    org.codehaus.jackson.JsonGenerator createJsonGenerator(java.io.OutputStream,org.codehaus.jackson.JsonEncoding) -> a
+    org.codehaus.jackson.JsonParser _createJsonParser(java.io.InputStream,org.codehaus.jackson.io.IOContext) -> a
+    org.codehaus.jackson.JsonGenerator _createJsonGenerator(java.io.Writer,org.codehaus.jackson.io.IOContext) -> a
+    org.codehaus.jackson.JsonGenerator _createUTF8JsonGenerator(java.io.OutputStream,org.codehaus.jackson.io.IOContext) -> a
+    java.io.Writer _createWriter(java.io.OutputStream,org.codehaus.jackson.JsonEncoding,org.codehaus.jackson.io.IOContext) -> a
+    org.codehaus.jackson.io.IOContext _createContext(java.lang.Object,boolean) -> a
+    org.codehaus.jackson.util.BufferRecycler _getBufferRecycler() -> a
+org.codehaus.jackson.JsonGenerationException -> a.a.a.c:
+org.codehaus.jackson.JsonGenerator -> a.a.a.d:
+    org.codehaus.jackson.PrettyPrinter _cfgPrettyPrinter -> a
+    org.codehaus.jackson.JsonGenerator setPrettyPrinter(org.codehaus.jackson.PrettyPrinter) -> a
+    org.codehaus.jackson.JsonGenerator useDefaultPrettyPrinter() -> a
+    org.codehaus.jackson.JsonGenerator setHighestNonEscapedChar(int) -> a
+    org.codehaus.jackson.JsonGenerator setCharacterEscapes(org.codehaus.jackson.io.CharacterEscapes) -> a
+    void writeStartArray() -> b
+    void writeEndArray() -> c
+    void writeStartObject() -> d
+    void writeEndObject() -> e
+    void writeFieldName(java.lang.String) -> a
+    void writeString(java.lang.String) -> b
+    void writeRaw(java.lang.String) -> c
+    void writeRaw(char[],int,int) -> a
+    void writeRaw(char) -> a
+    void writeNumber(int) -> b
+    void writeNumber(long) -> a
+    void writeNumber(java.math.BigInteger) -> a
+    void writeNumber(double) -> a
+    void writeNumber(float) -> a
+    void writeNumber(java.math.BigDecimal) -> a
+    void writeBoolean(boolean) -> a
+    void writeNull() -> f
+    void flush() -> g
+org.codehaus.jackson.JsonGenerator$Feature -> a.a.a.e:
+    org.codehaus.jackson.JsonGenerator$Feature AUTO_CLOSE_TARGET -> a
+    org.codehaus.jackson.JsonGenerator$Feature AUTO_CLOSE_JSON_CONTENT -> b
+    org.codehaus.jackson.JsonGenerator$Feature QUOTE_FIELD_NAMES -> c
+    org.codehaus.jackson.JsonGenerator$Feature QUOTE_NON_NUMERIC_NUMBERS -> d
+    org.codehaus.jackson.JsonGenerator$Feature WRITE_NUMBERS_AS_STRINGS -> e
+    org.codehaus.jackson.JsonGenerator$Feature FLUSH_PASSED_TO_STREAM -> f
+    org.codehaus.jackson.JsonGenerator$Feature ESCAPE_NON_ASCII -> g
+    boolean _defaultState -> h
+    int _mask -> i
+    org.codehaus.jackson.JsonGenerator$Feature[] $VALUES -> j
+    org.codehaus.jackson.JsonGenerator$Feature[] values() -> values
+    org.codehaus.jackson.JsonGenerator$Feature valueOf(java.lang.String) -> valueOf
+    int collectDefaults() -> a
+    boolean enabledByDefault() -> b
+    int getMask() -> c
+org.codehaus.jackson.JsonLocation -> a.a.a.f:
+    org.codehaus.jackson.JsonLocation NA -> a
+    long _totalBytes -> b
+    long _totalChars -> c
+    int _lineNr -> d
+    int _columnNr -> e
+    java.lang.Object _sourceRef -> f
+    long getByteOffset() -> a
+    java.lang.String toString() -> toString
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+org.codehaus.jackson.JsonParseException -> a.a.a.g:
+org.codehaus.jackson.JsonParser -> a.a.a.h:
+    int _features -> a
+    org.codehaus.jackson.JsonToken _currToken -> b
+    void close() -> close
+    boolean isEnabled(org.codehaus.jackson.JsonParser$Feature) -> a
+    org.codehaus.jackson.JsonToken nextToken() -> a
+    org.codehaus.jackson.JsonParser skipChildren() -> b
+    org.codehaus.jackson.JsonToken getCurrentToken() -> c
+    java.lang.String getCurrentName() -> d
+    org.codehaus.jackson.JsonLocation getCurrentLocation() -> e
+    java.lang.String getText() -> f
+    byte getByteValue() -> g
+    short getShortValue() -> h
+    int getIntValue() -> i
+    long getLongValue() -> j
+    java.math.BigInteger getBigIntegerValue() -> k
+    float getFloatValue() -> l
+    double getDoubleValue() -> m
+    java.math.BigDecimal getDecimalValue() -> n
+    org.codehaus.jackson.JsonParseException _constructError(java.lang.String) -> a
+org.codehaus.jackson.JsonParser$Feature -> a.a.a.i:
+    org.codehaus.jackson.JsonParser$Feature AUTO_CLOSE_SOURCE -> a
+    org.codehaus.jackson.JsonParser$Feature ALLOW_COMMENTS -> b
+    org.codehaus.jackson.JsonParser$Feature ALLOW_UNQUOTED_FIELD_NAMES -> c
+    org.codehaus.jackson.JsonParser$Feature ALLOW_SINGLE_QUOTES -> d
+    org.codehaus.jackson.JsonParser$Feature ALLOW_UNQUOTED_CONTROL_CHARS -> e
+    org.codehaus.jackson.JsonParser$Feature ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER -> f
+    org.codehaus.jackson.JsonParser$Feature ALLOW_NUMERIC_LEADING_ZEROS -> g
+    org.codehaus.jackson.JsonParser$Feature ALLOW_NON_NUMERIC_NUMBERS -> h
+    org.codehaus.jackson.JsonParser$Feature INTERN_FIELD_NAMES -> i
+    org.codehaus.jackson.JsonParser$Feature CANONICALIZE_FIELD_NAMES -> j
+    boolean _defaultState -> k
+    org.codehaus.jackson.JsonParser$Feature[] $VALUES -> l
+    org.codehaus.jackson.JsonParser$Feature[] values() -> values
+    org.codehaus.jackson.JsonParser$Feature valueOf(java.lang.String) -> valueOf
+    int collectDefaults() -> a
+    boolean enabledByDefault() -> b
+    boolean enabledIn(int) -> a
+    int getMask() -> c
+org.codehaus.jackson.JsonProcessingException -> a.a.a.j:
+    org.codehaus.jackson.JsonLocation mLocation -> a
+    org.codehaus.jackson.JsonLocation getLocation() -> a
+    java.lang.String getMessage() -> getMessage
+    java.lang.String toString() -> toString
+org.codehaus.jackson.JsonStreamContext -> a.a.a.k:
+    int _type -> a
+    int _index -> b
+    boolean inArray() -> a
+    boolean inRoot() -> b
+    boolean inObject() -> c
+    java.lang.String getTypeDesc() -> d
+    int getEntryCount() -> e
+    int getCurrentIndex() -> f
+org.codehaus.jackson.JsonToken -> a.a.a.l:
+    org.codehaus.jackson.JsonToken NOT_AVAILABLE -> a
+    org.codehaus.jackson.JsonToken START_OBJECT -> b
+    org.codehaus.jackson.JsonToken END_OBJECT -> c
+    org.codehaus.jackson.JsonToken START_ARRAY -> d
+    org.codehaus.jackson.JsonToken END_ARRAY -> e
+    org.codehaus.jackson.JsonToken FIELD_NAME -> f
+    org.codehaus.jackson.JsonToken VALUE_EMBEDDED_OBJECT -> g
+    org.codehaus.jackson.JsonToken VALUE_STRING -> h
+    org.codehaus.jackson.JsonToken VALUE_NUMBER_INT -> i
+    org.codehaus.jackson.JsonToken VALUE_NUMBER_FLOAT -> j
+    org.codehaus.jackson.JsonToken VALUE_TRUE -> k
+    org.codehaus.jackson.JsonToken VALUE_FALSE -> l
+    org.codehaus.jackson.JsonToken VALUE_NULL -> m
+    java.lang.String _serialized -> n
+    char[] _serializedChars -> o
+    byte[] _serializedBytes -> p
+    org.codehaus.jackson.JsonToken[] $VALUES -> q
+    org.codehaus.jackson.JsonToken[] values() -> values
+    org.codehaus.jackson.JsonToken valueOf(java.lang.String) -> valueOf
+    java.lang.String asString() -> a
+org.codehaus.jackson.ObjectCodec -> a.a.a.m:
+org.codehaus.jackson.PrettyPrinter -> a.a.a.n:
+    void writeRootValueSeparator(org.codehaus.jackson.JsonGenerator) -> a
+    void writeStartObject(org.codehaus.jackson.JsonGenerator) -> b
+    void writeEndObject(org.codehaus.jackson.JsonGenerator,int) -> a
+    void writeObjectEntrySeparator(org.codehaus.jackson.JsonGenerator) -> c
+    void writeObjectFieldValueSeparator(org.codehaus.jackson.JsonGenerator) -> d
+    void writeStartArray(org.codehaus.jackson.JsonGenerator) -> e
+    void writeEndArray(org.codehaus.jackson.JsonGenerator,int) -> b
+    void writeArrayValueSeparator(org.codehaus.jackson.JsonGenerator) -> f
+    void beforeArrayValues(org.codehaus.jackson.JsonGenerator) -> g
+    void beforeObjectEntries(org.codehaus.jackson.JsonGenerator) -> h
+org.codehaus.jackson.SerializableString -> a.a.a.o:
+    java.lang.String getValue() -> a
+    byte[] asUnquotedUTF8() -> b
+org.codehaus.jackson.impl.ByteSourceBootstrapper -> a.a.a.a.a:
+    org.codehaus.jackson.io.IOContext _context -> a
+    java.io.InputStream _in -> b
+    byte[] _inputBuffer -> c
+    int _inputPtr -> g
+    int _inputEnd -> h
+    boolean _bufferRecyclable -> i
+    int _inputProcessed -> d
+    boolean _bigEndian -> e
+    int _bytesPerChar -> f
+    org.codehaus.jackson.JsonEncoding detectEncoding() -> a
+    java.io.Reader constructReader() -> b
+    org.codehaus.jackson.JsonParser constructParser(int,org.codehaus.jackson.ObjectCodec,org.codehaus.jackson.sym.BytesToNameCanonicalizer,org.codehaus.jackson.sym.CharsToNameCanonicalizer) -> a
+    boolean handleBOM(int) -> b
+    boolean checkUTF32(int) -> c
+    boolean checkUTF16(int) -> d
+    void reportWeirdUCS4(java.lang.String) -> a
+    boolean ensureLoaded(int) -> a
+org.codehaus.jackson.impl.ByteSourceBootstrapper$1 -> a.a.a.a.b:
+    int[] $SwitchMap$org$codehaus$jackson$JsonEncoding -> a
+org.codehaus.jackson.impl.Indenter -> a.a.a.a.c:
+    void writeIndentation(org.codehaus.jackson.JsonGenerator,int) -> a
+    boolean isInline() -> a
+org.codehaus.jackson.impl.JsonGeneratorBase -> a.a.a.a.d:
+    org.codehaus.jackson.ObjectCodec _objectCodec -> b
+    int _features -> c
+    boolean _cfgNumbersAsStrings -> d
+    org.codehaus.jackson.impl.JsonWriteContext _writeContext -> e
+    boolean _closed -> f
+    boolean isEnabled(org.codehaus.jackson.JsonGenerator$Feature) -> a
+    org.codehaus.jackson.JsonGenerator useDefaultPrettyPrinter() -> a
+    org.codehaus.jackson.impl.JsonWriteContext getOutputContext() -> h
+    void writeStartArray() -> b
+    void _writeStartArray() -> i
+    void writeEndArray() -> c
+    void _writeEndArray() -> j
+    void writeStartObject() -> d
+    void _writeStartObject() -> k
+    void writeEndObject() -> e
+    void _writeEndObject() -> l
+    void close() -> close
+    void _verifyValueWrite(java.lang.String) -> d
+    void _reportError(java.lang.String) -> e
+    void _cantHappen() -> m
+org.codehaus.jackson.impl.JsonParserBase -> a.a.a.a.e:
+    org.codehaus.jackson.io.IOContext _ioContext -> c
+    boolean _closed -> d
+    int _inputPtr -> e
+    int _inputEnd -> f
+    long _currInputProcessed -> g
+    int _currInputRow -> h
+    int _currInputRowStart -> i
+    long _tokenInputTotal -> j
+    int _tokenInputRow -> k
+    int _tokenInputCol -> l
+    org.codehaus.jackson.impl.JsonReadContext _parsingContext -> m
+    org.codehaus.jackson.JsonToken _nextToken -> n
+    org.codehaus.jackson.util.TextBuffer _textBuffer -> o
+    char[] _nameCopyBuffer -> p
+    boolean _nameCopied -> q
+    org.codehaus.jackson.util.ByteArrayBuilder _byteArrayBuilder -> r
+    byte[] _binaryValue -> s
+    java.math.BigDecimal BD_MIN_LONG -> t
+    java.math.BigDecimal BD_MAX_LONG -> u
+    java.math.BigDecimal BD_MIN_INT -> v
+    java.math.BigDecimal BD_MAX_INT -> w
+    int _numTypesValid -> x
+    int _numberInt -> y
+    long _numberLong -> z
+    double _numberDouble -> A
+    java.math.BigInteger _numberBigInt -> B
+    java.math.BigDecimal _numberBigDecimal -> C
+    boolean _numberNegative -> D
+    int _intLength -> E
+    int _fractLength -> F
+    int _expLength -> G
+    java.lang.String getCurrentName() -> d
+    void close() -> close
+    org.codehaus.jackson.JsonLocation getCurrentLocation() -> e
+    void loadMoreGuaranteed() -> o
+    boolean loadMore() -> p
+    void _closeInput() -> q
+    void _releaseBuffers() -> r
+    void _handleEOF() -> s
+    void _reportMismatchedEndMarker(int,char) -> a
+    org.codehaus.jackson.JsonToken reset(boolean,int,int,int) -> a
+    org.codehaus.jackson.JsonToken resetInt(boolean,int) -> a
+    org.codehaus.jackson.JsonToken resetFloat(boolean,int,int,int) -> b
+    org.codehaus.jackson.JsonToken resetAsNaN(java.lang.String,double) -> a
+    int getIntValue() -> i
+    long getLongValue() -> j
+    java.math.BigInteger getBigIntegerValue() -> k
+    float getFloatValue() -> l
+    double getDoubleValue() -> m
+    java.math.BigDecimal getDecimalValue() -> n
+    void _parseNumericValue(int) -> a
+    void _parseSlowFloatValue(int) -> d
+    void _parseSlowIntValue(int,char[],int,int) -> a
+    void convertNumberToInt() -> t
+    void convertNumberToLong() -> u
+    void convertNumberToBigInteger() -> v
+    void convertNumberToDouble() -> w
+    void convertNumberToBigDecimal() -> x
+    void reportUnexpectedNumberChar(int,java.lang.String) -> a
+    void reportInvalidNumber(java.lang.String) -> b
+    void reportOverflowInt() -> y
+    void reportOverflowLong() -> z
+    char _decodeEscaped() -> A
+org.codehaus.jackson.impl.JsonParserMinimalBase -> a.a.a.a.f:
+    org.codehaus.jackson.JsonToken nextToken() -> a
+    org.codehaus.jackson.JsonParser skipChildren() -> b
+    void _handleEOF() -> s
+    java.lang.String getText() -> f
+    void _reportUnexpectedChar(int,java.lang.String) -> b
+    void _reportInvalidEOF() -> B
+    void _reportInvalidEOF(java.lang.String) -> c
+    void _reportInvalidEOFInValue() -> C
+    void _throwInvalidSpace(int) -> b
+    void _throwUnquotedSpace(int,java.lang.String) -> c
+    char _handleUnrecognizedCharacterEscape(char) -> a
+    java.lang.String _getCharDesc(int) -> c
+    void _reportError(java.lang.String) -> d
+    void _wrapError(java.lang.String,java.lang.Throwable) -> a
+    void _throwInternal() -> D
+    org.codehaus.jackson.JsonParseException _constructError(java.lang.String,java.lang.Throwable) -> b
+org.codehaus.jackson.impl.JsonParserMinimalBase$1 -> a.a.a.a.g:
+    int[] $SwitchMap$org$codehaus$jackson$JsonToken -> a
+org.codehaus.jackson.impl.JsonReadContext -> a.a.a.a.h:
+    org.codehaus.jackson.impl.JsonReadContext _parent -> c
+    int _lineNr -> d
+    int _columnNr -> e
+    java.lang.String _currentName -> f
+    org.codehaus.jackson.impl.JsonReadContext _child -> g
+    void reset(int,int,int) -> a
+    org.codehaus.jackson.impl.JsonReadContext createRootContext() -> g
+    org.codehaus.jackson.impl.JsonReadContext createChildArrayContext(int,int) -> a
+    org.codehaus.jackson.impl.JsonReadContext createChildObjectContext(int,int) -> b
+    java.lang.String getCurrentName() -> h
+    org.codehaus.jackson.impl.JsonReadContext getParent() -> i
+    org.codehaus.jackson.JsonLocation getStartLocation(java.lang.Object) -> a
+    boolean expectComma() -> j
+    void setCurrentName(java.lang.String) -> a
+    java.lang.String toString() -> toString
+org.codehaus.jackson.impl.JsonWriteContext -> a.a.a.a.i:
+    org.codehaus.jackson.impl.JsonWriteContext _parent -> c
+    java.lang.String _currentName -> d
+    org.codehaus.jackson.impl.JsonWriteContext _child -> e
+    org.codehaus.jackson.impl.JsonWriteContext createRootContext() -> g
+    org.codehaus.jackson.impl.JsonWriteContext reset(int) -> a
+    org.codehaus.jackson.impl.JsonWriteContext createChildArrayContext() -> h
+    org.codehaus.jackson.impl.JsonWriteContext createChildObjectContext() -> i
+    org.codehaus.jackson.impl.JsonWriteContext getParent() -> j
+    int writeFieldName(java.lang.String) -> a
+    int writeValue() -> k
+    void appendDesc(java.lang.StringBuilder) -> a
+    java.lang.String toString() -> toString
+org.codehaus.jackson.impl.ReaderBasedParser -> a.a.a.a.j:
+    java.io.Reader _reader -> H
+    char[] _inputBuffer -> I
+    org.codehaus.jackson.ObjectCodec _objectCodec -> J
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer _symbols -> K
+    boolean _tokenIncomplete -> L
+    boolean loadMore() -> p
+    char getNextChar(java.lang.String) -> e
+    void _closeInput() -> q
+    void _releaseBuffers() -> r
+    java.lang.String getText() -> f
+    java.lang.String _getText2(org.codehaus.jackson.JsonToken) -> a
+    org.codehaus.jackson.JsonToken nextToken() -> a
+    org.codehaus.jackson.JsonToken _nextAfterName() -> L
+    void close() -> close
+    org.codehaus.jackson.JsonToken parseNumberText(int) -> d
+    org.codehaus.jackson.JsonToken parseNumberText2(boolean) -> a
+    char _verifyNoLeadingZeroes() -> M
+    org.codehaus.jackson.JsonToken _handleInvalidNumberStart(int,boolean) -> a
+    java.lang.String _parseFieldName(int) -> e
+    java.lang.String _parseFieldName2(int,int,int) -> a
+    java.lang.String _handleUnusualFieldName(int) -> f
+    java.lang.String _parseApostropheFieldName() -> E
+    org.codehaus.jackson.JsonToken _handleUnexpectedValue(int) -> g
+    org.codehaus.jackson.JsonToken _handleApostropheValue() -> F
+    java.lang.String _parseUnusualFieldName2(int,int,int[]) -> a
+    void _finishString() -> G
+    void _finishString2() -> H
+    void _skipString() -> I
+    void _skipCR() -> J
+    void _skipLF() -> K
+    int _skipWS() -> N
+    int _skipWSOrEnd() -> O
+    void _skipComment() -> P
+    void _skipCComment() -> Q
+    void _skipCppComment() -> R
+    char _decodeEscaped() -> A
+    void _matchToken(java.lang.String,int) -> a
+    void _reportInvalidToken(java.lang.String,java.lang.String) -> a
+org.codehaus.jackson.impl.ReaderBasedParser$1 -> a.a.a.a.k:
+    int[] $SwitchMap$org$codehaus$jackson$JsonToken -> a
+org.codehaus.jackson.impl.Utf8Generator -> a.a.a.a.l:
+    byte[] HEX_CHARS -> g
+    byte[] NULL_BYTES -> u
+    byte[] TRUE_BYTES -> v
+    byte[] FALSE_BYTES -> w
+    int[] sOutputEscapes -> h
+    org.codehaus.jackson.io.IOContext _ioContext -> i
+    java.io.OutputStream _outputStream -> j
+    int[] _outputEscapes -> k
+    int _maximumNonEscapedChar -> l
+    org.codehaus.jackson.io.CharacterEscapes _characterEscapes -> m
+    byte[] _outputBuffer -> n
+    int _outputTail -> o
+    int _outputEnd -> p
+    int _outputMaxContiguous -> q
+    char[] _charBuffer -> r
+    int _charBufferLength -> s
+    boolean _bufferRecyclable -> t
+    org.codehaus.jackson.JsonGenerator setHighestNonEscapedChar(int) -> a
+    org.codehaus.jackson.JsonGenerator setCharacterEscapes(org.codehaus.jackson.io.CharacterEscapes) -> a
+    void writeFieldName(java.lang.String) -> a
+    void writeStartArray() -> b
+    void writeEndArray() -> c
+    void writeStartObject() -> d
+    void writeEndObject() -> e
+    void _writeFieldName(java.lang.String) -> f
+    void _writePPFieldName(java.lang.String,boolean) -> a
+    void writeString(java.lang.String) -> b
+    void _writeLongString(java.lang.String) -> g
+    void _writeLongString(char[],int,int) -> b
+    void writeRaw(java.lang.String) -> c
+    void writeRaw(char[],int,int) -> a
+    void writeRaw(char) -> a
+    void _writeSegmentedRaw(char[],int,int) -> c
+    void writeNumber(int) -> b
+    void _writeQuotedInt(int) -> c
+    void writeNumber(long) -> a
+    void _writeQuotedLong(long) -> b
+    void writeNumber(java.math.BigInteger) -> a
+    void writeNumber(double) -> a
+    void writeNumber(float) -> a
+    void writeNumber(java.math.BigDecimal) -> a
+    void _writeQuotedRaw(java.lang.Object) -> a
+    void writeBoolean(boolean) -> a
+    void writeNull() -> f
+    void _verifyValueWrite(java.lang.String) -> d
+    void _verifyPrettyValueWrite(java.lang.String,int) -> a
+    void flush() -> g
+    void close() -> close
+    void _releaseBuffers() -> n
+    void _writeStringSegments(java.lang.String) -> h
+    void _writeStringSegments(char[],int,int) -> d
+    void _writeStringSegment(char[],int,int) -> e
+    void _writeStringSegment2(char[],int,int) -> f
+    void _writeStringSegmentASCII2(char[],int,int) -> g
+    void _writeCustomStringSegment2(char[],int,int) -> h
+    int _writeCustomEscape(byte[],int,org.codehaus.jackson.SerializableString,int) -> a
+    int _handleLongCustomEscape(byte[],int,int,byte[],int) -> a
+    int _outputRawMultiByteChar(int,char[],int,int) -> a
+    void _outputSurrogates(int,int) -> a
+    int _outputMultiByteChar(int,int) -> c
+    int _decodeSurrogate(int,int) -> b
+    void _writeNull() -> p
+    int _writeGenericEscape(int,int) -> d
+    void _flushBuffer() -> o
+org.codehaus.jackson.impl.Utf8StreamParser -> a.a.a.a.m:
+    int[] sInputCodesUtf8 -> O
+    int[] sInputCodesLatin1 -> P
+    org.codehaus.jackson.ObjectCodec _objectCodec -> H
+    org.codehaus.jackson.sym.BytesToNameCanonicalizer _symbols -> I
+    int[] _quadBuffer -> J
+    boolean _tokenIncomplete -> K
+    int _quad1 -> Q
+    java.io.InputStream _inputStream -> L
+    byte[] _inputBuffer -> M
+    boolean _bufferRecyclable -> N
+    boolean loadMore() -> p
+    void _closeInput() -> q
+    void _releaseBuffers() -> r
+    java.lang.String getText() -> f
+    java.lang.String _getText2(org.codehaus.jackson.JsonToken) -> a
+    org.codehaus.jackson.JsonToken nextToken() -> a
+    org.codehaus.jackson.JsonToken _nextTokenNotInObject(int) -> m
+    org.codehaus.jackson.JsonToken _nextAfterName() -> L
+    void close() -> close
+    org.codehaus.jackson.JsonToken parseNumberText(int) -> d
+    org.codehaus.jackson.JsonToken _parserNumber2(char[],int,boolean,int) -> a
+    int _verifyNoLeadingZeroes() -> M
+    org.codehaus.jackson.JsonToken _parseFloatText(char[],int,int,boolean,int) -> a
+    org.codehaus.jackson.sym.Name _parseFieldName(int) -> e
+    org.codehaus.jackson.sym.Name parseMediumFieldName(int,int[]) -> a
+    org.codehaus.jackson.sym.Name parseLongFieldName(int) -> f
+    org.codehaus.jackson.sym.Name slowParseFieldName() -> E
+    org.codehaus.jackson.sym.Name parseFieldName(int,int,int) -> a
+    org.codehaus.jackson.sym.Name parseFieldName(int,int,int,int) -> a
+    org.codehaus.jackson.sym.Name parseEscapedFieldName(int[],int,int,int,int) -> a
+    org.codehaus.jackson.sym.Name _handleUnusualFieldName(int) -> g
+    org.codehaus.jackson.sym.Name _parseApostropheFieldName() -> F
+    org.codehaus.jackson.sym.Name findName(int,int) -> b
+    org.codehaus.jackson.sym.Name findName(int,int,int) -> b
+    org.codehaus.jackson.sym.Name findName(int[],int,int,int) -> a
+    org.codehaus.jackson.sym.Name addName(int[],int,int) -> a
+    void _finishString() -> G
+    void _finishString2(char[],int) -> a
+    void _skipString() -> H
+    org.codehaus.jackson.JsonToken _handleUnexpectedValue(int) -> h
+    org.codehaus.jackson.JsonToken _handleApostropheValue() -> I
+    org.codehaus.jackson.JsonToken _handleInvalidNumberStart(int,boolean) -> a
+    void _matchToken(java.lang.String,int) -> a
+    void _reportInvalidToken(java.lang.String,java.lang.String) -> a
+    int _skipWS() -> N
+    int _skipWSOrEnd() -> O
+    void _skipComment() -> P
+    void _skipCComment() -> Q
+    void _skipCppComment() -> R
+    char _decodeEscaped() -> A
+    int _decodeCharForError(int) -> i
+    int _decodeUtf8_2(int) -> n
+    int _decodeUtf8_3(int) -> o
+    int _decodeUtf8_3fast(int) -> p
+    int _decodeUtf8_4(int) -> q
+    void _skipUtf8_2(int) -> r
+    void _skipUtf8_3(int) -> s
+    void _skipUtf8_4(int) -> t
+    void _skipCR() -> J
+    void _skipLF() -> K
+    int nextByte() -> S
+    void _reportInvalidChar(int) -> j
+    void _reportInvalidInitial(int) -> k
+    void _reportInvalidOther(int) -> l
+    void _reportInvalidOther(int,int) -> a
+    int[] growArrayBy(int[],int) -> a
+org.codehaus.jackson.impl.Utf8StreamParser$1 -> a.a.a.a.n:
+    int[] $SwitchMap$org$codehaus$jackson$JsonToken -> a
+org.codehaus.jackson.impl.WriterBasedGenerator -> a.a.a.a.o:
+    char[] HEX_CHARS -> g
+    int[] sOutputEscapes -> h
+    org.codehaus.jackson.io.IOContext _ioContext -> i
+    java.io.Writer _writer -> j
+    int[] _outputEscapes -> k
+    int _maximumNonEscapedChar -> l
+    org.codehaus.jackson.io.CharacterEscapes _characterEscapes -> m
+    org.codehaus.jackson.SerializableString _currentEscape -> n
+    char[] _outputBuffer -> o
+    int _outputHead -> p
+    int _outputTail -> q
+    int _outputEnd -> r
+    char[] _entityBuffer -> s
+    org.codehaus.jackson.JsonGenerator setHighestNonEscapedChar(int) -> a
+    org.codehaus.jackson.JsonGenerator setCharacterEscapes(org.codehaus.jackson.io.CharacterEscapes) -> a
+    void writeFieldName(java.lang.String) -> a
+    void writeStartArray() -> b
+    void writeEndArray() -> c
+    void writeStartObject() -> d
+    void writeEndObject() -> e
+    void _writeFieldName(java.lang.String,boolean) -> a
+    void _writePPFieldName(java.lang.String,boolean) -> b
+    void writeString(java.lang.String) -> b
+    void writeRaw(java.lang.String) -> c
+    void writeRaw(char[],int,int) -> a
+    void writeRaw(char) -> a
+    void writeRawLong(java.lang.String) -> f
+    void writeNumber(int) -> b
+    void _writeQuotedInt(int) -> c
+    void writeNumber(long) -> a
+    void _writeQuotedLong(long) -> b
+    void writeNumber(java.math.BigInteger) -> a
+    void writeNumber(double) -> a
+    void writeNumber(float) -> a
+    void writeNumber(java.math.BigDecimal) -> a
+    void _writeQuotedRaw(java.lang.Object) -> a
+    void writeBoolean(boolean) -> a
+    void writeNull() -> f
+    void _verifyValueWrite(java.lang.String) -> d
+    void _verifyPrettyValueWrite(java.lang.String,int) -> a
+    void flush() -> g
+    void close() -> close
+    void _releaseBuffers() -> n
+    void _writeString(java.lang.String) -> g
+    void _writeString2(int) -> d
+    void _writeLongString(java.lang.String) -> h
+    void _writeSegment(int) -> e
+    void _writeStringASCII(int,int) -> a
+    void _writeSegmentASCII(int,int) -> b
+    void _writeStringCustom(int) -> f
+    void _writeSegmentCustom(int) -> g
+    void _writeNull() -> p
+    void _prependOrWriteCharacterEscape(char,int) -> a
+    int _prependOrWriteCharacterEscape(char[],int,int,char,int) -> a
+    char[] _allocateEntityBuffer() -> q
+    void _flushBuffer() -> o
+org.codehaus.jackson.io.BaseReader -> a.a.a.b.a:
+    org.codehaus.jackson.io.IOContext _context -> a
+    java.io.InputStream _in -> b
+    byte[] _buffer -> c
+    int _ptr -> d
+    int _length -> e
+    char[] _tmpBuf -> f
+    void close() -> close
+    int read() -> read
+    void freeBuffers() -> a
+    void reportBounds(char[],int,int) -> a
+    void reportStrangeStream() -> b
+org.codehaus.jackson.io.CharacterEscapes -> a.a.a.b.b:
+    int[] getEscapeCodesForAscii() -> a
+    org.codehaus.jackson.SerializableString getEscapeSequence(int) -> a
+org.codehaus.jackson.io.IOContext -> a.a.a.b.c:
+    java.lang.Object _sourceRef -> a
+    org.codehaus.jackson.JsonEncoding _encoding -> b
+    boolean _managedResource -> c
+    org.codehaus.jackson.util.BufferRecycler _bufferRecycler -> d
+    byte[] _readIOBuffer -> e
+    byte[] _writeEncodingBuffer -> f
+    char[] _tokenCBuffer -> g
+    char[] _concatCBuffer -> h
+    char[] _nameCopyBuffer -> i
+    void setEncoding(org.codehaus.jackson.JsonEncoding) -> a
+    java.lang.Object getSourceReference() -> a
+    org.codehaus.jackson.JsonEncoding getEncoding() -> b
+    boolean isResourceManaged() -> c
+    org.codehaus.jackson.util.TextBuffer constructTextBuffer() -> d
+    byte[] allocReadIOBuffer() -> e
+    byte[] allocWriteEncodingBuffer() -> f
+    char[] allocTokenBuffer() -> g
+    char[] allocConcatBuffer() -> h
+    void releaseReadIOBuffer(byte[]) -> a
+    void releaseWriteEncodingBuffer(byte[]) -> b
+    void releaseTokenBuffer(char[]) -> a
+    void releaseConcatBuffer(char[]) -> b
+    void releaseNameCopyBuffer(char[]) -> c
+org.codehaus.jackson.io.InputDecorator -> a.a.a.b.d:
+    java.io.InputStream decorate(org.codehaus.jackson.io.IOContext,java.io.InputStream) -> a
+org.codehaus.jackson.io.MergedStream -> a.a.a.b.e:
+    org.codehaus.jackson.io.IOContext _context -> a
+    java.io.InputStream _in -> b
+    byte[] _buffer -> c
+    int _ptr -> d
+    int _end -> e
+    int available() -> available
+    void close() -> close
+    void mark(int) -> mark
+    boolean markSupported() -> markSupported
+    int read() -> read
+    int read(byte[]) -> read
+    int read(byte[],int,int) -> read
+    void reset() -> reset
+    long skip(long) -> skip
+    void freeMergedBuffer() -> a
+org.codehaus.jackson.io.NumberInput -> a.a.a.b.f:
+    java.lang.String MIN_LONG_STR_NO_SIGN -> a
+    java.lang.String MAX_LONG_STR -> b
+    int parseInt(char[],int,int) -> a
+    long parseLong(char[],int,int) -> b
+    boolean inLongRange(char[],int,int,boolean) -> a
+    double parseDouble(java.lang.String) -> a
+org.codehaus.jackson.io.NumberOutput -> a.a.a.b.g:
+    int MILLION -> g
+    int BILLION -> h
+    long TEN_BILLION_L -> i
+    long THOUSAND_L -> j
+    long MIN_INT_AS_LONG -> k
+    long MAX_INT_AS_LONG -> l
+    java.lang.String SMALLEST_LONG -> a
+    char[] LEADING_TRIPLETS -> b
+    char[] FULL_TRIPLETS -> c
+    byte[] FULL_TRIPLETS_B -> d
+    java.lang.String[] sSmallIntStrs -> e
+    java.lang.String[] sSmallIntStrs2 -> f
+    int outputInt(int,char[],int) -> a
+    int outputInt(int,byte[],int) -> a
+    int outputLong(long,char[],int) -> a
+    int outputLong(long,byte[],int) -> a
+    int outputLeadingTriplet(int,char[],int) -> b
+    int outputLeadingTriplet(int,byte[],int) -> b
+    int outputFullTriplet(int,char[],int) -> c
+    int outputFullTriplet(int,byte[],int) -> c
+    int calcLongStrLength(long) -> a
+org.codehaus.jackson.io.OutputDecorator -> a.a.a.b.h:
+    java.io.OutputStream decorate(org.codehaus.jackson.io.IOContext,java.io.OutputStream) -> a
+    java.io.Writer decorate(org.codehaus.jackson.io.IOContext,java.io.Writer) -> a
+org.codehaus.jackson.io.UTF32Reader -> a.a.a.b.i:
+    boolean mBigEndian -> g
+    char mSurrogate -> h
+    int mCharCount -> i
+    int mByteCount -> j
+    int read(char[],int,int) -> read
+    void reportUnexpectedEOF(int,int) -> a
+    void reportInvalid(int,int,java.lang.String) -> a
+    boolean loadMore(int) -> a
+    int read() -> read
+    void close() -> close
+org.codehaus.jackson.io.UTF8Writer -> a.a.a.b.j:
+    org.codehaus.jackson.io.IOContext _context -> a
+    java.io.OutputStream _out -> b
+    byte[] _outBuffer -> c
+    int _outBufferEnd -> d
+    int _outPtr -> e
+    int _surrogate -> f
+    java.io.Writer append(char) -> append
+    void close() -> close
+    void flush() -> flush
+    void write(char[]) -> write
+    void write(char[],int,int) -> write
+    void write(int) -> write
+    void write(java.lang.String) -> write
+    void write(java.lang.String,int,int) -> write
+    int convertSurrogate(int) -> a
+    void throwIllegal(int) -> b
+    java.lang.Appendable append(char) -> append
+org.codehaus.jackson.sym.BytesToNameCanonicalizer -> a.a.a.c.a:
+    org.codehaus.jackson.sym.BytesToNameCanonicalizer _parent -> a
+    boolean _intern -> b
+    int _count -> c
+    int _mainHashMask -> d
+    int[] _mainHash -> e
+    org.codehaus.jackson.sym.Name[] _mainNames -> f
+    org.codehaus.jackson.sym.BytesToNameCanonicalizer$Bucket[] _collList -> g
+    int _collCount -> h
+    int _collEnd -> i
+    boolean _needRehash -> j
+    boolean _mainHashShared -> k
+    boolean _mainNamesShared -> l
+    boolean _collListShared -> m
+    org.codehaus.jackson.sym.BytesToNameCanonicalizer createRoot() -> a
+    org.codehaus.jackson.sym.BytesToNameCanonicalizer makeChild(boolean,boolean) -> a
+    void release() -> b
+    void initTables(int) -> c
+    void mergeChild(org.codehaus.jackson.sym.BytesToNameCanonicalizer) -> a
+    void markAsShared() -> f
+    int size() -> c
+    boolean maybeDirty() -> d
+    org.codehaus.jackson.sym.Name getEmptyName() -> e
+    org.codehaus.jackson.sym.Name findName(int) -> a
+    org.codehaus.jackson.sym.Name findName(int,int) -> a
+    org.codehaus.jackson.sym.Name findName(int[],int) -> a
+    org.codehaus.jackson.sym.Name addName(java.lang.String,int[],int) -> a
+    int calcHash(int) -> b
+    int calcHash(int,int) -> b
+    int calcHash(int[],int) -> b
+    void _addSymbol(int,org.codehaus.jackson.sym.Name) -> a
+    void rehash() -> g
+    void nukeSymbols() -> h
+    int findBestBucket() -> i
+    void unshareMain() -> j
+    void unshareCollision() -> k
+    void unshareNames() -> l
+    void expandCollision() -> m
+    org.codehaus.jackson.sym.Name constructName(int,java.lang.String,int[],int) -> a
+org.codehaus.jackson.sym.BytesToNameCanonicalizer$Bucket -> a.a.a.c.b:
+    org.codehaus.jackson.sym.Name _name -> a
+    org.codehaus.jackson.sym.BytesToNameCanonicalizer$Bucket _next -> b
+    int length() -> a
+    org.codehaus.jackson.sym.Name find(int,int,int) -> a
+    org.codehaus.jackson.sym.Name find(int,int[],int) -> a
+org.codehaus.jackson.sym.CharsToNameCanonicalizer -> a.a.a.c.c:
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer sBootstrapSymbolTable -> a
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer _parent -> b
+    boolean _intern -> c
+    boolean _canonicalize -> d
+    java.lang.String[] _symbols -> e
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer$Bucket[] _buckets -> f
+    int _size -> g
+    int _sizeThreshold -> h
+    int _indexMask -> i
+    boolean _dirty -> j
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer createRoot() -> a
+    void initTables(int) -> a
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer makeChild(boolean,boolean) -> a
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer makeOrphan() -> e
+    void mergeChild(org.codehaus.jackson.sym.CharsToNameCanonicalizer) -> a
+    void release() -> b
+    int size() -> c
+    boolean maybeDirty() -> d
+    java.lang.String findSymbol(char[],int,int,int) -> a
+    int calcHash(char[],int,int) -> a
+    int calcHash(java.lang.String) -> a
+    void copyArrays() -> f
+    void rehash() -> g
+org.codehaus.jackson.sym.CharsToNameCanonicalizer$Bucket -> a.a.a.c.d:
+    java.lang.String _symbol -> a
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer$Bucket mNext -> b
+    java.lang.String getSymbol() -> a
+    org.codehaus.jackson.sym.CharsToNameCanonicalizer$Bucket getNext() -> b
+    java.lang.String find(char[],int,int) -> a
+org.codehaus.jackson.sym.Name -> a.a.a.c.e:
+    java.lang.String _name -> a
+    int _hashCode -> b
+    java.lang.String getName() -> a
+    boolean equals(int) -> a
+    boolean equals(int,int) -> a
+    boolean equals(int[],int) -> a
+    java.lang.String toString() -> toString
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+org.codehaus.jackson.sym.Name1 -> a.a.a.c.f:
+    org.codehaus.jackson.sym.Name1 sEmptyName -> c
+    int mQuad -> d
+    org.codehaus.jackson.sym.Name1 getEmptyName() -> b
+    boolean equals(int) -> a
+    boolean equals(int,int) -> a
+    boolean equals(int[],int) -> a
+org.codehaus.jackson.sym.Name2 -> a.a.a.c.g:
+    int mQuad1 -> c
+    int mQuad2 -> d
+    boolean equals(int) -> a
+    boolean equals(int,int) -> a
+    boolean equals(int[],int) -> a
+org.codehaus.jackson.sym.Name3 -> a.a.a.c.h:
+    int mQuad1 -> c
+    int mQuad2 -> d
+    int mQuad3 -> e
+    boolean equals(int) -> a
+    boolean equals(int,int) -> a
+    boolean equals(int[],int) -> a
+org.codehaus.jackson.sym.NameN -> a.a.a.c.i:
+    int[] mQuads -> c
+    int mQuadLen -> d
+    boolean equals(int) -> a
+    boolean equals(int,int) -> a
+    boolean equals(int[],int) -> a
+org.codehaus.jackson.util.BufferRecycler -> a.a.a.d.a:
+    byte[][] _byteBuffers -> a
+    char[][] _charBuffers -> b
+    byte[] allocByteBuffer(org.codehaus.jackson.util.BufferRecycler$ByteBufferType) -> a
+    void releaseByteBuffer(org.codehaus.jackson.util.BufferRecycler$ByteBufferType,byte[]) -> a
+    char[] allocCharBuffer(org.codehaus.jackson.util.BufferRecycler$CharBufferType) -> a
+    char[] allocCharBuffer(org.codehaus.jackson.util.BufferRecycler$CharBufferType,int) -> a
+    void releaseCharBuffer(org.codehaus.jackson.util.BufferRecycler$CharBufferType,char[]) -> a
+    byte[] balloc(int) -> a
+    char[] calloc(int) -> b
+org.codehaus.jackson.util.BufferRecycler$ByteBufferType -> a.a.a.d.b:
+    org.codehaus.jackson.util.BufferRecycler$ByteBufferType READ_IO_BUFFER -> a
+    org.codehaus.jackson.util.BufferRecycler$ByteBufferType WRITE_ENCODING_BUFFER -> b
+    org.codehaus.jackson.util.BufferRecycler$ByteBufferType WRITE_CONCAT_BUFFER -> c
+    int size -> d
+    org.codehaus.jackson.util.BufferRecycler$ByteBufferType[] $VALUES -> e
+    org.codehaus.jackson.util.BufferRecycler$ByteBufferType[] values() -> values
+    org.codehaus.jackson.util.BufferRecycler$ByteBufferType valueOf(java.lang.String) -> valueOf
+    int access$000(org.codehaus.jackson.util.BufferRecycler$ByteBufferType) -> a
+org.codehaus.jackson.util.BufferRecycler$CharBufferType -> a.a.a.d.c:
+    org.codehaus.jackson.util.BufferRecycler$CharBufferType TOKEN_BUFFER -> a
+    org.codehaus.jackson.util.BufferRecycler$CharBufferType CONCAT_BUFFER -> b
+    org.codehaus.jackson.util.BufferRecycler$CharBufferType TEXT_BUFFER -> c
+    org.codehaus.jackson.util.BufferRecycler$CharBufferType NAME_COPY_BUFFER -> d
+    int size -> e
+    org.codehaus.jackson.util.BufferRecycler$CharBufferType[] $VALUES -> f
+    org.codehaus.jackson.util.BufferRecycler$CharBufferType[] values() -> values
+    org.codehaus.jackson.util.BufferRecycler$CharBufferType valueOf(java.lang.String) -> valueOf
+    int access$100(org.codehaus.jackson.util.BufferRecycler$CharBufferType) -> a
+org.codehaus.jackson.util.ByteArrayBuilder -> a.a.a.d.d:
+    byte[] NO_BYTES -> a
+    java.util.LinkedList _pastBlocks -> b
+    int _pastLen -> c
+    byte[] _currBlock -> d
+    int _currBlockPtr -> e
+    void append(int) -> a
+    void write(byte[]) -> write
+    void write(byte[],int,int) -> write
+    void write(int) -> write
+    void close() -> close
+    void flush() -> flush
+    void _allocMore() -> a
+org.codehaus.jackson.util.CharTypes -> a.a.a.d.e:
+    char[] HEX_CHARS -> h
+    byte[] HEX_BYTES -> i
+    int[] sInputCodes -> a
+    int[] sInputCodesUtf8 -> b
+    int[] sInputCodesJsNames -> c
+    int[] sInputCodesUtf8JsNames -> d
+    int[] sInputCodesComment -> e
+    int[] sOutputEscapes128 -> f
+    int[] sHexValues -> g
+    int[] getInputCodeLatin1() -> a
+    int[] getInputCodeUtf8() -> b
+    int[] getInputCodeLatin1JsNames() -> c
+    int[] getInputCodeUtf8JsNames() -> d
+    int[] getInputCodeComment() -> e
+    int[] get7BitOutputEscapes() -> f
+    int charToHex(int) -> a
+    void appendQuoted(java.lang.StringBuilder,java.lang.String) -> a
+    char[] copyHexChars() -> g
+    byte[] copyHexBytes() -> h
+org.codehaus.jackson.util.DefaultPrettyPrinter -> a.a.a.d.f:
+    org.codehaus.jackson.impl.Indenter _arrayIndenter -> a
+    org.codehaus.jackson.impl.Indenter _objectIndenter -> b
+    boolean _spacesInObjectEntries -> c
+    int _nesting -> d
+    void writeRootValueSeparator(org.codehaus.jackson.JsonGenerator) -> a
+    void writeStartObject(org.codehaus.jackson.JsonGenerator) -> b
+    void beforeObjectEntries(org.codehaus.jackson.JsonGenerator) -> h
+    void writeObjectFieldValueSeparator(org.codehaus.jackson.JsonGenerator) -> d
+    void writeObjectEntrySeparator(org.codehaus.jackson.JsonGenerator) -> c
+    void writeEndObject(org.codehaus.jackson.JsonGenerator,int) -> a
+    void writeStartArray(org.codehaus.jackson.JsonGenerator) -> e
+    void beforeArrayValues(org.codehaus.jackson.JsonGenerator) -> g
+    void writeArrayValueSeparator(org.codehaus.jackson.JsonGenerator) -> f
+    void writeEndArray(org.codehaus.jackson.JsonGenerator,int) -> b
+org.codehaus.jackson.util.DefaultPrettyPrinter$FixedSpaceIndenter -> a.a.a.d.g:
+    void writeIndentation(org.codehaus.jackson.JsonGenerator,int) -> a
+    boolean isInline() -> a
+org.codehaus.jackson.util.DefaultPrettyPrinter$Lf2SpacesIndenter -> a.a.a.d.h:
+    java.lang.String SYSTEM_LINE_SEPARATOR -> a
+    char[] SPACES -> b
+    boolean isInline() -> a
+    void writeIndentation(org.codehaus.jackson.JsonGenerator,int) -> a
+org.codehaus.jackson.util.InternCache -> a.a.a.d.i:
+    org.codehaus.jackson.util.InternCache instance -> a
+    boolean removeEldestEntry(java.util.Map$Entry) -> removeEldestEntry
+    java.lang.String intern(java.lang.String) -> a
+org.codehaus.jackson.util.TextBuffer -> a.a.a.d.j:
+    char[] NO_CHARS -> a
+    org.codehaus.jackson.util.BufferRecycler _allocator -> b
+    char[] _inputBuffer -> c
+    int _inputStart -> d
+    int _inputLen -> e
+    java.util.ArrayList _segments -> f
+    boolean _hasSegments -> g
+    int _segmentSize -> h
+    char[] _currentSegment -> i
+    int _currentSize -> j
+    java.lang.String _resultString -> k
+    char[] _resultArray -> l
+    void releaseBuffers() -> a
+    void resetWithEmpty() -> b
+    void resetWithShared(char[],int,int) -> a
+    void resetWithCopy(char[],int,int) -> b
+    void resetWithString(java.lang.String) -> a
+    char[] findBuffer(int) -> b
+    void clearSegments() -> o
+    int size() -> c
+    int getTextOffset() -> d
+    char[] getTextBuffer() -> e
+    java.lang.String contentsAsString() -> f
+    char[] contentsAsArray() -> g
+    java.math.BigDecimal contentsAsDecimal() -> h
+    double contentsAsDouble() -> i
+    void append(char[],int,int) -> c
+    char[] getCurrentSegment() -> j
+    char[] emptyAndGetCurrentSegment() -> k
+    int getCurrentSegmentSize() -> l
+    void setCurrentLength(int) -> a
+    char[] finishCurrentSegment() -> m
+    char[] expandCurrentSegment() -> n
+    java.lang.String toString() -> toString
+    void unshare(int) -> c
+    void expand(int) -> d
+    char[] buildResultArray() -> p
+    char[] _charArray(int) -> e
