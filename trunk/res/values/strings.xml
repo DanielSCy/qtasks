@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QuickTasks</string>
+    <string name="switch_acc_item">Switch Account</string>
+    <string name="sync_item">Synchronize</string>
+    <string name="no_network">Network connection is not available, cannot synchronize</string>
+    <string name="empty_item_title">Please enter details first</string>
+    <string name="delete_done_item">Delete completed</string>
+    <string name="add_desc">Add item</string>
+
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<ImageButton 
+			android:layout_width="40dp"
+			android:layout_height="40dp"
+			android:id="@+id/addItemButton"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"
+			android:layout_margin="4dp"
+			android:contentDescription="@string/add_desc"
+			android:src="@android:drawable/ic_input_add"/>
+		<EditText
+			android:id="@+id/newItemText"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_toRightOf="@+id/addItemButton"
+			android:inputType="textMultiLine"
+			android:focusable="true"
+			android:focusableInTouchMode="true"
+			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+	<ViewSwitcher
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/viewSwitcher">
+		<daniel.stanciu.quicktasks.MyScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:fillViewport="true">
+			<daniel.stanciu.quicktasks.MyLinearLayout 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:id="@+id/mainViewLayout1" >
+			</daniel.stanciu.quicktasks.MyLinearLayout>
+		</daniel.stanciu.quicktasks.MyScrollView>
+		<daniel.stanciu.quicktasks.MyScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:fillViewport="true">
+			<daniel.stanciu.quicktasks.MyLinearLayout 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:id="@+id/mainViewLayout2" >
+			</daniel.stanciu.quicktasks.MyLinearLayout>
+		</daniel.stanciu.quicktasks.MyScrollView>
+	</ViewSwitcher>
+</LinearLayout>

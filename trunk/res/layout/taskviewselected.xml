@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/taskViewSelected"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:id="@+id/taskCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true" />
+
+    <EditText
+        android:id="@+id/taskEdit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/taskCheckBox"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/taskCheckBox"
+        android:ems="10"
+        android:focusable="true"
+        android:focusableInTouchMode="true" 
+        android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+
+    </EditText>
+
+</RelativeLayout>
