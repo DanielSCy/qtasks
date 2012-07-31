@@ -20,8 +20,6 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
-//import android.util.Log;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.ViewConfiguration;
@@ -367,7 +365,7 @@ public class MyGestureDetector {
      *
      * @throws NullPointerException if {@code listener} is null.
      */
-    public MyGestureDetector(Context context, OnGestureListener listener, Handler handler,
+	public MyGestureDetector(Context context, OnGestureListener listener, Handler handler,
             boolean ignoreMultitouch) {
         if (handler != null) {
             mHandler = new GestureHandler(handler);

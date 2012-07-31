@@ -3,5 +3,7 @@
     android:id="@+id/listText"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="?android:attr/listPreferredItemHeight"
     android:textAppearance="?android:attr/textAppearanceLarge" >
 </daniel.stanciu.quicktasks.MyTextView>
