@@ -31,7 +31,8 @@ public class DbManager {
 		TasksOpenHelper.TASKS_TITLE_COLUMN,
 		TasksOpenHelper.TASKS_CHECKED_COLUMN,
 		TasksOpenHelper.TASKS_LIST_ID_COLUMN,
-		TasksOpenHelper.TASKS_DELETED_COLUMN
+		TasksOpenHelper.TASKS_DELETED_COLUMN,
+		TasksOpenHelper.TASKS_PRIORITY_COLUMN
 	};
 	
 	public DbManager(Context context, QuickTasksActivity activity) {
@@ -117,7 +118,7 @@ public class DbManager {
 					new String[] {
 							listId
 					},
-					null, null, TasksOpenHelper.TASKS_CHECKED_COLUMN + " ASC");
+					null, null, TasksOpenHelper.TASKS_CHECKED_COLUMN + " ASC, " + TasksOpenHelper.TASKS_PRIORITY_COLUMN + " ASC");
 			
 			while(tasksCursor.moveToNext()) {
 				MyTask task = getTaskFromCursor(tasksCursor);
@@ -140,6 +141,7 @@ public class DbManager {
 		result.setChecked(cursor.getInt(3) != 0);
 		result.setParentListId(cursor.getString(4));
 		result.setDeleted(cursor.getInt(5) != 0);
+		result.setPriority(cursor.getInt(6));
 		return result;
 	}
 
@@ -314,6 +316,14 @@ public class DbManager {
 	
 	public void updateTask(MyTask task) {
 		updateTask(task, true);
+	}
+	
+	public void updateTaskPriority(long internalId, int priority) {
+		openDb();
+		db.execSQL("update " + TasksOpenHelper.TASKS_TABLE_NAME + 
+				" set " + TasksOpenHelper.TASKS_PRIORITY_COLUMN + " = ? " +
+				" where " + TasksOpenHelper.TASKS_INTERNAL_ID_COLUMN + " = ?",
+				new Object[] { priority, internalId });
 	}
 	
 	public void updateTask(MyTask task, boolean setDirty) {

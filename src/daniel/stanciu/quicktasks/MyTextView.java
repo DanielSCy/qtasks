@@ -4,11 +4,9 @@ import daniel.stanciu.quicktasks.MyGestureDetector.OnDoubleTapListener;
 import daniel.stanciu.quicktasks.MyGestureDetector.OnGestureListener;
 import android.content.Context;
 //import android.graphics.Canvas;
-import android.os.Handler;
 import android.util.AttributeSet;
 //import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.MotionEvent;
 //import android.view.View;
@@ -18,6 +16,7 @@ import android.widget.TextView;
 public class MyTextView extends TextView implements OnGestureListener, OnDoubleTapListener {
 	
 	private static final int DELETE_THRESHOLD = 200;
+	private static final int PRIORITY_CHANGE_THRESHOLD = 100;
 	private QuickTasksActivity activity;
 	private MyGestureDetector gd;
 	private MyArrayAdapter<MyTaskBase> arrayAdapter;
@@ -166,6 +165,7 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 		MyTaskBase item = (MyTaskBase)getTag();
 		int position = arrayAdapter.getPosition(item);
 		float distanceX = 0;
+		float distanceY = 0;
 		//LayoutParams lp;
 		switch (e.getAction() & MotionEvent.ACTION_MASK) {
 		case MotionEvent.ACTION_UP:
@@ -176,6 +176,7 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 				getScrollViewParent().setDoNotIntercept(false);
 			}
 			distanceX = Math.abs(e.getX() - doubleTapStart.getX());
+			distanceY = e.getY() - doubleTapStart.getY();
 			if (distanceX > DELETE_THRESHOLD) {
 				if (activity.currentViewType == ViewType.TASKS) {
 					activity.getDbManager().deleteTask((MyTask)item);
@@ -186,10 +187,31 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 				disableTouch = true;
 				activity.deleteView(position);
 			} else {
-				if (activity.currentViewType == ViewType.TASKS) {
-					((View)getParent()).setBackgroundResource(0);
+				if (activity.currentViewType == ViewType.TASKS && Math.abs(distanceY) > PRIORITY_CHANGE_THRESHOLD) {
+					MyTask task = (MyTask)item;
+					if (distanceY > 0) {
+						// decrease priority
+						if (task.getPriority() < MyTask.LOW_PRIORITY) {
+							activity.getDbManager().updateTaskPriority(task.getInternalId(), task.getPriority() + 1);
+							disableTouch = true;
+							activity.getDataFromDB();
+							activity.populateView();
+						}
+					} else {
+						// increase priority
+						if (task.getPriority() > MyTask.HIGH_PRIORITY) {
+							activity.getDbManager().updateTaskPriority(task.getInternalId(), task.getPriority() - 1);
+							disableTouch = true;
+							activity.getDataFromDB();
+							activity.populateView();
+						}
+					}
 				} else {
-					setBackgroundResource(0);
+					if (activity.currentViewType == ViewType.TASKS) {
+						((View)getParent()).setBackgroundResource(0);
+					} else {
+						setBackgroundResource(0);
+					}
 				}
 //				((View)this.getParent()).setPadding(0, 0, 0, 0);
 //				lp = (LayoutParams)((View)this.getParent()).getLayoutParams();
@@ -221,12 +243,16 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 			}
 //			Log.d(QuickTasksActivity.TAG, "I got the moves");
 			distanceX = Math.abs(e.getX() - doubleTapStart.getX());
+			distanceY = e.getY() - doubleTapStart.getY();
 			if (distanceX > DELETE_THRESHOLD) {
 				if (activity.currentViewType == ViewType.TASKS) {
 					((View)getParent()).setBackgroundResource(R.drawable.delete_color);
 				} else {
 					setBackgroundResource(R.drawable.delete_color);
 				}
+			} else if (activity.currentViewType == ViewType.TASKS && Math.abs(distanceY) > PRIORITY_CHANGE_THRESHOLD) {
+				// mark with priority change color
+				((View)getParent()).setBackgroundResource(R.drawable.priority_change_color);
 			} else {
 				if (activity.currentViewType == ViewType.TASKS) {
 					((View)getParent()).setBackgroundResource(R.drawable.marked_color);

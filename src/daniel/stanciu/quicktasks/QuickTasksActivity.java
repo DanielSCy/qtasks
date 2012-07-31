@@ -272,7 +272,7 @@ public class QuickTasksActivity extends Activity {
 				if (isNetworkAvailable()) {
 					gtasksUtils.gotAccount(false);
 				} else {
-					Toast.makeText(this, R.string.no_network, Toast.LENGTH_LONG);
+					Toast.makeText(this, R.string.no_network, Toast.LENGTH_LONG).show();
 				}
 			}
 			return true;

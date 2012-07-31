@@ -3,7 +3,6 @@ package daniel.stanciu.quicktasks;
 import java.util.List;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Handler;
 import android.util.TypedValue;
@@ -166,6 +165,13 @@ public class MyArrayAdapter<T> extends ArrayAdapter<T> {
 		checkView.setText("");
 		checkView.setChecked(item.isChecked());
 		checkView.setTag(item);
+		if (item.getPriority() == MyTask.HIGH_PRIORITY) {
+			checkView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.high_pri_mark, 0, 0, 0);
+		} else if (item.getPriority() == MyTask.LOW_PRIORITY) {
+			checkView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.low_pri_mark, 0, 0, 0);
+		} else {
+			checkView.setBackgroundResource(0);
+		}
 		checkView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			
 			@Override
