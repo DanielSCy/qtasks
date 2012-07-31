@@ -170,7 +170,7 @@ public class MyArrayAdapter<T> extends ArrayAdapter<T> {
 		} else if (item.getPriority() == MyTask.LOW_PRIORITY) {
 			checkView.setCompoundDrawablesWithIntrinsicBounds(R.drawable.low_pri_mark, 0, 0, 0);
 		} else {
-			checkView.setBackgroundResource(0);
+			checkView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
 		}
 		checkView.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			
@@ -190,7 +190,7 @@ public class MyArrayAdapter<T> extends ArrayAdapter<T> {
 						remove((T)task);
 						add((T)task);
 					} else {
-						int targetPos = getFirstCheckedPosition();
+						int targetPos = getFirstPositionForPriority(task.getPriority() + 1);
 						view.setPaintFlags(view.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
 						view.setTextColor(getColor(android.R.attr.textColorPrimary));
 						if (targetPos >= 0 && targetPos < position) {
@@ -272,6 +272,16 @@ public class MyArrayAdapter<T> extends ArrayAdapter<T> {
 			MyTask task = (MyTask)getItem(i);
 			if (task.isChecked())
 				return i;
+		}
+		return -1;
+	}
+	
+	protected int getFirstPositionForPriority(int priority) {
+		for (int i = 0; i < getCount(); ++i) {
+			MyTask task = (MyTask)getItem(i);
+			if (task.isChecked() || task.getPriority() == priority) {
+				return i;
+			}
 		}
 		return -1;
 	}

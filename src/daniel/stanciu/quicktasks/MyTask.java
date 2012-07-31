@@ -12,6 +12,7 @@ public class MyTask extends MyTaskBase {
 	
 	public MyTask(String id, String title) {
 		super(id, title);
+		priority = NORMAL_PRIORITY;
 	}
 
 	public boolean isChecked() {

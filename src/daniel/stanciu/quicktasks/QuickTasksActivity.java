@@ -91,10 +91,10 @@ public class QuickTasksActivity extends Activity {
 				} else {
 					newItem = new MyTask(null, title);
 					dbManager.insertTask((MyTask)newItem, currentList);
-					int firstChecked = arrayAdapter.getFirstCheckedPosition();
-					if (firstChecked > 0) {
-						arrayAdapter.insert(newItem, firstChecked);
-						addView(firstChecked);
+					int targetPos = arrayAdapter.getFirstPositionForPriority(((MyTask)newItem).getPriority() + 1);
+					if (targetPos > 0) {
+						arrayAdapter.insert(newItem, targetPos);
+						addView(targetPos);
 					} else {
 						arrayAdapter.add(newItem);
 						addView(arrayAdapter.getCount() - 1);
