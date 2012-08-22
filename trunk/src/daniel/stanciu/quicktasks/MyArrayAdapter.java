@@ -94,7 +94,7 @@ public class MyArrayAdapter<T> extends ArrayAdapter<T> {
 							editText = null;
 						}
 
-						String newTitle = ((EditText)v).getText().toString();
+						String newTitle = ((EditText)v).getText().toString().trim();
 						if (!newTitle.equals(list.getTitle())) {
 							list.setTitle(newTitle);
 							//activity.getDbManager().updateTask(task);
@@ -253,7 +253,7 @@ public class MyArrayAdapter<T> extends ArrayAdapter<T> {
 							editingPosition = -1;
 							editText = null;
 						}
-						String newTitle = ((EditText)v).getText().toString();
+						String newTitle = ((EditText)v).getText().toString().trim();
 						if (!newTitle.equals(task.getTitle())) {
 							task.setTitle(newTitle);
 							activity.getDbManager().updateTask(task);
