@@ -77,7 +77,7 @@ public class QuickTasksActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				String title = newItemEditText.getText().toString();
+				String title = newItemEditText.getText().toString().trim();
 				if (title.isEmpty()) {
 					Toast.makeText(QuickTasksActivity.this, R.string.empty_item_title, Toast.LENGTH_SHORT).show();
 					return;
