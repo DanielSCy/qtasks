@@ -3,19 +3,15 @@ package daniel.stanciu.quicktasks;
 import daniel.stanciu.quicktasks.MyGestureDetector.OnDoubleTapListener;
 import daniel.stanciu.quicktasks.MyGestureDetector.OnGestureListener;
 import android.content.Context;
-//import android.graphics.Canvas;
 import android.util.AttributeSet;
-//import android.util.Log;
 import android.view.View;
 import android.view.ViewParent;
 import android.view.MotionEvent;
-//import android.view.View;
-//import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 public class MyTextView extends TextView implements OnGestureListener, OnDoubleTapListener {
 	
-	private static final int DELETE_THRESHOLD = 200;
+//	private static final int DELETE_THRESHOLD = 200;
 	private static final int PRIORITY_CHANGE_THRESHOLD = 100;
 	private QuickTasksActivity activity;
 	private MyGestureDetector gd;
@@ -84,33 +80,28 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 
 	@Override
 	public boolean onDown(MotionEvent e) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void onShowPress(MotionEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public boolean onSingleTapUp(MotionEvent e) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
 			float distanceY) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public void onLongPress(MotionEvent e) {
 		if (activity.currentViewType == ViewType.LISTS) {
-			// TODO: edit current list
 			MyTasksList list = (MyTasksList)getTag();
 			int position = arrayAdapter.getPosition(list);
 			arrayAdapter.setEditingPosition(position);
@@ -122,7 +113,6 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 	@Override
 	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
 			float velocityY) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -166,7 +156,16 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 		int position = arrayAdapter.getPosition(item);
 		float distanceX = 0;
 		float distanceY = 0;
-		//LayoutParams lp;
+		View mainView;
+		int viewWidth;
+		
+		if (activity.currentViewType == ViewType.TASKS) {
+			mainView = (View)getParent();
+		} else {
+			mainView = this;
+		}
+		viewWidth = mainView.getWidth();
+		
 		switch (e.getAction() & MotionEvent.ACTION_MASK) {
 		case MotionEvent.ACTION_UP:
 			if (doubleTapStart == null) {
@@ -175,9 +174,9 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 			if (getScrollViewParent() != null) {
 				getScrollViewParent().setDoNotIntercept(false);
 			}
-			distanceX = Math.abs(e.getX() - doubleTapStart.getX());
-			distanceY = e.getY() - doubleTapStart.getY();
-			if (distanceX > DELETE_THRESHOLD) {
+			distanceX = Math.abs(e.getRawX() - doubleTapStart.getRawX());
+			distanceY = e.getRawY() - doubleTapStart.getRawY();
+			if (distanceX > viewWidth / 2) {
 				if (activity.currentViewType == ViewType.TASKS) {
 					activity.getDbManager().deleteTask((MyTask)item);
 				} else {
@@ -207,32 +206,18 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 						}
 					}
 				} else {
-					if (activity.currentViewType == ViewType.TASKS) {
-						((View)getParent()).setBackgroundResource(0);
-					} else {
-						setBackgroundResource(0);
-					}
+					mainView.setBackgroundResource(0);
+					mainView.setTranslationX(0);
+					mainView.setAlpha(1);
 				}
-//				((View)this.getParent()).setPadding(0, 0, 0, 0);
-//				lp = (LayoutParams)((View)this.getParent()).getLayoutParams();
-//				lp.leftMargin = 0;
-//				((View)this.getParent()).setLayoutParams(lp);
-//				requestLayout();
 			}
 			doubleTapStart = null;
 			return true;
 		case MotionEvent.ACTION_CANCEL:
 			doubleTapStart = null;
-			if (activity.currentViewType == ViewType.TASKS) {
-				((View)getParent()).setBackgroundResource(0);
-			} else {
-				setBackgroundResource(0);
-			}
-//			((View)this.getParent()).setPadding(0, 0, 0, 0);
-//			lp = (LayoutParams)((View)this.getParent()).getLayoutParams();
-//			lp.leftMargin = 0;
-//			((View)this.getParent()).setLayoutParams(lp);
-//			requestLayout();
+			mainView.setBackgroundResource(0);
+			mainView.setTranslationX(0);
+			mainView.setAlpha(1);
 			if (getScrollViewParent() != null) {
 				getScrollViewParent().setDoNotIntercept(false);
 			}
@@ -242,30 +227,18 @@ public class MyTextView extends TextView implements OnGestureListener, OnDoubleT
 				return false;
 			}
 //			Log.d(QuickTasksActivity.TAG, "I got the moves");
-			distanceX = Math.abs(e.getX() - doubleTapStart.getX());
-			distanceY = e.getY() - doubleTapStart.getY();
-			if (distanceX > DELETE_THRESHOLD) {
-				if (activity.currentViewType == ViewType.TASKS) {
-					((View)getParent()).setBackgroundResource(R.drawable.delete_color);
-				} else {
-					setBackgroundResource(R.drawable.delete_color);
-				}
+			distanceX = Math.abs(e.getRawX() - doubleTapStart.getRawX());
+			mainView.setTranslationX(e.getRawX() - doubleTapStart.getRawX());
+			mainView.setAlpha(Math.max(0f, Math.min(1f, 1f - 2f*distanceX/viewWidth)));			
+			distanceY = e.getRawY() - doubleTapStart.getRawY();
+			if (distanceX > viewWidth / 2) {
+				mainView.setBackgroundResource(R.drawable.delete_color);
 			} else if (activity.currentViewType == ViewType.TASKS && Math.abs(distanceY) > PRIORITY_CHANGE_THRESHOLD) {
 				// mark with priority change color
 				((View)getParent()).setBackgroundResource(R.drawable.priority_change_color);
 			} else {
-				if (activity.currentViewType == ViewType.TASKS) {
-					((View)getParent()).setBackgroundResource(R.drawable.marked_color);
-				} else {
-					setBackgroundResource(R.drawable.marked_color);
-				}
+				mainView.setBackgroundResource(R.drawable.marked_color);
 			}
-			// TODO: move the view
-//			((View)this.getParent()).setPadding((int)(e.getX() - doubleTapStart.getX()), 0, 0, 0);
-//			lp = (LayoutParams)((View)this.getParent()).getLayoutParams();
-//			lp.leftMargin = (int)(e.getX() - doubleTapStart.getX());
-//			((View)this.getParent()).setLayoutParams(lp);
-//			requestLayout();
 			return true;
 		}
 		return false;
