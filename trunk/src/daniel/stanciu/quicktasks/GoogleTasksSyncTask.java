@@ -6,9 +6,11 @@ import android.widget.Toast;
 
 public class GoogleTasksSyncTask extends AsyncTask<Void, Void, GoogleTasksSyncResult> {
 	private QuickTasksActivity activity;
+	private boolean isRetry = false;
 	
-	public GoogleTasksSyncTask(QuickTasksActivity act) {
+	public GoogleTasksSyncTask(QuickTasksActivity act, boolean isRetry) {
 		activity = act;
+		this.isRetry = isRetry;
 //		Log.d(QuickTasksActivity.TAG, "GoogleTasksSyncTask created from:");
 //		for (StackTraceElement trace : Thread.currentThread().getStackTrace()) {
 //			Log.d(QuickTasksActivity.TAG, "\t" + trace.toString());
@@ -40,8 +42,8 @@ public class GoogleTasksSyncTask extends AsyncTask<Void, Void, GoogleTasksSyncRe
 			activity.getDataFromDB();
 			activity.populateView();
 		} else if (result.getStatus() == GoogleTasksSyncResult.RETRY) {
-			Toast.makeText(activity, "Synchronization failed, will retry: " + result.getMessage(), Toast.LENGTH_SHORT).show();
-			activity.gtasksUtils.gotAccount(false);
+			//Toast.makeText(activity, "Synchronization failed, will retry: " + result.getMessage(), Toast.LENGTH_SHORT).show();
+			activity.gtasksUtils.gotAccount(false, true);
 		} else {
 			Toast.makeText(activity, "Synchronization failed: " + result.getMessage(), Toast.LENGTH_LONG).show();
 		}
@@ -49,7 +51,9 @@ public class GoogleTasksSyncTask extends AsyncTask<Void, Void, GoogleTasksSyncRe
 
 	@Override
 	protected void onPreExecute() {
-		Toast.makeText(activity, "Starting synchronization", Toast.LENGTH_SHORT).show();
+		if (!isRetry) {
+			Toast.makeText(activity, "Starting synchronization", Toast.LENGTH_SHORT).show();
+		}
 		super.onPreExecute();
 	}
 

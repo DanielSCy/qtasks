@@ -8,5 +8,18 @@
     <string name="empty_item_title">Please enter details first</string>
     <string name="delete_done_item">Delete completed</string>
     <string name="add_desc">Add item</string>
-
+    <string name="settings_title">Settings</string>
+    <string name="settings_item">Settings</string>
+	<string-array name="new_task_prio_titles">
+	    <item>High</item>
+	    <item>Normal</item>
+	    <item>Low</item>
+	</string-array>
+	<string-array name="new_task_prio_values">
+	    <item>0</item>
+	    <item>1</item>
+	    <item>2</item>
+	</string-array>
+	<string name="new_task_prio_pref_key">new_task_prio_pref_key</string>
+	<string name="new_task_prio_pref_title">New task priority</string>
 </resources>

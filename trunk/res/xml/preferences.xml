@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ListPreference
+        android:entryValues="@array/new_task_prio_values"
+        android:entries="@array/new_task_prio_titles"
+        android:key="@string/new_task_prio_pref_key"
+        android:title="@string/new_task_prio_pref_title" />
+</PreferenceScreen>
