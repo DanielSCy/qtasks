@@ -13,6 +13,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Menu;
@@ -90,9 +91,12 @@ public class QuickTasksActivity extends Activity {
 					addView(arrayAdapter.getCount() - 1);
 				} else {
 					newItem = new MyTask(null, title);
+					// set priority
+					int priority = Integer.parseInt(PreferenceManager.getDefaultSharedPreferences(QuickTasksActivity.this).getString(QuickTasksActivity.this.getString(R.string.new_task_prio_pref_key), "1"));
+					((MyTask)newItem).setPriority(priority);
 					dbManager.insertTask((MyTask)newItem, currentList);
 					int targetPos = arrayAdapter.getFirstPositionForPriority(((MyTask)newItem).getPriority() + 1);
-					if (targetPos > 0) {
+					if (targetPos >= 0) {
 						arrayAdapter.insert(newItem, targetPos);
 						addView(targetPos);
 					} else {
@@ -122,7 +126,7 @@ public class QuickTasksActivity extends Activity {
         getDataFromDB();
         populateView();
         if (shouldUpdate()) {
-        	gtasksUtils.gotAccount(false);
+        	gtasksUtils.gotAccount(false, false);
         }
         
     }
@@ -270,7 +274,7 @@ public class QuickTasksActivity extends Activity {
 		case R.id.sync_item:
 			if (!isEmulator()) {
 				if (isNetworkAvailable()) {
-					gtasksUtils.gotAccount(false);
+					gtasksUtils.gotAccount(false, false);
 				} else {
 					Toast.makeText(this, R.string.no_network, Toast.LENGTH_LONG).show();
 				}
@@ -278,6 +282,11 @@ public class QuickTasksActivity extends Activity {
 			return true;
 		case R.id.delete_done_item:
 			deleteCompletedTasks();
+			return true;
+		case R.id.settings_item:
+			Intent settingsIntent = new Intent();
+			settingsIntent.setClass(this, SettingsActivity.class);
+			startActivity(settingsIntent);
 			return true;
 		}
 		return false;
@@ -298,14 +307,14 @@ public class QuickTasksActivity extends Activity {
 		switch (requestCode) {
 		case REQUEST_AUTHENTICATE:
 			if (resultCode == RESULT_OK) {
-				gtasksUtils.gotAccount(false);
+				gtasksUtils.gotAccount(false, false);
 			} else {
 				gtasksUtils.chooseAccount(false);
 			}
 			break;
 		case REQUEST_AUTHENTICATE_EXCEPTION:
 			if (resultCode == RESULT_OK) {
-				gtasksUtils.gotAccount(true);
+				gtasksUtils.gotAccount(true, true);
 			} else {
 				gtasksUtils.chooseAccount(true);
 			}

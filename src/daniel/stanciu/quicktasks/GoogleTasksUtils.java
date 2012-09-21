@@ -67,9 +67,10 @@ public class GoogleTasksUtils {
 
 	}
 	
-	public void gotAccount(boolean fromException) {
+	@SuppressWarnings("deprecation")
+	public void gotAccount(boolean fromException, boolean isRetry) {
 		if (QuickTasksActivity.isEmulator()) {
-			onAuthToken(fromException);
+			onAuthToken(fromException, isRetry);
 			return;
 		}
 		Account account = accountManager.getAccountByName(accountName);
@@ -79,12 +80,12 @@ public class GoogleTasksUtils {
 		}
 		
 		if (credential.getAccessToken() != null) {
-			onAuthToken(fromException);
+			onAuthToken(fromException, isRetry);
 			return;
 		}
 		
 		accountManager.getAccountManager().getAuthToken(
-				account, AUTH_TOKEN_TYPE, true, new GetTokenAccountManagerCallback(fromException), null);
+				account, AUTH_TOKEN_TYPE, true, new GetTokenAccountManagerCallback(fromException, isRetry), null);
 	}
 
 	public void chooseAccount(boolean fromException) {
@@ -111,7 +112,7 @@ public class GoogleTasksUtils {
 		credential.setAccessToken(authToken);
 	}
 
-	private void onAuthToken(boolean fromException) {
+	private void onAuthToken(boolean fromException, boolean isRetry) {
 		if (QuickTasksActivity.isEmulator()) {
 			getDebugTaskLists();
 			getDebugTasks();
@@ -131,11 +132,11 @@ public class GoogleTasksUtils {
 						activity.populateView();
 					}
 				} catch (IOException ex) {
-					Toast.makeText(activity, "Synchronization failed: " + ex.getLocalizedMessage(), Toast.LENGTH_LONG);
+					Toast.makeText(activity, "Synchronization failed: " + ex.getLocalizedMessage(), Toast.LENGTH_LONG).show();
 				}
 			} else {
 				// in main UI thread, do the synchronization in new thread
-				new GoogleTasksSyncTask(activity).execute();
+				new GoogleTasksSyncTask(activity, isRetry).execute();
 			}
 //			downloadUpdates();
 //			updateDirty();
@@ -341,7 +342,7 @@ public class GoogleTasksUtils {
 				Bundle bundle = future.getResult();
 				setAccountName(bundle.getString(AccountManager.KEY_ACCOUNT_NAME));
 				setAuthToken(bundle.getString(AccountManager.KEY_AUTHTOKEN));
-				onAuthToken(fromException);
+				onAuthToken(fromException, false);
 			} catch (OperationCanceledException e) {
 				
 			} catch (AuthenticatorException e) {
@@ -355,10 +356,12 @@ public class GoogleTasksUtils {
 	private final class GetTokenAccountManagerCallback implements
 			AccountManagerCallback<Bundle> {
 		boolean fromException = false;
+		boolean isRetry = false;
 
-		public GetTokenAccountManagerCallback(boolean fromException) {
+		public GetTokenAccountManagerCallback(boolean fromException, boolean isRetry) {
 			super();
 			this.fromException = fromException;
+			this.isRetry = isRetry;
 		}
 
 		@Override
@@ -380,7 +383,7 @@ public class GoogleTasksUtils {
 					}
 				} else if (bundle.containsKey(AccountManager.KEY_AUTHTOKEN)) {
 					setAuthToken(bundle.getString(AccountManager.KEY_AUTHTOKEN));
-					onAuthToken(fromException);
+					onAuthToken(fromException, isRetry);
 				}
 			} catch (Exception e) {
 				Log.e(QuickTasksActivity.TAG, e.getMessage(), e);

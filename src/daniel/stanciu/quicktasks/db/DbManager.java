@@ -223,6 +223,7 @@ public class DbManager {
 			values.put(TasksOpenHelper.TASKS_DIRTY_COLUMN, 0);
 		}
 		values.put(TasksOpenHelper.TASKS_TITLE_COLUMN, task.getTitle());
+		values.put(TasksOpenHelper.TASKS_PRIORITY_COLUMN, task.getPriority());
 		if (task.isChecked()) {
 			values.put(TasksOpenHelper.TASKS_CHECKED_COLUMN, 1);
 		}
