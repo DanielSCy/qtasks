@@ -23,4 +23,9 @@
         android:title="@string/settings_item"
         android:orderInCategory="100"
         android:showAsAction="never"/>
+    <item
+        android:id="@+id/uncheck_all_item"
+        android:title="@string/uncheck_all_item"
+        android:orderInCategory="50"
+        android:showAsAction="never"/>
 </menu>
