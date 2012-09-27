@@ -266,6 +266,17 @@ public class QuickTasksActivity extends Activity {
 	}
 
 	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		if (currentViewType == ViewType.LISTS) {
+			menu.findItem(R.id.uncheck_all_item).setVisible(false);
+		} else {
+			menu.findItem(R.id.uncheck_all_item).setVisible(true);
+		}
+		
+		return super.onPrepareOptionsMenu(menu);
+	}
+
+	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.switch_acc_item:
@@ -288,6 +299,9 @@ public class QuickTasksActivity extends Activity {
 			settingsIntent.setClass(this, SettingsActivity.class);
 			startActivity(settingsIntent);
 			return true;
+		case R.id.uncheck_all_item:
+			uncheckCompletedTasks();
+			return true;
 		}
 		return false;
 	}
@@ -297,6 +311,15 @@ public class QuickTasksActivity extends Activity {
 			return;
 		}
 		dbManager.deleteCompletedTasks(currentList);
+		getDataFromDB();
+		populateView();
+	}
+	
+	private void uncheckCompletedTasks() {
+		if (currentViewType == ViewType.LISTS) {
+			return;
+		}
+		dbManager.uncheckCompletedTasks(currentList);
 		getDataFromDB();
 		populateView();
 	}

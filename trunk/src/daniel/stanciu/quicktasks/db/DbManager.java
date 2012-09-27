@@ -538,6 +538,22 @@ public class DbManager {
 		);
 	}
 
+	public void uncheckCompletedTasks(MyTasksList currentList) {
+		String listId = currentList.getId();
+		if (listId == null) {
+			listId = Long.toString(currentList.getInternalId());
+		}
+		openDb();
+		db.execSQL("update " + TasksOpenHelper.TASKS_TABLE_NAME +
+				" set " + TasksOpenHelper.TASKS_CHECKED_COLUMN + " = 0 where " +
+				TasksOpenHelper.TASKS_CHECKED_COLUMN + " <> 0 and " +
+				TasksOpenHelper.TASKS_LIST_ID_COLUMN + " = ?",
+				new Object[] {
+					listId
+				}
+		);
+	}
+
 	public MyTasksList findListByInternalId(long listId) {
 		for (MyTaskBase list : availableLists) {
 			if (list.getInternalId() == listId) {

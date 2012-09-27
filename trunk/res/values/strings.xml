@@ -22,4 +22,5 @@
 	</string-array>
 	<string name="new_task_prio_pref_key">new_task_prio_pref_key</string>
 	<string name="new_task_prio_pref_title">New task priority</string>
+	<string name="uncheck_all_item">Uncheck all</string>
 </resources>
