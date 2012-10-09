@@ -4,5 +4,12 @@
         android:entryValues="@array/new_task_prio_values"
         android:entries="@array/new_task_prio_titles"
         android:key="@string/new_task_prio_pref_key"
-        android:title="@string/new_task_prio_pref_title" />
+        android:title="@string/new_task_prio_pref_title"
+        android:defaultValue="1" />
+    <ListPreference
+        android:entryValues="@array/theme_values"
+        android:entries="@array/theme_titles"
+        android:key="@string/theme_pref_key"
+        android:title="@string/theme_pref_title"
+        android:defaultValue="dark" />
 </PreferenceScreen>

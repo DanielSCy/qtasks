@@ -32,6 +32,7 @@ public class QuickTasksActivity extends Activity {
 	private static final String LIST_ID_PREF = "listId";
 	public static final int REQUEST_AUTHENTICATE = 0;
 	public static final int REQUEST_AUTHENTICATE_EXCEPTION = 1;
+	public static final int REQUEST_SETTINGS = 2;
 
 	protected static final String TAG = "QuickTasks";
 	
@@ -59,6 +60,7 @@ public class QuickTasksActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate()");
+        setTheme();
         gtasksUtils = new GoogleTasksUtils(this);
         
         setContentView(R.layout.main);
@@ -131,7 +133,17 @@ public class QuickTasksActivity extends Activity {
         
     }
     
-    public void getDataFromDB() {
+    private void setTheme() {
+    	String theme = PreferenceManager.getDefaultSharedPreferences(QuickTasksActivity.this).getString(QuickTasksActivity.this.getString(R.string.theme_pref_key), "dark");
+    	if (theme.equals("dark")) {
+            this.setTheme(android.R.style.Theme_Holo);
+    	} else {
+            this.setTheme(android.R.style.Theme_Holo_Light_DarkActionBar);
+    	}
+
+	}
+
+	public void getDataFromDB() {
 		List<MyTaskBase> taskTitles = null;
 		if (currentViewType == ViewType.LISTS) {
 			if (Build.VERSION.SDK_INT >= 11) {
@@ -297,7 +309,7 @@ public class QuickTasksActivity extends Activity {
 		case R.id.settings_item:
 			Intent settingsIntent = new Intent();
 			settingsIntent.setClass(this, SettingsActivity.class);
-			startActivity(settingsIntent);
+			startActivityForResult(settingsIntent, REQUEST_SETTINGS);
 			return true;
 		case R.id.uncheck_all_item:
 			uncheckCompletedTasks();
@@ -341,6 +353,9 @@ public class QuickTasksActivity extends Activity {
 			} else {
 				gtasksUtils.chooseAccount(true);
 			}
+			break;
+		case REQUEST_SETTINGS:
+			setTheme();
 			break;
 		}
 	}
