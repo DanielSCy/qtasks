@@ -232,19 +232,19 @@ public class GoogleTasksUtils {
 					} else {
 						TaskList webList = new TaskList();
 						webList.setTitle(list.getTitle());
-						Log.d(QuickTasksActivity.TAG, "About to insert list");
+						Log.d(QuickTasksActivity.TAG, "About to insert list: " + list.getTitle());
 						TaskList result = service.tasklists().insert(webList).execute();
 						list.setId(result.getId());
 						dbManager.newListUploaded(list);
 					}
 				} else {
 					if (list.isDeleted()) {
-						Log.d(QuickTasksActivity.TAG, "About to delete list");
+						Log.d(QuickTasksActivity.TAG, "About to delete list" + list.getTitle());
 						service.tasklists().delete(list.getId()).execute();
 					} else {
 						TaskList result = service.tasklists().get(list.getId()).execute();
 						result.setTitle(list.getTitle());
-						Log.d(QuickTasksActivity.TAG, "About to update list");
+						Log.d(QuickTasksActivity.TAG, "About to update list" + list.getTitle());
 						service.tasklists().update(list.getId(), result).execute();
 					}
 					dbManager.existingListUploaded(list);
@@ -253,6 +253,12 @@ public class GoogleTasksUtils {
 			
 			ArrayList<MyTask> dirtyTasks = dbManager.getDirtyTasks();
 			for (MyTask task : dirtyTasks) {
+				MyTasksList list = dbManager.findListById(task.getParentListId());
+				if (list == null || list.isDeleted()) {
+					// the task belongs to a deleted list, just mark as not dirty
+					dbManager.existingTaskUploaded(task);
+					continue;
+				}
 				if (task.getId() == null) {
 					if (task.isDeleted()) {
 						// task not uploaded yet but already deleted, just mark as not dirty
@@ -265,7 +271,7 @@ public class GoogleTasksUtils {
 						} else {
 							webTask.setStatus(MyTask.NEEDS_ACTION);
 						}
-						Log.d(QuickTasksActivity.TAG, "About to insert task");
+						Log.d(QuickTasksActivity.TAG, "About to insert task: " + task.getTitle());
 						Task result = service.tasks().insert(task.getParentListId(), webTask).execute();
 						task.setId(result.getId());
 						dbManager.newTaskUploaded(task);
@@ -283,7 +289,7 @@ public class GoogleTasksUtils {
 							result.setStatus(MyTask.NEEDS_ACTION);
 							result.setCompleted(null);
 						}
-						Log.d(QuickTasksActivity.TAG, "About to update task");
+						Log.d(QuickTasksActivity.TAG, "About to update task: " + task.getTitle());
 						service.tasks().update(task.getParentListId(), task.getId(), result).execute();
 					}
 					dbManager.existingTaskUploaded(task);

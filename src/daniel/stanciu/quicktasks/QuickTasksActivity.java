@@ -1,8 +1,13 @@
 package daniel.stanciu.quicktasks;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.util.Calendar;
 import java.util.List;
 
 import daniel.stanciu.quicktasks.db.DbManager;
+import daniel.stanciu.quicktasks.db.TasksOpenHelper;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,6 +19,7 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Menu;
@@ -61,6 +67,7 @@ public class QuickTasksActivity extends Activity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate()");
         setTheme();
+        
         gtasksUtils = new GoogleTasksUtils(this);
         
         setContentView(R.layout.main);
@@ -133,7 +140,38 @@ public class QuickTasksActivity extends Activity {
         
     }
     
-    private void setTheme() {
+    private void exportDbToSD() {
+        File dbFile = getDatabasePath(TasksOpenHelper.DATABASE_NAME);
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+        try {
+        	File output = new File(getExternalFilesDir(null), dbFile.getName() + "_"
+        					+ DateFormat.format("dd.MM.yyyy", Calendar.getInstance()));
+        	fis = new FileInputStream(dbFile);
+        	fos = new FileOutputStream(output);
+        	
+        	byte[] buffer = new byte[1024];
+        	int numRead = 0;
+        	
+        	while ((numRead = fis.read(buffer)) > 0) {
+        		fos.write(buffer, 0, numRead);
+        	}
+        	fos.close();
+        	fis.close();
+        	Toast.makeText(this, "Export completed", Toast.LENGTH_SHORT).show();
+        } catch (Exception ex) {
+        	Toast.makeText(this, "Export exception: " + ex.toString(), Toast.LENGTH_LONG).show();
+        } finally {
+        	try { fis.close(); } catch (Exception ex) {}
+        	try { fos.close(); } catch (Exception ex) {}
+        }
+	}
+    
+    private void importDbFromSD() {
+    	
+    }
+
+	private void setTheme() {
     	String theme = PreferenceManager.getDefaultSharedPreferences(QuickTasksActivity.this).getString(QuickTasksActivity.this.getString(R.string.theme_pref_key), "dark");
     	if (theme.equals("dark")) {
             this.setTheme(android.R.style.Theme_Holo);
@@ -313,6 +351,9 @@ public class QuickTasksActivity extends Activity {
 			return true;
 		case R.id.uncheck_all_item:
 			uncheckCompletedTasks();
+			return true;
+		case R.id.export_db_item:
+			exportDbToSD();
 			return true;
 		}
 		return false;

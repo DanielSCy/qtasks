@@ -28,4 +28,9 @@
         android:title="@string/uncheck_all_item"
         android:orderInCategory="50"
         android:showAsAction="never"/>
+    <item
+        android:id="@+id/export_db_item"
+        android:title="@string/export_db_item"
+        android:orderInCategory="60"
+        android:showAsAction="never"/>
 </menu>
