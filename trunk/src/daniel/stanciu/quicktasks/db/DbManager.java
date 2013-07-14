@@ -563,4 +563,14 @@ public class DbManager {
 		
 		return null;
 	}
+
+	public MyTasksList findListById(String listId) {
+		for (MyTaskBase list : availableLists) {
+			if (list.getId() == listId) {
+				return (MyTasksList)list;
+			}
+		}
+		
+		return null;
+	}
 }

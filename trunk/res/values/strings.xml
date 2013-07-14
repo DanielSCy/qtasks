@@ -33,4 +33,5 @@
 	</string-array>
 	<string name="theme_pref_key">theme_pref_key</string>
 	<string name="theme_pref_title">Theme</string>
+	<string name="export_db_item">Export</string>
 </resources>
